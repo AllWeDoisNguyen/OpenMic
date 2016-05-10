@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160510223543) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comedians", force: :cascade do |t|
     t.string   "name"
     t.string   "username"
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 20160510223543) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "comedians", ["username"], name: "index_comedians_on_username", unique: true
+  add_index "comedians", ["username"], name: "index_comedians_on_username", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -31,6 +34,6 @@ ActiveRecord::Schema.define(version: 20160510223543) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "users", ["username"], name: "index_users_on_username", unique: true
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end
