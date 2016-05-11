@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shows
   root 'sessions#new'
 
   post '/sessions' => 'sessions#create_user'
