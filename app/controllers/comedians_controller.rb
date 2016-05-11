@@ -26,6 +26,10 @@ class ComediansController < ApplicationController
   def create
     @comedian = Comedian.new(comedian_params)
 
+    return render action: 'new' unless @comedian.save
+
+    redirect_to root_path, notice: 'Created Comedian'
+
     respond_to do |format|
       if @comedian.save
         format.html { redirect_to @comedian, notice: 'Comedian was successfully created.' }
@@ -69,6 +73,6 @@ class ComediansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comedian_params
-      params.require(:comedian).permit(:name, :username, :password)
+      params.require(:comedian).permit(:name, :username, :password, :password_confirmation)
     end
 end
