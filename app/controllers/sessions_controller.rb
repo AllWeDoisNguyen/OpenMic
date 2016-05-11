@@ -18,6 +18,5 @@ class SessionsController < ApplicationController
 
   	session[:comedian_id] = @comedian.id
   	redirect_to root_path
-
   end
 end
