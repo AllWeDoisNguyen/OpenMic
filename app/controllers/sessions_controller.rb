@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
   end
 
@@ -8,6 +9,7 @@ class SessionsController < ApplicationController
   	return render action: 'new' unless @user
 
   	session[:user_id] = @user.id
+  	p session
   	redirect_to root_path
   end
 
