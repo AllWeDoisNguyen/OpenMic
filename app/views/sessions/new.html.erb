@@ -8,8 +8,11 @@
   	<%= label_tag :password %>
   	<%= password_field_tag :password %>
   </p>
-  
+
   <p>
   	<%= submit_tag 'Log in' %>
   </p>
-<% end %>	
+<% end %>
+
+<%= link_to 'Sign up as comedian', new_comedian_path %>
+<%= link_to 'Sign up as user', new_user_path %>
