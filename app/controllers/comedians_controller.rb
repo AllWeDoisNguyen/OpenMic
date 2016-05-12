@@ -1,6 +1,9 @@
 class ComediansController < ApplicationController
   before_action :set_comedian, only: [:show, :edit, :update, :destroy]
 
+  # Get a comedian's shows
+  # Show.find(Comedian.last.bookings.last.show_id)
+
   # GET /comedians
   # GET /comedians.json
   def index
@@ -69,6 +72,6 @@ class ComediansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comedian_params
-      params.require(:comedian).permit(:name, :username, :password, :password_confirmation)
+      params.require(:comedian).permit(:name, :username, :password, :password_confirmation, :bookings)
     end
 end
