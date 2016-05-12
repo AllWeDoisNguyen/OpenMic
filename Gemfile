@@ -28,6 +28,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'puma'
 
+gem 'acts_as_commentable'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

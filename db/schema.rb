@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510230803) do
+ActiveRecord::Schema.define(version: 20160511230636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "comedian_id"
+    t.integer  "show_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "bookings", ["comedian_id"], name: "index_bookings_on_comedian_id", using: :btree
+  add_index "bookings", ["show_id"], name: "index_bookings_on_show_id", using: :btree
 
   create_table "comedians", force: :cascade do |t|
     t.string   "name"
@@ -26,6 +36,15 @@ ActiveRecord::Schema.define(version: 20160510230803) do
 
   add_index "comedians", ["username"], name: "index_comedians_on_username", unique: true, using: :btree
 
+  create_table "shows", force: :cascade do |t|
+    t.string   "venue"
+    t.string   "venue_website"
+    t.date     "date"
+    t.time     "time"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "username"
@@ -36,4 +55,6 @@ ActiveRecord::Schema.define(version: 20160510230803) do
 
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
+  add_foreign_key "bookings", "comedians"
+  add_foreign_key "bookings", "shows"
 end
