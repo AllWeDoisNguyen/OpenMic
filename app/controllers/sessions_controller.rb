@@ -9,8 +9,12 @@ class SessionsController < ApplicationController
   	return render action: 'new' unless @user
     session[:comedian_id] = nil
   	session[:user_id] = @user.id
-  	p session
-  	redirect_to root_path
+
+  	# p "***************"
+  	# p "user:" + session[:user_id].to_s
+  	# p "***************"
+
+  	redirect_to users_path
   end
 
   def create_comedian
@@ -19,7 +23,11 @@ class SessionsController < ApplicationController
   	return render action: 'new' unless @comedian
     session[:user_id] = nil
   	session[:comedian_id] = @comedian.id
-  	redirect_to root_path
+
+  	# p "***************"
+  	# p "comedian:" + session[:comedian_id].to_s
+  	# p "***************"
+  	redirect_to comedians_path
   end
 
   def destroy
