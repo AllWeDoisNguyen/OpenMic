@@ -19,12 +19,14 @@ ActiveRecord::Schema.define(version: 20160511230636) do
   create_table "bookings", force: :cascade do |t|
     t.integer  "comedian_id"
     t.integer  "show_id"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   add_index "bookings", ["comedian_id"], name: "index_bookings_on_comedian_id", using: :btree
   add_index "bookings", ["show_id"], name: "index_bookings_on_show_id", using: :btree
+  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id", using: :btree
 
   create_table "comedians", force: :cascade do |t|
     t.string   "name"
@@ -57,4 +59,5 @@ ActiveRecord::Schema.define(version: 20160511230636) do
 
   add_foreign_key "bookings", "comedians"
   add_foreign_key "bookings", "shows"
+  add_foreign_key "bookings", "users"
 end

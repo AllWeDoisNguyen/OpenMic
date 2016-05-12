@@ -3,6 +3,8 @@ class CreateBookings < ActiveRecord::Migration
     create_table :bookings do |t|
       t.belongs_to :comedian, index: true, foreign_key: true
       t.belongs_to :show, index: true, foreign_key: true
+      t.belongs_to :user, index: true, foreign_key: true
+
 
       t.timestamps null: false
     end
