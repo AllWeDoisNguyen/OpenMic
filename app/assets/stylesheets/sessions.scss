@@ -1,3 +1,26 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: #ffff4d
+
+}
+h1 {
+  text-align: center;
+  font-size: 200%
+
+}
+
+#sign_in_block {
+  text-align: center;
+}
+
+#logo_image {
+  align-self: center;
+  border: groove;
+}
+
+#open_mic_block {
+  margin-top: 12em;
+}
