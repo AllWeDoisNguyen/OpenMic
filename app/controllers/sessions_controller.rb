@@ -11,8 +11,9 @@ class SessionsController < ApplicationController
       create_user
     elsif @comedian
       create_comedian
-    else
-      p "Shit's fucked up!"
+    elsif
+      render action: 'new'	
+      flash[:notice_login] = "Incorrect password or username."
     end
   end
 
