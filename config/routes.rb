@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :shows
   root 'sessions#new'
 
-  post '/sessions' => 'sessions#create_user'
+  post '/sessions' => 'sessions#create'
 
   resources :sessions
   resources :users

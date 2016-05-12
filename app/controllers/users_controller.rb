@@ -27,12 +27,16 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
-      else
+      if Comedian.find_by(username: @user.username)
         format.html { render :new }
+        flash[:notice] = 'Username is already taken.'
         format.json { render json: @user.errors, status: :unprocessable_entity }
+      elsif @user.save
+         format.html { redirect_to @user, notice: 'User was successfully created.' }
+         format.json { render :show, status: :created, location: @user }
+       else
+         format.html { render :new }
+         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end

@@ -3,6 +3,19 @@ class SessionsController < ApplicationController
   def new
   end
 
+  def create
+    @user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
+    @comedian = Comedian.find_by(username: params[:username]).try(:authenticate, params[:password])
+    
+    if @user
+      create_user
+    elsif @comedian
+      create_comedian
+    else
+      p "Shit's fucked up!"
+    end
+  end
+
   def create_user
   	@user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
 
@@ -10,9 +23,10 @@ class SessionsController < ApplicationController
     session[:comedian_id] = nil
   	session[:user_id] = @user.id
 
-  	# p "***************"
-  	# p "user:" + session[:user_id].to_s
-  	# p "***************"
+  	p "***************"
+  	p "user:" + session[:user_id].to_s
+    p "comedian:" + session[:comedian_id].to_s
+  	p "***************"
 
   	redirect_to users_path
   end
@@ -24,9 +38,10 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
   	session[:comedian_id] = @comedian.id
 
-  	# p "***************"
-  	# p "comedian:" + session[:comedian_id].to_s
-  	# p "***************"
+  	p "***************"
+    p "user:" + session[:user_id].to_s
+  	p "comedian:" + session[:comedian_id].to_s
+  	p "***************"
   	redirect_to comedians_path
   end
 
