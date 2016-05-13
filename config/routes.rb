@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
   resources :shows
-  root 'sessions#new'
+  root 'comedians#index'
 
-  post '/sessions' => 'sessions#create'
-  delete '/sessions' => 'sessions#destroy'
+  get '/sessions/new_user/' => 'sessions#new_user', as: :new_user_session
+  get '/sessions/new_comedian/' => 'sessions#new_comedian', as: :new_comedian_session
+  post '/sessions/create_comedian/' => 'sessions#create_comedian', as: :create_comedian_session
+  post '/sessions/create_user/' => 'sessions#create_user', as: :create_user_session
+  get '/sessions/logout' => 'sessions#destroy', as: :log_out
+  
 
-  resources :sessions
   resources :users
-  resources :comedians
+  resources :comedians 
+  resources :sessions
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,35 @@
+
+<div id="open_mic_block">
+
+    <center>
+  <img id = "logo_image" src="http://www.hamptonsaudiovisualrentals.com/microphone.jpg"
+      alt="microphone_image" height = "225" width = "225">
+    </center>
+	<p id="notice"><%= flash[:notice_login] %></p>
+	
+
+  <h1>Sign in as a User</h1>
+
+  <div id = "sign_in_block">
+
+  	<% if current_user.nil? && current_comedian.nil? %>
+	    <%= form_tag create_user_session_path %>
+	      <p>
+	    	   <%= label_tag :username %>
+	    	    <%= text_field_tag :username %>
+	      </p>
+	      <p>
+	    	   <%= label_tag :password %>
+	    	    <%= password_field_tag :password %>
+	      </p>
+	      <p>
+	    	   <%= submit_tag 'Log in' %>
+	       </p>
+	  <% else %>
+	  	 <%= link_to 'Log out', log_out_path, action: :destroy %>
+    <% end %>
+       
+      <%= link_to 'Sign up as comedian', new_comedian_path %>
+      <%= link_to 'Sign up as user', new_user_path %>
+    </div>
+</div>
