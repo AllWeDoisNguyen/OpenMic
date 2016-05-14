@@ -15,6 +15,8 @@ class ShowsController < ApplicationController
     @shows = Show.all
     @bookings = Booking.all
     @booking = Booking.new
+    @user = User.new
+    @users = User.all
   end
 
   # GET /shows/new
