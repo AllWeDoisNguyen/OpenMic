@@ -17,7 +17,7 @@ class Comedian < ActiveRecord::Base
 
 	def next_show_name
 		unless self.shows.first.nil?
-			self.shows.first.show
+			self.shows.first.show_name
 		else
 			""
 		end
