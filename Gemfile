@@ -29,6 +29,10 @@ gem 'puma'
 
 gem 'acts_as_commentable'
 
+gem 'paperclip'
+
+gem 'aws-sdk', '~> 2.3'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
