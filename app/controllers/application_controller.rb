@@ -25,4 +25,8 @@ class ApplicationController < ActionController::Base
   	return redirect_to root_path
   end
 
+  def homepage
+    @comedians = Comedian.all
+  end
+
 end

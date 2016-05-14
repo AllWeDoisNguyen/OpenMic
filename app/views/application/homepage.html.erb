@@ -1,0 +1,24 @@
+<div id="open_mic_header">
+    <%= image_tag("OpenMiic/OpenMiiclogo.png", size: "400x200", alt: "OpenMiic logo") %>
+      <h1>Find the Best Local Comedians</h1>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Profile</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @comedians.each do |comedian| %>
+      <tr>
+        <td><%= image_tag comedian.avatar.url(:thumb)%></td>
+        <td><%= comedian.name %></td>
+        <td><%= link_to "#{comedian.username}", comedian %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

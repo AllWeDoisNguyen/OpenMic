@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :shows
-  root 'comedians#index'
+  root 'application#homepage'
 
   get '/sessions/new_user/' => 'sessions#new_user', as: :new_user_session
   get '/sessions/new_comedian/' => 'sessions#new_comedian', as: :new_comedian_session
