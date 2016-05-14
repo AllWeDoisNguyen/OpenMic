@@ -10,6 +10,13 @@ class ShowsController < ApplicationController
   # GET /shows/1
   # GET /shows/1.json
   def show
+    @comedians = Comedian.all
+    @comedian = Comedian.new
+    @shows = Show.all
+    @bookings = Booking.all
+    @booking = Booking.new
+    @user = User.new
+    @users = User.all
   end
 
   # GET /shows/new
