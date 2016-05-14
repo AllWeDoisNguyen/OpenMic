@@ -38,4 +38,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  # Give paperclip access to imagemagick which is located in
+  #this path when typing which convert in command line
+  Paperclip.options[:command_path] = "/usr/bin/convert"
 end

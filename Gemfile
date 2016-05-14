@@ -29,9 +29,11 @@ gem 'puma'
 
 gem 'acts_as_commentable'
 
-gem 'paperclip'
-
 gem 'aws-sdk', '~> 2.3'
+
+gem 'rails_12factor'
+#for image uploading, installing the newest paperclip version
+gem "paperclip", "~> 5.0.0.beta1"
 
 # Use Unicorn as the app server
 # gem 'unicorn'

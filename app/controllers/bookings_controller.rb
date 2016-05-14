@@ -16,3 +16,5 @@ class BookingsController < ApplicationController
   end
 
 end
+#booking.show.build(booking_params) probably to replace booking.new
+#So the booking makes the association with the show. 
