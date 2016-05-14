@@ -31,7 +31,7 @@ gem 'acts_as_commentable'
 
 gem 'aws-sdk', '~> 2.3'
 
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production  
 #for image uploading, installing the newest paperclip version
 gem "paperclip", "~> 5.0.0.beta1"
 

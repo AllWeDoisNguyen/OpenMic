@@ -1,0 +1,37 @@
+
+<%= form_tag '', :method => :get do %>
+  <%= label_tag :name, "Search by comedian's name" %>
+  <%= text_field_tag :name %>
+  <%= submit_tag 'Filter' %>
+<% end %><br>
+<%= form_tag '', :method => :get do %>
+  <%= label_tag :room_number, "Search by venue" %>
+  <%= text_field_tag :room_number %>
+  <%= submit_tag 'Filter' %>
+<% end %><br>
+<%= form_tag '', :method => :get do %>
+  <%= label_tag :start, "Search by date" %>
+  <%= date_field_tag :start %>
+  <%= submit_tag 'Filter' %>
+<% end %><br>
+<%= form_tag '', :method => :get do %>
+  <%= label_tag :start_time, "Search by time" %>
+  <%= time_field_tag :start_time %>
+  <%= submit_tag 'Filter' %>
+<% end %><br>
+
+<%= link_to "Start Over", bookings_new_path %>
+<table>
+  <tr class="custom">
+    <th>Comedian</th>
+    <th>Show</th>
+  </tr>
+<% @bookings.each do |b| %>
+  <tr class="custom">
+    <td><%= b.comedian.name %></td>
+    <td><%= b.show.venue %></td> 
+    <td><%= b.show.date %></td>
+    <td><%= b.show.time %></td>
+  </tr>
+<% end %>
+</table>

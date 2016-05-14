@@ -10,9 +10,14 @@ Rails.application.routes.draw do
   get '/bookings/add_comedian' => 'bookings#create', as: :create_booking
 
 
-  resources :users
-  resources :comedians
+  resources :users do 
+    resources :bookings
+  end
+  resources :comedians do 
+    resources :bookings
+  end
   resources :sessions
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

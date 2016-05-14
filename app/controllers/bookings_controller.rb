@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
 
   private
   def booking_params
-    params.require(:booking).permit(:comedian_id, :show_id)
+    params.require(:booking).permit(:comedian_id, :show_id, :user_id)
   end
 
 end
