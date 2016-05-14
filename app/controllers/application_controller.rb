@@ -28,6 +28,7 @@ class ApplicationController < ActionController::Base
   def homepage
     @comedians = Comedian.all
     @shows = Show.all
+    @bookings = Booking.all
   end
 
 end

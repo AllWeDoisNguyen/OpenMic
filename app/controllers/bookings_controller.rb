@@ -10,6 +10,10 @@ class BookingsController < ApplicationController
     redirect_to root_path
   end
 
+  def index
+    @bookings = Booking.all 
+  end
+
   private
   def booking_params
     params.require(:booking).permit(:comedian_id, :show_id, :user_id)
