@@ -1,4 +1,4 @@
-<%= form_for(@comedian) do |f| %>
+<%= form_for @comedian, html: { multipart: true } do |f| %>
   <% if @comedian.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@comedian.errors.count, "error") %> prohibited this comedian from being saved:</h2>
@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </div>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>

@@ -6,9 +6,9 @@
 <table>
   <thead>
     <tr>
+      <th>Avatar</th>
       <th>Name</th>
       <th>Username</th>
-      <th>Password</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +16,7 @@
   <tbody>
     <% @comedians.each do |comedian| %>
       <tr>
+        <td><%= image_tag comedian.avatar.url(:thumb)%></td>
         <td><%= comedian.name %></td>
         <td><%= comedian.username %></td>
         <td><%= comedian.password %></td>

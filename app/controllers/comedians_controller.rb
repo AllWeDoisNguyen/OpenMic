@@ -72,6 +72,6 @@ class ComediansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comedian_params
-      params.require(:comedian).permit(:name, :username, :password, :password_confirmation, :bookings)
+      params.require(:comedian).permit(:avatar, :name, :username, :password, :password_confirmation, :bookings)
     end
 end
