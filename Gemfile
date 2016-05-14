@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'font-awesome-rails'
+
 gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -31,7 +33,7 @@ gem 'acts_as_commentable'
 
 gem 'aws-sdk', '~> 2.3'
 
-gem 'rails_12factor', group: :production  
+gem 'rails_12factor', group: :production
 #for image uploading, installing the newest paperclip version
 gem "paperclip", "~> 5.0.0.beta1"
 
