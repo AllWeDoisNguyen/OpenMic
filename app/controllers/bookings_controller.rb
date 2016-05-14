@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+    
     @booking = Booking.new booking_params
     @booking.save
     redirect_to root_path
@@ -21,4 +22,6 @@ class BookingsController < ApplicationController
 
 end
 #booking.show.build(booking_params) probably to replace booking.new
-#So the booking makes the association with the show. 
+#So the booking makes the association with the show.
+#they give us a comedian name, find id by name, find id for show
+

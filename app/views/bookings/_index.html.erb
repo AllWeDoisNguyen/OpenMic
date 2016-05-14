@@ -10,6 +10,11 @@
   <%= submit_tag 'Filter' %>
 <% end %><br>
 <%= form_tag '', :method => :get do %>
+  <%= label_tag :show_name, "Show Name" %>
+  <%= text_field_tag :show_name %>
+  <%= submit_tag 'Filter' %>
+<% end %><br>
+<%= form_tag '', :method => :get do %>
   <%= label_tag :date, "Search by date" %>
   <%= date_field_tag :date %>
   <%= submit_tag 'Filter' %>
@@ -23,13 +28,13 @@
 <%= link_to "Start Over", root_path %>
 <table>
   <tr class="custom">
-    <th>Comedian</th>
-    <th>Show</th>
+    <th>Shows</th>
   </tr>
 <% @bookings.each do |b| %>
   <tr class="custom">
     <td><%= b.comedian.name %></td>
     <td><%= b.show.venue %></td> 
+    <td><%= b.show.show_name %></td> 
     <td><%= b.show.date %></td>
     <td><%= b.show.time %></td>
   </tr>
