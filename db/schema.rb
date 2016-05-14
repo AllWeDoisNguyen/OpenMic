@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20160514200720) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "booking_id"
-    t.string   "show"
+    t.string   "name"
   end
 
   create_table "users", force: :cascade do |t|
