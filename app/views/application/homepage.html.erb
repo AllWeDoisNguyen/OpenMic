@@ -13,6 +13,8 @@
     </tr>
   </thead>
   <tbody>
+    <%= link_to 'Sign in as a comedian', new_comedian_session_path %> | 
+    <%= link_to 'Sign in as a user', new_user_session_path %>
     <% @comedians.each do |comedian| %>
       <tr>
         <td><%= image_tag comedian.avatar.url(:thumb)%></td>
