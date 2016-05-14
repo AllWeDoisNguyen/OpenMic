@@ -10,10 +10,11 @@ class Booking < ActiveRecord::Base
 
   def find_id_by_comedian_username
   	@comedian_username = params[:username]
-  	Comedian.find_by(username: @comedian_username)
+  	Comedian.find_by(username: @comedian_username).id
   end
 
   def find_id_by_show_name
 
   end
+  
 end

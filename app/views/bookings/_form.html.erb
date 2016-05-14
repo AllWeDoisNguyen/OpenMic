@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :comedian_Username %><br>
-    <%= f.text_field :username %>
+    <%= f.collection_select(:comedian_id, @comedians, :id, :username, :prompt => true) %>
   </div>
   <div class="field">
     <%= f.label :show_Name %><br>
-    <%= f.text_field :show_name %>
+    <%= f.collection_select(:show_id, @shows, :id, :show_name, :prompt => true) %>
   </div>
   <div class="actions">
     <%= f.submit %>

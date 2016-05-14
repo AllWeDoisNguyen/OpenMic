@@ -5,7 +5,8 @@ class BookingsController < ApplicationController
   end
 
   def create
-    
+    p find_id_by_comedian_username
+    p booking_params
     @booking = Booking.new booking_params
     @booking.save
     redirect_to root_path
@@ -15,9 +16,13 @@ class BookingsController < ApplicationController
     @bookings = Booking.all 
   end
 
+  def username
+    Comedian.find_by(username: params[:username]).id
+  end
+
   private
   def booking_params
-    params.require(:booking).permit(:comedian_id, :show_id, :user_id)
+    params.require(:booking).permit(:comedian_id, :show_id, :user_id, :username, :show_name)
   end
 
 end

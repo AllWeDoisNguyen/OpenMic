@@ -27,8 +27,13 @@ class ApplicationController < ActionController::Base
 
   def homepage
     @comedians = Comedian.all
+    @comedian = Comedian.new
+    @show = Show.new
     @shows = Show.all
     @bookings = Booking.all
+    @booking = Booking.new
+    @user = User.new
+    @users = User.all
   end
 
 end
