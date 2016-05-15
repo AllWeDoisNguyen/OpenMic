@@ -5,15 +5,13 @@ class BookingsController < ApplicationController
   end
 
   def create
-    p find_id_by_comedian_username
-    p booking_params
     @booking = Booking.new booking_params
     @booking.save
     redirect_to root_path
   end
 
   def index
-    @bookings = Booking.all 
+    @bookings = Booking.all
   end
 
   def username
@@ -29,4 +27,3 @@ end
 #booking.show.build(booking_params) probably to replace booking.new
 #So the booking makes the association with the show.
 #they give us a comedian name, find id by name, find id for show
-
