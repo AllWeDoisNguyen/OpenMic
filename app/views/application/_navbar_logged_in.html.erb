@@ -40,7 +40,8 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form> -->
-      <ul class="nav navbar-nav navbar-right">
+      <p class="nav navbar-nav navbar-text alert-success"><%= flash[:notice_login] %></p>
+      <ul class="nav navbar-nav navbar-right"> 
         <% if !current_user.nil? %>
         <li><%= content_tag(:a, "My Profile", href: "/users/#{current_user.id}") %></li>
         <% elsif !current_comedian.nil? %>

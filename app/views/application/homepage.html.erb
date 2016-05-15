@@ -10,21 +10,28 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-          <h3>Comedians</h3>
-          <hr>
-            <% @comedians.each do |x| %>
-            <% x %>
-            <div class="col-sm-4">
-              <%= link_to image_tag(x.avatar.url(:medium), class: "img-circle img-responsive img-center"), x %>
-                <h2><%= link_to x.name, x %></h2>
-                <p><%= link_to x.next_show_name, x.next_show %><p>
-                <p><%= x.bio %><p>
-            </div>
-            <% end %>
+      <div class="panel panel-warning">
+        <div class="panel-heading"><h3>Comedians</h3>
         </div>
+      </div>  
+        <hr>
+      <div class="container">
+        <div class="row"> 
+          <% @comedians.each do |x| %>
+            <% x %>
+              <div class="col-xs-5">
+                <div id="panel" class="panel panel-warning">
+                  <div class="panel-heading"><h><%= link_to x.name, x %></h>
+                  </div>
+                    <div class="panel-body"><%= link_to image_tag(x.avatar.url(:medium), class: "img-rounded img-responsive img-center"), x %>
+                        <%= link_to x.next_show_name, x.next_show %>
+                            <%= x.bio %>
+                    </div>        
+                </div>         
+              </div>
+          <% end %>             
+        </div>
+      </div>
         <!-- /.row -->
 
         <hr>
