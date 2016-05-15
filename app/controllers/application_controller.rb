@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
   end
 
   def homepage
-    @comedians = Comedian.all
+    @comedians = Comedian.all.sample(6)
     @comedian = Comedian.new
     @show = Show.new
     @shows = Show.all

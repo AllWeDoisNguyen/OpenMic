@@ -13,9 +13,9 @@
 <body>
 
   <% if current_user.nil? && current_comedian.nil? %>
-  <%= render 'navbar_logged_out' %>
+    <%= render 'navbar_logged_out' %>
   <% else %>
-  <%= render 'navbar_logged_in' %>
+    <%= render 'navbar_logged_in' %>
   <% end %>
 
     <%= yield %>

@@ -3,7 +3,7 @@ class Comedian < ActiveRecord::Base
 	validates :name, :username, :password_digest, presence: true
 	has_many :bookings
 	has_many :shows, :through => :bookings
-	has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "OpenMiic/humor-public-speaking-100px.jpg", :default_style => :thumb
+	has_attached_file :avatar, styles: { medium: "300x300#", thumb: "100x100#" }, default_url: "OpenMiic/humor-public-speaking-300px.jpg", :default_style => :thumb
 	validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
 	def next_show
