@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Name:</strong>
+  <%= @show.show_name %>
+</p>
+
+<p>
   <strong>Venue:</strong>
   <%= @show.venue %>
 </p>
@@ -8,6 +13,13 @@
 <p>
   <strong>Venue website:</strong>
   <%= @show.venue_website %>
+</p>
+
+<p>
+  <strong>Booked comedians:</strong>
+  <% @show.bookings.each do |x| %>
+    <%= link_to x.comedian.name, x.comedian %>
+  <% end %>
 </p>
 
 <p>

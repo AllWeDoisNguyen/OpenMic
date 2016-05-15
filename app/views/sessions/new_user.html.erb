@@ -6,7 +6,7 @@
       alt="microphone_image" height = "225" width = "225">
     </center>
 	<p id="notice"><%= flash[:notice_login] %></p>
-	
+
 
   <h1>Sign in as a User</h1>
 
@@ -28,7 +28,7 @@
 	  <% else %>
 	  	 <%= link_to 'Log out', log_out_path, action: :destroy %>
     <% end %>
-       
+
       <%= link_to 'Sign up as comedian', new_comedian_path %>
       <%= link_to 'Sign up as user', new_user_path %>
     </div>

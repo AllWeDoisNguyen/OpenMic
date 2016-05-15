@@ -12,9 +12,13 @@
 </head>
 <body>
 
-<%= render 'navbar_logged_in' %>
+  <% if current_user.nil? && current_comedian.nil? %>
+  <%= render 'navbar_logged_out' %>
+  <% else %>
+  <%= render 'navbar_logged_in' %>
+  <% end %>
 
-<%= yield %>
+    <%= yield %>
 
 </body>
 </html>

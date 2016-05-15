@@ -10,6 +10,12 @@
   <%= @comedian.username %>
 </p>
 
+<p>
+  <strong>Upcoming Shows:</strong>
+  <% @comedian.shows.each do |x| %>
+    <%= link_to x.show_name, x %>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_comedian_path(@comedian) %> |
 <%= link_to 'Back', root_path %>
