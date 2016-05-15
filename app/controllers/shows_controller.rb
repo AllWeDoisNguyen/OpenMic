@@ -45,6 +45,13 @@ class ShowsController < ApplicationController
   # POST /shows.json
   def create
     @show = Show.new(show_params)
+    @show.save
+    @comedians_to_book = bookings_params
+    @comedians_to_book.each do |c|
+      @booking = @show.bookings.new(comedian_id: c)
+      @booking.save
+    end
+    @comedians = Comedian.all
 
     respond_to do |format|
       if @show.save
@@ -55,6 +62,7 @@ class ShowsController < ApplicationController
         format.json { render json: @show.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /shows/1
@@ -89,6 +97,16 @@ class ShowsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def show_params
+      p params
       params.require(:show).permit(:venue, :venue_website, :date, :time)
+    end
+
+    def bookings_params
+      @bookings_params = params[:show][:bookings_attributes]
+      @booking_values = @bookings_params.values
+      @booking_values.map! do |x|
+        x["comedian_id"].to_i
+      end
+      @booking_values
     end
 end
