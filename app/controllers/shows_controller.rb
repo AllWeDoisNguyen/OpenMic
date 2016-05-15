@@ -10,6 +10,11 @@ class ShowsController < ApplicationController
   # GET /shows/1
   # GET /shows/1.json
   def show
+    p "*" * 30
+    p 'show'
+    p params
+    p "*" * 30
+
     @comedians = Comedian.all
     @comedian = Comedian.new
     @shows = Show.all
@@ -21,7 +26,15 @@ class ShowsController < ApplicationController
 
   # GET /shows/new
   def new
+    p "*" * 30
+    p 'show'
+    p params
+    p "*" * 30
+
     @show = Show.new
+    @booking = Booking.new
+    @comedian = Comedian.new
+    @comedians = Comedian.all
   end
 
   # GET /shows/1/edit

@@ -27,6 +27,14 @@
     <%= f.label :time %><br>
     <%= f.time_select :time %>
   </div>
+  <!--  bookings start here -->
+  <% f.fields_for :bookings do |x| %>
+    <div class="field">
+      <%= x.label :comedian_Username %><br>
+      <%= x.collection_select(:comedian_id, @comedians, :id, :username, :prompt => true, multiple: true) %>
+    </div>
+  <% end %>
+  <!-- bookings end here -->
   <div class="actions">
     <%= f.submit %>
   </div>
