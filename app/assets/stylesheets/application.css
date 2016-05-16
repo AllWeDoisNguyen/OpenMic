@@ -25,3 +25,40 @@ body {
 .navbar-brand {
   padding: 1px !important;
 }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.comedian-table-link {
+  color: #8a6d3b;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.comedian-table-link:hover {
+  color: #8a6d3b;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ul.navbar-nav li a {
+  font-size: 14pt;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+h3 {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.panel-body a {
+  color: #8a6d3b;
+}
+
+.panel-body a {
+  color: #8a6d3b;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
