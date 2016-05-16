@@ -11,25 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :avatar %><br>
-    <%= f.file_field :avatar %>
+  <div class="col-md-6">
+    <div class="input-group">
+      <span><%= f.label :name, class: "input-group-addon" %></span>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :username %><br>
+      <%= f.text_field :username %>
+    </div>
+    <div class="field">
+      <%= f.label :avatar %><br>
+      <%= f.file_field :avatar %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :username %><br>
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
+  <div class="col-md-6">
+    <div class="field">
+      <%= f.label :password %><br>
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %><br>
+      <%= f.password_field :password_confirmation %>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>
