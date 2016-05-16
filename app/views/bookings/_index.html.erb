@@ -1,4 +1,4 @@
-<div class="comedian-signup-master-container">
+<div class="comedian-signup-master-container col-md-8 col-centered">
   <h1>Search Comedian Shows</h1>
   <br><br>
   <div class="comedian-signup-container">
@@ -8,7 +8,7 @@
         <!-- first form -->
         <%= form_tag '', :method => :get do %>
           <div class="horiz-flex-box">
-            <div class="input-group col-md-10">
+            <div class="input-group col-md-9">
               <span class="input-group-addon", id="basic-addon1">
                 <%= label_tag :name, "Comedian name" %>
               </span>
@@ -22,7 +22,7 @@
         <!-- second form -->
         <%= form_tag '', :method => :get do %>
           <div class="horiz-flex-box">
-            <div class="input-group col-md-10">
+            <div class="input-group col-md-9">
               <span class="input-group-addon", id="basic-addon1">
                 <%= label_tag :venue, "Venue" %>
               </span>
@@ -36,7 +36,7 @@
         <!-- third form -->
         <%= form_tag '', :method => :get do %>
           <div class="horiz-flex-box">
-            <div class="input-group col-md-10">
+            <div class="input-group col-md-9">
               <span class="input-group-addon", id="basic-addon1">
                 <%= label_tag :show_name, "Show Name" %>
               </span>
@@ -49,21 +49,41 @@
         <br>
       </div>
       <!-- end first form col -->
+      <!-- begin second form col -->
       <div class="col-md-6">
+        <!-- begin fourth form -->
         <%= form_tag '', :method => :get do %>
-          <%= label_tag :date, "Search by date" %>
-          <%= date_field_tag :date %>
+          <div class="horiz-flex-box">
+            <div class="input-group col-md-9">
+              <span class="input-group-addon", id="basic-addon1">
+                <%= label_tag :date, "Search by date" %>
+              </span>
+            <%= date_field_tag :date, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+          </div>
           <%= submit_tag 'Filter' %>
-        <% end %><br>
+          <% end %>
+        </div>
+        <!-- end fourth form -->
+        <br>
+        <!-- begin fifth form -->
         <%= form_tag '', :method => :get do %>
-          <%= label_tag :time, "Search by time" %>
-          <%= time_field_tag :time %>
+          <div class="horiz-flex-box">
+            <div class="input-group col-md-9">
+              <span class="input-group-addon", id="basic-addon1">
+                <%= label_tag :time, "Search by time" %>
+              </span>
+              <%= time_field_tag :time, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+            </div>
           <%= submit_tag 'Filter' %>
-        <% end %><br>
+          <% end %>
+        </div>
+        <!-- end fifth form -->
+        <br>
       </div>
-      <%= link_to "Start Over", root_path %>
+      <!-- end second form col -->
     </div>
   </div>
+  <%= link_to "Start Over", root_path %>
 </div>
   <table id="table-show" class="table table-hover table-bordered">
     <tr class="custom">
