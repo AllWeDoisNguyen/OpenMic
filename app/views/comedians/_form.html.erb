@@ -10,32 +10,44 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="col-md-6">
-    <div class="input-group">
-      <span><%= f.label :name, class: "input-group-addon" %></span>
-      <%= f.text_field :name, class: "form-control" %>
+  <div class="comedian-signup-container">
+    <div>
+      <div class="col-md-5">
+        <div class="input-group">
+          <span class="input-group-addon", id="basic-addon1"><%= f.label :name %></span>
+          <%= f.text_field :name, class: "form-control", 'aria-describedby':"basic-addon1" %>
+        </div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon", id="basic-addon1"><%= f.label :username %></span>
+          <%= f.text_field :username, class: "form-control", 'aria-describedby':"basic-addon1" %>
+        </div>
+        <br>
+        <div class="field">
+          <%= f.label :avatar %><br>
+          <%= f.file_field :avatar %>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="input-group">
+          <span class="input-group-addon", id="basic-addon1"><%= f.label :password %></span>
+          <%= f.password_field :password, class: "form-control", 'aria-describedby':"basic-addon1" %>
+        </div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon", id="basic-addon1"><%= f.label :password_confirmation %></span>
+          <%= f.password_field :password_confirmation, class: "form-control", 'aria-describedby':"basic-addon1" %>
+        </div>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :username %><br>
-      <%= f.text_field :username %>
+    <br>
+    <div class="actions">
+      <div>
+        <%= f.submit %>
+      </div>
+      <div>
+        <%= button_to 'Back', root_path %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :avatar %><br>
-      <%= f.file_field :avatar %>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="field">
-      <%= f.label :password %><br>
-      <%= f.password_field :password %>
-    </div>
-    <div class="field">
-      <%= f.label :password_confirmation %><br>
-      <%= f.password_field :password_confirmation %>
-    </div>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
   </div>
 <% end %>
