@@ -7,7 +7,6 @@ class Comedian < ActiveRecord::Base
 	validates :name, :username, :password_digest, presence: true
 	validates_length_of :bio, maximum: 160
 
-
 	def next_show
 		# self.shows.first
 		unless self.shows.first.nil?
