@@ -95,3 +95,12 @@ h1 {
   font-family: Verdana, Geneva, sans-serif !important;
   color: #8a6d3b !important;
 }
+
+.banner-filler {
+  padding-top: 50px;
+}
+
+.horiz-flex-box {
+  display:flex;
+  flex-direction: row;
+}
