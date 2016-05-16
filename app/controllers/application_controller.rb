@@ -34,6 +34,26 @@ class ApplicationController < ActionController::Base
     @booking = Booking.new
     @user = User.new
     @users = User.all
-  end
 
+    if params[:name]
+      @find_comedian = Comedian.find_by(name: params[:name])
+      @bookings = Booking.where(comedian_id: @find_comedian.id) 
+    end
+    if params[:venue]
+      @find_venue = Show.find_by(venue: params[:venue])
+      @bookings = Booking.where(show_id: @find_venue.id)
+    end
+    if params[:show_name]
+      @f_venue = Show.find_by(show_name: params[:show_name])
+      @bookings = Booking.where(show_id: @f_venue.id)
+    end
+    if params[:date]
+      @f_venue = Show.find_by(date: params[:date])
+      @bookings = Booking.where(show_id: @f_venue.id)
+    end 
+    if params[:time]
+      @f_venue = Show.find_by(time: params[:time])
+      @bookings = Booking.where(show_id: @f_venue.id)
+    end
+  end
 end
