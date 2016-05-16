@@ -1,47 +1,63 @@
 <div class="container">
   <h1>Search Comedian Shows</h1>
-    <table id="table-search" class="table">
-<%= form_tag '', :method => :get do %>
-  <%= label_tag :name, "Comedian name" %>
-  <%= text_field_tag :name %>
-  <%= submit_tag 'Filter' %>
-<% end %><br>
-<%= form_tag '', :method => :get do %>
-  <%= label_tag :venue, "Venue" %>
-  <%= text_field_tag :venue %>
-  <%= submit_tag 'Filter' %>
-<% end %><br>
-<%= form_tag '', :method => :get do %>
-  <%= label_tag :show_name, "Show Name" %>
-  <%= text_field_tag :show_name %>
-  <%= submit_tag 'Filter' %>
-<% end %><br>
-<%= form_tag '', :method => :get do %>
-  <%= label_tag :date, "Search by date" %>
-  <%= date_field_tag :date %>
-  <%= submit_tag 'Filter' %>
-<% end %><br>
-<%= form_tag '', :method => :get do %>
-  <%= label_tag :time, "Search by time" %>
-  <%= time_field_tag :time %>
-  <%= submit_tag 'Filter' %>
-<% end %><br>
+    <table id="table-search" class="table table-bordered">
+      <%= form_tag '', :method => :get do %>
+        <%= label_tag :name, "Comedian name" %>
+        <%= text_field_tag :name %>
+        <%= submit_tag 'Filter' %>
+      <% end %><br>
+      <%= form_tag '', :method => :get do %>
+        <%= label_tag :venue, "Venue" %>
+        <%= text_field_tag :venue %>
+        <%= submit_tag 'Filter' %>
+      <% end %><br>
+      <%= form_tag '', :method => :get do %>
+        <%= label_tag :show_name, "Show Name" %>
+        <%= text_field_tag :show_name %>
+        <%= submit_tag 'Filter' %>
+      <% end %><br>
+      <%= form_tag '', :method => :get do %>
+        <%= label_tag :date, "Search by date" %>
+        <%= date_field_tag :date %>
+        <%= submit_tag 'Filter' %>
+      <% end %><br>
+      <%= form_tag '', :method => :get do %>
+        <%= label_tag :time, "Search by time" %>
+        <%= time_field_tag :time %>
+        <%= submit_tag 'Filter' %>
+      <% end %><br>
 
-<%= link_to "Start Over", root_path %>
-<table id="table-show" class="table">
-  <tr class="custom">
-    <h2>Search Results</h2>
-  </tr>
-<% @bookings.each do |b| %>
-  <tr class="custom">
-    <td><%= image_tag b.comedian.avatar.url(:thumb)%></td>
-    <td><%= b.comedian.name %></td>
-    <td><%= b.show.venue %></td> 
-    <td><%= b.show.show_name %></td> 
-    <td><%= b.show.date %></td>
-    <td><%= b.show.time %></td>
-  </tr>
-<% end %>
-</table>
-</table>
+      <%= link_to "Start Over", root_path %>
+      <table id="table-show" class="table table-hover table-bordered">
+        <tr class="custom">
+          <h2>Search Results</h2>
+        </tr>
+        <thead>
+        <tr>
+          <th>Comedian</th>
+          <th>Show</th>
+        </tr>
+        </thead>
+      <% @bookings.each do |b| %>
+        <tbody>
+        <tr>
+          <td>
+          <ul class="list-unstyled">    
+          <li><%= image_tag b.comedian.avatar.url(:thumb)%></li>
+              <li><%= b.comedian.name %></li> 
+          </ul></td>    
+          <td><ul class="list-unstyled">
+              <li>Event Name:<%= b.show.show_name %></li>
+              <li>Show Venue:<%= b.show.venue %></li>
+              <li>Show Date:<%= b.show.date %></li>
+              <li>Show Time:<%= b.show.time %></li>
+              </ul>
+          </td>
+        </tr>  
+      </tbody>
+      <% end %>
+      </table>
+    </table>
 </div>
+
+
