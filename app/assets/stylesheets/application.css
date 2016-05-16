@@ -62,3 +62,29 @@ h3 {
   font-weight: bold;
   text-decoration: none;
 }
+
+#comedian_avatar {
+  display: inline-block;
+}
+
+.col-centered {
+  float: none !important;
+  margin: 0 auto !important;
+}
+
+.comedian-signup-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.comedian-signup-master-container {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  padding: 50px 20px !important;
+  border-radius: 10pt;
+}
+
+h1 {
+  font-family: Verdana, Geneva, sans-serif !important;
+  color: #8a6d3b !important;
+}
