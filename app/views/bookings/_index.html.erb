@@ -1,63 +1,99 @@
-<div class="container">
+<div class="comedian-signup-master-container">
   <h1>Search Comedian Shows</h1>
-    <table id="table-search" class="table table-bordered">
-      <%= form_tag '', :method => :get do %>
-        <%= label_tag :name, "Comedian name" %>
-        <%= text_field_tag :name %>
-        <%= submit_tag 'Filter' %>
-      <% end %><br>
-      <%= form_tag '', :method => :get do %>
-        <%= label_tag :venue, "Venue" %>
-        <%= text_field_tag :venue %>
-        <%= submit_tag 'Filter' %>
-      <% end %><br>
-      <%= form_tag '', :method => :get do %>
-        <%= label_tag :show_name, "Show Name" %>
-        <%= text_field_tag :show_name %>
-        <%= submit_tag 'Filter' %>
-      <% end %><br>
-      <%= form_tag '', :method => :get do %>
-        <%= label_tag :date, "Search by date" %>
-        <%= date_field_tag :date %>
-        <%= submit_tag 'Filter' %>
-      <% end %><br>
-      <%= form_tag '', :method => :get do %>
-        <%= label_tag :time, "Search by time" %>
-        <%= time_field_tag :time %>
-        <%= submit_tag 'Filter' %>
-      <% end %><br>
-
+  <br><br>
+  <div class="comedian-signup-container">
+    <div>
+      <!-- first form col -->
+      <div class="col-md-6">
+        <!-- first form -->
+        <%= form_tag '', :method => :get do %>
+          <div class="horiz-flex-box">
+            <div class="input-group col-md-10">
+              <span class="input-group-addon", id="basic-addon1">
+                <%= label_tag :name, "Comedian name" %>
+              </span>
+            <%= text_field_tag :name, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+            </div>
+          <%= submit_tag 'Filter' %>
+          <% end %>
+        </div>
+        <!-- end first form -->
+        <br>
+        <!-- second form -->
+        <%= form_tag '', :method => :get do %>
+          <div class="horiz-flex-box">
+            <div class="input-group col-md-10">
+              <span class="input-group-addon", id="basic-addon1">
+                <%= label_tag :venue, "Venue" %>
+              </span>
+            <%= text_field_tag :venue, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+            </div>
+          <%= submit_tag 'Filter' %>
+          <% end %>
+        </div>
+        <!-- end second form -->
+        <br>
+        <!-- third form -->
+        <%= form_tag '', :method => :get do %>
+          <div class="horiz-flex-box">
+            <div class="input-group col-md-10">
+              <span class="input-group-addon", id="basic-addon1">
+                <%= label_tag :show_name, "Show Name" %>
+              </span>
+            <%= text_field_tag :show_name, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+            </div>
+          <%= submit_tag 'Filter' %>
+          <% end %>
+        </div>
+        <!-- end third form -->
+        <br>
+      </div>
+      <!-- end first form col -->
+      <div class="col-md-6">
+        <%= form_tag '', :method => :get do %>
+          <%= label_tag :date, "Search by date" %>
+          <%= date_field_tag :date %>
+          <%= submit_tag 'Filter' %>
+        <% end %><br>
+        <%= form_tag '', :method => :get do %>
+          <%= label_tag :time, "Search by time" %>
+          <%= time_field_tag :time %>
+          <%= submit_tag 'Filter' %>
+        <% end %><br>
+      </div>
       <%= link_to "Start Over", root_path %>
-      <table id="table-show" class="table table-hover table-bordered">
-        <tr class="custom">
-          <h2>Search Results</h2>
-        </tr>
-        <thead>
-        <tr class="custom">
-          <th>Comedian</th>
-          <th>Show</th>
-        </tr>
-        </thead>
-      <% @bookings.each do |b| %>
-        <tbody>
+    </div>
+  </div>
+</div>
+  <table id="table-show" class="table table-hover table-bordered">
+    <tr class="custom">
+      <h2>Search Results</h2>
+    </tr>
+    <thead>
+    <tr>
+      <th>Comedian</th>
+      <th>Show</th>
+    </tr>
+    </thead>
+    <% @bookings.each do |b| %>
+      <tbody>
         <tr>
           <td>
-          <ul class="list-unstyled">    
-          <li><%= image_tag b.comedian.avatar.url(:thumb)%></li>
-              <li><%= b.comedian.name %></li> 
-          </ul></td>    
-          <td><ul class="list-unstyled">
+            <ul class="list-unstyled">
+              <li><%= image_tag b.comedian.avatar.url(:thumb)%></li>
+              <li><%= b.comedian.name %></li>
+            </ul>
+          </td>
+          <td>
+            <ul class="list-unstyled">
               <li>Event Name:<%= b.show.show_name %></li>
               <li>Show Venue:<%= b.show.venue %></li>
               <li>Show Date:<%= b.show.date %></li>
               <li>Show Time:<%= b.show.time %></li>
-              </ul>
+            </ul>
           </td>
-        </tr>  
+        </tr>
       </tbody>
-      <% end %>
-      </table>
-    </table>
+    <% end %>
+  </table>
 </div>
-
-

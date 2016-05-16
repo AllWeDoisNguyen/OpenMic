@@ -12,7 +12,7 @@
   <% end %>
   <div class="comedian-signup-container">
     <div>
-      <div class="col-md-5">
+      <div class="col-md-6">
         <div class="input-group">
           <span class="input-group-addon", id="basic-addon1"><%= f.label :name %></span>
           <%= f.text_field :name, class: "form-control", 'aria-describedby':"basic-addon1" %>
@@ -28,7 +28,7 @@
           <%= f.file_field :avatar %>
         </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-6">
         <div class="input-group">
           <span class="input-group-addon", id="basic-addon1"><%= f.label :password %></span>
           <%= f.password_field :password, class: "form-control", 'aria-describedby':"basic-addon1" %>
@@ -41,7 +41,7 @@
       </div>
     </div>
     <br>
-    <div class="actions">
+    <div class="actions submit-and-back-buttons-container">
       <div>
         <%= f.submit %>
       </div>

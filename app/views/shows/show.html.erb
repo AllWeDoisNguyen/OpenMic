@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="banner-filler"></div>
 <p>
   <strong>Name:</strong>
   <%= @show.show_name %>
@@ -7,19 +7,7 @@
 
 <p>
   <strong>Venue:</strong>
-  <%= @show.venue %>
-</p>
-
-<p>
-  <strong>Venue website:</strong>
-  <%= @show.venue_website %>
-</p>
-
-<p>
-  <strong>Booked comedians:</strong>
-  <% @show.bookings.each do |x| %>
-    <%= link_to x.comedian.name, x.comedian %>
-  <% end %>
+  <%= link_to @show.venue, @show.venue_website %>
 </p>
 
 <p>
@@ -30,6 +18,13 @@
 <p>
   <strong>Time:</strong>
   <%= @show.time %>
+</p>
+
+<p>
+  <strong>Booked comedians:</strong>
+  <% @show.bookings.each do |x| %>
+    <%= link_to x.comedian.name, x.comedian %>
+  <% end %>
 </p>
 
 <%= render 'bookings/form' %>

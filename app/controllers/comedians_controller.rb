@@ -8,6 +8,7 @@ class ComediansController < ApplicationController
   # GET /comedians.json
   def index
     @comedians = Comedian.all
+    @bookings = Booking.all
   end
 
   # GET /comedians/1

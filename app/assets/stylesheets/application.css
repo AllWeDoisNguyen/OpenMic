@@ -84,7 +84,23 @@ h3 {
   border-radius: 10pt;
 }
 
+.submit-and-back-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 35%;
+}
+
 h1 {
   font-family: Verdana, Geneva, sans-serif !important;
   color: #8a6d3b !important;
+}
+
+.banner-filler {
+  padding-top: 50px;
+}
+
+.horiz-flex-box {
+  display:flex;
+  flex-direction: row;
 }

@@ -1,9 +1,13 @@
+<div class="banner-filler"></div>
 <p id="notice"><%= notice %></p>
 <p id="notice"><%= flash[:notice_login] %></p>
 
 <h1>Listing Comedians</h1>
 
-<table>
+<%= render 'bookings/index' %>
+
+<h1> O R I G I N A L  D A T A</h1>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Avatar</th>
