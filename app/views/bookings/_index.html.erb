@@ -1,4 +1,6 @@
-
+<div class="container">
+  <h1>Search Comedian Shows</h1>
+    <table id="table-search" class="table">
 <%= form_tag '', :method => :get do %>
   <%= label_tag :name, "Comedian name" %>
   <%= text_field_tag :name %>
@@ -26,12 +28,13 @@
 <% end %><br>
 
 <%= link_to "Start Over", root_path %>
-<table>
+<table id="table-show" class="table">
   <tr class="custom">
-    <th>Shows</th>
+    <h2>Search Results</h2>
   </tr>
 <% @bookings.each do |b| %>
   <tr class="custom">
+    <td><%= image_tag b.comedian.avatar.url(:thumb)%></td>
     <td><%= b.comedian.name %></td>
     <td><%= b.show.venue %></td> 
     <td><%= b.show.show_name %></td> 
@@ -40,3 +43,5 @@
   </tr>
 <% end %>
 </table>
+</table>
+</div>
