@@ -64,7 +64,7 @@
                   <div class="panel-heading"><h4><%= link_to x.name, x, class: "comedian-table-link" %></h4>
                   </div>
                     <div class="panel-body"><%= link_to image_tag(x.avatar.url(:medium), class: "img-rounded img-responsive img-center"), x %>
-                      <% unless x.next_show_name.nil? %>
+                      <% unless x.next_show_name.nil? || x.next_show.date.nil? %>
                         <%= link_to x.next_show_name, x.next_show %>
                       <% end %>
                       <%= x.bio %>
