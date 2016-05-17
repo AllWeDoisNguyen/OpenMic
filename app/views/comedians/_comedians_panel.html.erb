@@ -1,0 +1,34 @@
+<div class="group-panel">
+  <div class="container-fluid">
+    <div class="row">
+      <% @comedians.each do |x| %>
+      <!-- Filler box beginning -->
+      <div class="col-xs-4 col-lg-2 comedian-panel-container-outer comedian-hover-box">
+        <div class="panel-body comedian-filler-box" style="display:none;"></div>
+        <div class="panel-body comedian-panel-container-body">
+          <%= link_to image_tag(x.avatar.url(:medium), class: "img-rounded img-responsive img-center"), x %>
+          <h4><%= link_to x.name, x, class: "comedian-table-link" %></h4>
+          <h4>Rating Goes Here</h4>
+          <% unless x.show.nil? || x.next_show_name.nil? || x.next_show.date.nil? %>
+            <%= link_to x.next_show_name, x.next_show %>
+          <% end %>
+        </div>
+      </div>
+      <!-- Filler box end -->
+      <!-- Real box beginning -->
+          <div class="col-xs-4 col-lg-2 comedian-panel-container-outer comedian-hover-box">
+            <div class="panel-body comedian-filler-box" style="display:none;"></div>
+            <div class="panel-body comedian-panel-container-body">
+              <%= link_to image_tag(x.avatar.url(:medium), class: "img-rounded img-responsive img-center"), x %>
+              <h4><%= link_to x.name, x, class: "comedian-table-link" %></h4>
+              <h4>Rating Goes Here</h4>
+              <% unless x.show.nil? || x.next_show_name.nil? || x.next_show.date.nil? %>
+                <%= link_to x.next_show_name, x.next_show %>
+              <% end %>
+            </div>
+          </div>
+          <!-- Real box beginning -->
+      <% end %>
+    </div>
+  </div>
+</div>

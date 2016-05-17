@@ -10,10 +10,12 @@ Rails.application.routes.draw do
   get '/bookings/add_comedian' => 'bookings#create', as: :create_booking
 
 
-  resources :users 
-  resources :comedians 
+  resources :users
+  resources :comedians
   resources :sessions
   resources :bookings
+
+  get '/test' => 'application#testing_view'
 
 
 

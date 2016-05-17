@@ -25,6 +25,10 @@ class ApplicationController < ActionController::Base
   	return redirect_to root_path
   end
 
+  def testing_view
+    @comedians = Comedian.all
+  end
+
   def homepage
     @comedians = Comedian.all.sample(6)
     @comedian = Comedian.new
@@ -37,7 +41,7 @@ class ApplicationController < ActionController::Base
 
     if params[:name]
       @find_comedian = Comedian.find_by(name: params[:name])
-      @bookings = Booking.where(comedian_id: @find_comedian.id) 
+      @bookings = Booking.where(comedian_id: @find_comedian.id)
     end
     if params[:venue]
       @find_venue = Show.find_by(venue: params[:venue])
@@ -50,7 +54,7 @@ class ApplicationController < ActionController::Base
     if params[:date]
       @f_venue = Show.find_by(date: params[:date])
       @bookings = Booking.where(show_id: @f_venue.id)
-    end 
+    end
     if params[:time]
       @f_venue = Show.find_by(time: params[:time])
       @bookings = Booking.where(show_id: @f_venue.id)

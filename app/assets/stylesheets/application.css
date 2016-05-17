@@ -14,6 +14,42 @@
  *= require_self
  */
 
+ /* Beginning of css for panels*/
+
+
+ .user-row {
+     margin-bottom: 14px;
+ }
+
+ .user-row:last-child {
+     margin-bottom: 0;
+ }
+
+ .dropdown-user {
+     margin: 13px 0;
+     padding: 5px;
+     height: 100%;
+ }
+
+ .dropdown-user:hover {
+     cursor: pointer;
+ }
+
+ .table-user-information > tbody > tr {
+     border-top: 1px solid rgb(221, 221, 221);
+ }
+
+ .table-user-information > tbody > tr:first-child {
+     border-top: 0;
+ }
+
+
+ .table-user-information > tbody > tr > td {
+     border-top: 0;
+ }
+
+/* End of css for panels*/
+
 .fa-microphone {
   font-size: 25pt;
 }
@@ -128,3 +164,82 @@ hr.jumbo {
       -o-border-radius: 5px;
       border-radius: 5px;
 }
+
+/* New Comedian Panels Beginning */
+.comedian-panel-container-outer {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  padding: 0 !important;
+  margin: 10px !important;
+  transition: width 2s, max-height 2s, min-height 2s;
+}
+
+.comedian-panel-container-outer-hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  padding: 0 !important;
+  margin: 10px !important;
+  position: relative !important;
+  transition: width 2s, max-height 2s, min-height 2s;
+
+}
+
+.comedian-panel-container-inner {
+  transition: width 2s, max-height 2s, min-height 2s;
+}
+
+.comedian-panel-container-inner-hover {
+  transition: width 2s, max-height 2s, min-height 2s;
+}
+
+.comedian-panel-container-body {
+  min-height: 375px;
+  max-height: 375px;
+  height: 375px;
+  transition: width 2s, max-height 2s, min-height 2s;
+
+}
+
+.comedian-panel-container-body-hover {
+  min-height: 500px;
+  max-height: 500px;
+  height: 500px;
+  transition: width 2s, max-height 2s, min-height 2s;
+
+}
+
+.comedian-filler-box-body {
+  min-height: 375px;
+  max-height: 375px;
+  height: 375px;
+  display: none;
+  transition: width 2s, max-height 2s, min-height 2s;
+  display: none;
+}
+
+.comedian-filler-box-body-hover {
+ min-height: 375px;
+ max-height: 375px;
+ height: 375px;
+ display: block;
+}
+
+.comedian-filler-box-outer {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  padding: 0 !important;
+  margin: 10px !important;
+  transition: width 2s, max-height 2s, min-height 2s;
+  display:none;
+}
+
+.comedian-filler-box-outer-hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  padding: 0 !important;
+  margin: 10px !important;
+  transition: width 2s, max-height 2s, min-height 2s;
+  display: block;
+}
+
+/* New Comedian Panels End */
