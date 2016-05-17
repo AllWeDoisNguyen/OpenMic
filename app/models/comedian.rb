@@ -18,7 +18,11 @@ class Comedian < ActiveRecord::Base
 	# end
 
 	def next_show
-		self.shows.sort_by(&:date).reverse.first
+		if self.nil?
+			""
+		else
+			self.shows.sort_by(&:date).reverse.first
+		end
 	end
 
 	def next_show_name
