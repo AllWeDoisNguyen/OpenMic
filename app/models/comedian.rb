@@ -7,20 +7,26 @@ class Comedian < ActiveRecord::Base
 	validates :name, :username, :password_digest, presence: true
 	validates_length_of :bio, maximum: 160
 
+	# Old Method
+	# def next_show
+	# 	@next_show = self.shows.first
+	# 	unless @next_show.nil?
+	# 		@next_show
+	# 	else
+	# 		""
+	# 	end
+	# end
+
 	def next_show
-		# self.shows.first
-		unless self.shows.first.nil?
-			self.shows.first
+		self.shows.sort_by(&:date).reverse.first
+	end
+
+	def next_show_name
+		unless self.next_show.nil?
+			self.next_show.show_name
 		else
 			""
 		end
 	end
 
-	def next_show_name
-		unless self.shows.first.nil?
-			self.shows.first.show_name
-		else
-			""
-		end
-	end
 end

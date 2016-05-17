@@ -83,16 +83,18 @@
       <!-- end second form col -->
     </div>
   </div>
-  <%= link_to "Start Over", root_path %>
+  <%= button_to "Start Over", root_path %>
 </div>
-  <table id="table-show" class="table table-hover table-bordered">
+<!-- Comedian Table starts here -->
+<div class="container col-centered table-responsive" id="comedians-list-table-container">
+  <table id="table-show" class="table table-hover">
     <tr class="custom">
       <h2>Search Results</h2>
     </tr>
     <thead>
-    <tr>
+    <tr class="warning">
       <th>Comedian</th>
-      <th>Show</th>
+      <th>Upcoming Show</th>
     </tr>
     </thead>
     <% @bookings.each do |b| %>
@@ -100,8 +102,8 @@
         <tr>
           <td>
             <ul class="list-unstyled">
-              <li><%= image_tag b.comedian.avatar.url(:thumb)%></li>
-              <li><%= b.comedian.name %></li>
+              <li class="centered-list-item"><%= image_tag b.comedian.avatar.url(:thumb)%></li>
+              <li class="centered-list-item"><%= b.comedian.name %></li>
             </ul>
           </td>
           <td>

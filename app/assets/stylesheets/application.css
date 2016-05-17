@@ -104,3 +104,11 @@ h1 {
   display:flex;
   flex-direction: row;
 }
+
+.list-unstyled {
+  text-align: left;
+}
+
+li.centered-list-item {
+  text-align: center;
+}
