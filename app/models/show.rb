@@ -5,4 +5,5 @@ class Show < ActiveRecord::Base
 	belongs_to :owner, class_name: "User", foreign_key: "user_id"
 	belongs_to :owner, class_name: "Comedian", foreign_key: "comedian_id"
 	accepts_nested_attributes_for :bookings
+	validates :date, presence: true
 end
