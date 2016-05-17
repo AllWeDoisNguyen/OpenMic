@@ -11,54 +11,55 @@
     </header>
 
     <!-- Page Content -->
-    <!-- in nav navbar-nav right, <li class="active">
-        <a class="page-scroll" href="#services">Purpose</a></li>
-        -->
-    <div class="jumbotron text-center">
-      <section id="services">
+    <section id="services">
+      <div class="jumbotron text-center">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">The Social Network Connecting the Community to Laughter</h2>
-              <hr class="primary"></hr>
+            <h1 class="section-heading">Connecting the community through laughter</h1>
+              <hr class="jumbo">
           </div>
         </div>
           <div class="container">
             <div class="row">
               <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
+                  <i class="fa fa-comments" style="font-size:48px;color:#ac1c35"></i>
                   <h3>Local Comedians</h3>
                   <p class="text-muted">Real people, User driven ratings</p>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
-                  <h3>Local Comedians</h3>
+                  <i class="fa fa-sitemap" style="font-size:48px;color:#ac1c35"></i>
+                  <h3>A Social Network</h3>
                    <p class="text-muted">Real people, User driven ratings</p>
                 </div>
               </div> 
               <div class="col-lg-3 col-md-6 text-center">
                   <div class="service-box">
+                    <i class="fa fa-user-plus" style="font-size:48px;color:#ac1c35"></i>
                     <h3>Local Comedians</h3>
                     <p class="text-muted">Real people, User driven ratings</p>
                   </div>
               </div> 
               <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
+                  <i class="fa fa-line-chart" style="font-size:48px;color:#ac1c35"></i>
                   <h3>Local Comedians</h3>
                   <p class="text-muted">Real people, User driven ratings</p>
                 </div>
               </div> 
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
 
 
-        <hr>
-      <div class="container">
+    <div class="group-panel">  
+      <div class="container-fluid">
         <div class="row">
           <% @comedians.each do |x| %>
-              <div class="col-xs-4">
+              <div class="col-xs-4 col-lg-3">
                 <div id="panel" class="panel panel-warning">
                   <div class="panel-heading"><h4><%= link_to x.name, x, class: "comedian-table-link" %></h4>
                   </div>
@@ -71,6 +72,7 @@
           <% end %>
         </div>
       </div>
+    </div>  
         <!-- /.row -->
 
         <hr>
