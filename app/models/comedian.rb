@@ -17,6 +17,11 @@ class Comedian < ActiveRecord::Base
 	# 	end
 	# end
 
+	def show
+		@comedian = self 
+		@show = @comedian.bookings.find_by(show_id: @comedian.id)
+	end
+
 	def next_show
 		if self.nil?
 			""
