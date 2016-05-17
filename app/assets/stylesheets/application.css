@@ -104,28 +104,30 @@ h1 {
   display:flex;
   flex-direction: row;
 }
+
+.list-unstyled {
+  text-align: left;
+}
+
+li.centered-list-item {
+  text-align: center;
+}
+
 .section-heading {
   font-family: Verdana, Geneva, sans-serif !important;
   color: #656565 !important;
 }
 hr.jumbo {
-    width: 6%; 
-
+    width: 6%;
     height: 10px;
-
     border: 1;
-
     box-shadow: inset 0 9px 9px -3px #ac1c35;
-
       -webkit-border-radius: 5px;
-
       -moz-border-radius: 5px;
-
       -ms-border-radius: 5px;
-
       -o-border-radius: 5px;
-
       border-radius: 5px;
+<<<<<<< HEAD
 
 }
 .well {
@@ -133,3 +135,6 @@ hr.jumbo {
   background-color: #f6d258;
   height: 100px;
 }
+=======
+}
+>>>>>>> 3df70a490cbcd93ed992b91720211422c65931b1
