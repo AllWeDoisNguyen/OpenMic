@@ -128,3 +128,8 @@ hr.jumbo {
       border-radius: 5px;
 
 }
+.well {
+  color: #fff
+  background-color: #f6d258;
+  height: 100px;
+}
