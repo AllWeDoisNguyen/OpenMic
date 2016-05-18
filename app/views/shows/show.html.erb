@@ -26,6 +26,14 @@
   <% end %>
 </p>
 
+<div class = "gmaps_iframe"><iframe
+  width="350"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBvc3cf9rMc8McjqK3mVH2OCzrZndlyahg&q=<%= @show.address %>,<%= @show.city %>,<%= @show.state %>" allowfullscreen>
+</iframe></div>
+
+
 <%= render 'bookings/form' %>
 
 <%= link_to 'Edit', edit_show_path(@show) %> |

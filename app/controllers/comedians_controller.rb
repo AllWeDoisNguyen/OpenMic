@@ -33,7 +33,6 @@ class ComediansController < ApplicationController
   # POST /comedians.json
   def create
     @comedian = Comedian.new(comedian_params)
-
     respond_to do |format|
       if @comedian.save
         format.html { redirect_to @comedian, notice: 'Comedian was successfully created.' }
