@@ -17,8 +17,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li>
-        <a class="page-scroll" href="#services">Purpose</a></li>
+        <% if current_page?('/') %>
+          <li><a class="page-scroll" href="#services">Purpose</a></li>
+        <% end %>
         <li><a href="/comedians">Comedians</a></li>
         <li><a href="/shows">Shows</a></li>
         <li><a href="/shows/new">Create A Show</a></li>
