@@ -141,6 +141,15 @@ h1 {
   flex-direction: row;
 }
 
+.vert-flex-box {
+  display:flex;
+  flex-direction: column;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
 .list-unstyled {
   text-align: left;
 }
@@ -197,7 +206,7 @@ hr.jumbo {
   max-height: 375px;
   height: 375px;
   transition: width 2s, max-height 2s, min-height 2s;
-
+  text-align: center;
 }
 
 .comedian-panel-container-body-hover {
@@ -205,7 +214,20 @@ hr.jumbo {
   max-height: 500px;
   height: 500px;
   transition: width 2s, max-height 2s, min-height 2s;
+}
 
+.comedian-panel-body-line {
+  display: inline;
+  flex-direction: row;
+  justify-content: flex-start;
+  transition: display 2s, flex-direction 2s, justify-content 2s;
+}
+
+.comedian-panel-body-line-hover {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  transition: display 2s, flex-direction 2s, justify-content 2s;
 }
 
 .comedian-filler-box-body {
@@ -241,5 +263,20 @@ hr.jumbo {
   transition: width 2s, max-height 2s, min-height 2s;
   display: block;
 }
+
+.hidden {
+  display: none;
+  transition: display 2s;
+  transition-delay: 2s;
+}
+
+.was-hidden {
+  transition: display 2s;
+  transition-delay: 2s;
+}
+
+/*.comedian-panel-bottom {
+  align-self: baseline;
+}*/
 
 /* New Comedian Panels End */
