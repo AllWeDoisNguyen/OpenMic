@@ -25,6 +25,10 @@ class ComediansController < ApplicationController
   def edit
   end
 
+  def testing_view
+    @comedians = Comedian.all
+  end
+
   # POST /comedians
   # POST /comedians.json
   def create

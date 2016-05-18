@@ -23,7 +23,7 @@ div {
 .coralbg {
     padding: 2em;
     background-color: #f6d258; /*FA396F is now yellow*/
-} 
+}
 
 .coral {
     color: #c34946;/*lighter red*/
@@ -141,7 +141,7 @@ div.user-menu div.user-menu-content:not(.active){
 .btn-label {
 	position: relative;
 	left: -9px;
-	display: 
+	display:
 	inline-block;
 	padding: 6px 12px;
 	background: rgba(0,0,0,0.15); /*#fff*/
@@ -193,7 +193,7 @@ div.user-menu div.user-menu-content:not(.active){
     margin-top: 20px;
     margin-bottom: 0;
 }
- 
+
 .caption {
     position:absolute;
     top:0;
@@ -240,6 +240,14 @@ div.user-menu div.user-menu-content:not(.active){
 
 .square, .btn {
     border-radius: 0px!important;
+}
+
+col.comedian-1 {
+  width: 30%;
+}
+
+col.comedian-2 {
+  width: 70%;
 }
 
 /* -- media query for user profile image -- */

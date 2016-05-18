@@ -1,0 +1,59 @@
+<div class="group-panel">
+  <div class="container-fluid">
+    <div class="row">
+      <% counter = 1 %>
+      <% @comedians.each do |x| %>
+        <% if (counter + 3) % 4 == 0 %>
+          <div class="horiz-flex-box space-around">
+        <% end %>
+      <!-- Real box beginning -->
+          <div class="col-xs-4 col-lg-2 comedian-panel-container-outer
+                      comedian-hover-box">
+            <!-- <div class="panel-body comedian-filler-box" style="display:none;"></div> -->
+            <div class="panel-body comedian-panel-container-body">
+              <div class="vert-flex-box">
+              <div class="horiz-flex-box">
+                <div class="vert-flex-box col-lg-12">
+                <%= link_to image_tag(x.avatar.url(:medium),
+                    class: "img-rounded img-responsive img-left"), x %>
+              <div class="comedian-panel-body-line"><h4><%= link_to x.name, x, class: "comedian-table-link" %></h4></div>
+              <div class="comedian-panel-body-line"><h4>Rating Goes Here</h4></div>
+              <% unless x.show.nil? || x.next_show_name.nil? || x.next_show.date.nil? %>
+                <div class="comedian-panel-body-line"><%= link_to x.next_show_name, x.next_show %></div>
+              <% end %>
+              <div class="comedian-panel-body-line hidden"><h4>Bio goes here</h4><%= x.bio %></div>
+            </div>
+              <div class="vert-flex-box col-lg-12 hidden">
+                <h4>Posts</h4>
+                <div>Post1</div>
+                <div>Post2</div>
+                <div>Post3</div>
+                <div>Post4</div>
+            </div>
+          </div>
+          <div class="horiz-flex-box space-around hidden comedian-panel-bottom">
+              <div>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                @exampleHandle
+              </div>
+              <div>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                example@email.com
+              </div>
+              <div>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                (305) 555-5555
+              </div>
+          </div>
+        </div>
+            </div>
+          </div>
+        <% if counter % 4 == 0 %>
+          </div>
+        <% end %>
+        <% counter += 1 %>
+          <!-- Real box end -->
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -15,7 +15,9 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h1 class="section-heading">Connecting the community through laughter</h1>
-              <hr class="jumbo">
+            <br><br>
+            <hr class="jumbo">
+            <br><br><br><br>
           </div>
         </div>
           <div class="container">
@@ -51,10 +53,13 @@
           </div>
         </div>
       </section>
-<!-- Comedian carousel -->
 
 <!-- Comedian panels -->
-    <div class="group-panel">
+
+<%= render 'comedians/comedians_panel' %>
+
+<!-- Old Comedian panels -->
+    <!-- <div class="group-panel">
       <div class="container-fluid">
         <div class="row">
           <% @comedians.each do |x| %>
@@ -73,30 +78,30 @@
           <% end %>
         </div>
       </div>
-    </div>
+    </div> -->
         <!-- /.row -->
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
-
     </div>
     <!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="javascripts/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="javascripts/bootstrap.min.js"></script>
 
 
 
 <%= render 'bookings/index' %>
+<!-- Footer -->
+<footer>
+  <div class="row">
+    <div class="col-lg-12">
+      <p>Copyright &copy; Your Website 2014</p>
+    </div>
+  </div>
+  <!-- /.row -->
+</footer>
+
+<!-- jQuery -->
+<script src="javascripts/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="javascripts/bootstrap.min.js"></script>

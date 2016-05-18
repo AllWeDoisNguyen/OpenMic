@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :shows
+  
   root 'application#homepage'
 
   get '/sessions/new_user/' => 'sessions#new_user', as: :new_user_session
@@ -11,11 +11,14 @@ Rails.application.routes.draw do
 
 
   resources :users 
+  resources :sessions
+  resources :bookings
+  resources :shows
   resources :comedians do
     resources :reviews
   end
-  resources :sessions
-  resources :bookings
+
+  get '/test' => 'application#testing_view'
 
 
 
