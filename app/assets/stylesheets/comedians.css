@@ -82,7 +82,7 @@ div.user-menu-container .btn-group-vertical {
 }
 
 div.user-menu-container .btn-group-vertical>a {
-    padding: 1.9em 1.50em;
+    padding: 2.8em 1.70em;
     background-color: #f6d258;
     color: white;
     border-color: #f4ecd6;
@@ -167,7 +167,7 @@ div.user-menu div.user-menu-content:not(.active){
 }
 
 .user-image {
-  max-height:200px;
+  max-height:300px;
   overflow:hidden;
 }
 
@@ -248,6 +248,16 @@ col.comedian-1 {
 
 col.comedian-2 {
   width: 70%;
+}
+
+.com-prof-button {
+  max-height: 25%;
+  min-height: 25%;
+}
+
+.vert-button-container {
+  position: absolute;
+  height: 100%;
 }
 
 /* -- media query for user profile image -- */

@@ -1,4 +1,4 @@
-<link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">  
+<link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
 <div class="container">
     <div class="row user-menu-container square">
         <div class="col-md-7 user-details">
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-md-6 no-pad">
                     <div class="user-image">
-                        <img alt="comedian avatar" src="<%= @comedian.avatar.url %>" class="img-responsive thumbnail">
+                        <%= image_tag @comedian.avatar.url(:medium) %>
                     </div>
                 </div>
             </div>
@@ -33,18 +33,18 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-1 user-menu-btns">
-            <div class="btn-group-vertical square" id="responsive">
-                <a href="#" class="btn btn-block btn-default active">
+        <div class="col-md-1 user-menu-btns vert-button-container">
+            <div class="btn-group-vertical square vert-button-container" id="responsive">
+                <a href="#" class="btn btn-block btn-default com-prof-button active">
                   <i class="fa fa-bell-o fa-3x"></i>
                 </a>
-                <a href="#" class="btn btn-default">
+                <a href="#" class="btn btn-default com-prof-button">
                   <i class="fa fa-envelope-o fa-3x"></i>
                 </a>
-                <a href="#" class="btn btn-default">
+                <a href="#" class="btn btn-default com-prof-button">
                   <i class="fa fa-laptop fa-3x"></i>
                 </a>
-                <a href="#" class="btn btn-default">
+                <a href="#" class="btn btn-default com-prof-button">
                   <i class="fa fa-cloud-upload fa-3x"></i>
                 </a>
             </div>
@@ -152,7 +152,7 @@
 </div>
 <!-- <p id="notice">
 <%#notice %>
-    
+
 </p>
 <%#image_tag @comedian.avatar.url(:thumb)%>
 <p>
@@ -178,11 +178,11 @@
   <div class="col-md-1">
     <p id="notice"><%= flash[:notice_signin] %></p>
     <%= render @comedian.reviews %>
-    <div> 
+    <div>
       <%= link_to "Add Review", new_comedian_review_path(@comedian) %>
-    </div>  
+    </div>
   </div>
-</div>    
+</div>
 <script src="jquery.raty.js"></script>
 <script>
   $('.review-rating').raty({
