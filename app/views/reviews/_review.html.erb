@@ -1,11 +1,16 @@
-<div class="review-rating" data-score="<%= review.rating %>"></div>
-<p><%= review.comment %></p>
+<div class="vert-flex-box comment-individual">
+	<div class="review-rating" data-score="<%= review.rating %>"></div>
+		<div class="comment-body">
+			<p><%= review.comment %></p>
+		</div>
+	<% if current_user %>
 
-<% if current_user %>
+		<% if review.user_id == current_user.id %>
 
-	<% if review.user_id == current_user.id %>
-
-<%= link_to "Edit", edit_comedian_review_path(review.comedian, review) %>
-<%= link_to "Delete", comedian_review_path(review.comedian, review), method: :delete, date: {confirm: "Are you sure?" } %>
+			<div class="vert-flex list-unstyled">
+				<%= button_to "Edit", edit_comedian_review_path(review.comedian, review) %>
+				<%= button_to "Delete", comedian_review_path(review.comedian, review), method: :delete, date: {confirm: "Are you sure?" } %>
+			</div>
+		<% end %>
 	<% end %>
-<% end %>
+</div>
