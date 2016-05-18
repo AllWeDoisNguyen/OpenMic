@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
     @booking = Booking.new
     @user = User.new
     @users = User.all
-
+   
     if params[:name]
       @find_comedian = Comedian.find_by(name: params[:name])
       @bookings = Booking.where(comedian_id: @find_comedian.id)
