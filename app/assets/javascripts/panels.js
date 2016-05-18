@@ -1,4 +1,5 @@
-$(document).ready(function() {
+var comPanels;
+comPanels = function() {
   var timed_actions
   $('.comedian-hover-box').hover(function() {
     var comedianHoverBox = $(this)
@@ -45,5 +46,7 @@ $(document).ready(function() {
       .removeClass('col-lg-6');
     window.clearTimeout(timed_actions);
   });
+};
 
-});
+$(document).ready(comPanels);
+$(document).on('page:load', comPanels);
