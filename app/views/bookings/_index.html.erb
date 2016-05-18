@@ -1,3 +1,4 @@
+<!-- Search form for comedians and their shows -->
 <div class="comedian-signup-master-container col-md-8 col-centered">
   <h1>Search Comedian Shows</h1>
   <br><br>
@@ -6,7 +7,7 @@
       <!-- first form col -->
       <div class="col-md-6">
         <!-- first form -->
-        <%= form_tag '', :method => :get do %>
+        <%= form_tag '', :method => :get, :remote => true  do %>
           <div class="horiz-flex-box">
             <div class="input-group col-md-9">
               <span class="input-group-addon", id="basic-addon1">
@@ -66,7 +67,7 @@
         <!-- end fourth form -->
         <br>
         <!-- begin fifth form -->
-        <%= form_tag '', :method => :get do %>
+        <%= form_tag '', :method => :get, remote:true do %>
           <div class="horiz-flex-box">
             <div class="input-group col-md-9">
               <span class="input-group-addon", id="basic-addon1">

@@ -10,11 +10,6 @@ class ShowsController < ApplicationController
   # GET /shows/1
   # GET /shows/1.json
   def show
-    p "*" * 30
-    p 'show'
-    p params
-    p "*" * 30
-
     @comedians = Comedian.all
     @comedian = Comedian.new
     @shows = Show.all
@@ -26,11 +21,6 @@ class ShowsController < ApplicationController
 
   # GET /shows/new
   def new
-    p "*" * 30
-    p 'show'
-    p params
-    p "*" * 30
-
     @show = Show.new
     @booking = Booking.new
     @comedian = Comedian.new
@@ -97,7 +87,6 @@ class ShowsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def show_params
-      p params
       params.require(:show).permit(:venue, :venue_website, :date, :time)
     end
 
