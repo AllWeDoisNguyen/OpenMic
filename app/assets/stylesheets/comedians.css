@@ -21,6 +21,7 @@ div {
 
 /* -- color classes -- */
 .coralbg {
+    padding: 2em;
     background-color: #f6d258; /*FA396F is now yellow*/
 } 
 
@@ -53,7 +54,7 @@ div.user-menu-container {
 }
 
 div.user-menu-container .btn-lg {
-    padding: 0px 12px;
+    padding: 12px 12px;
 }
 
 div.user-menu-container h4 {
@@ -76,18 +77,19 @@ div.user-menu-container .thumbnail {
 
 /* -- Vertical Button Group -- */
 div.user-menu-container .btn-group-vertical {
+    padding: 0em 0em 0em 0em;
     display: block;
 }
 
 div.user-menu-container .btn-group-vertical>a {
-    padding: 20px 25px;
+    padding: 1.9em 1.50em;
     background-color: #f6d258;
     color: white;
     border-color: #f4ecd6;
 }
 
 div.btn-group-vertical>a:hover {
-    color: #fff;
+    color: #f6d258;
     border-color: #fff;
 }
 

@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
 
   resources :users 
-  resources :comedians 
+  resources :comedians do
+    resources :reviews
+  end
   resources :sessions
   resources :bookings
 
