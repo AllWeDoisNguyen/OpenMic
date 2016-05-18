@@ -16,6 +16,14 @@
 
  /* Beginning of css for panels*/
 
+ td ul a {
+   color: black !important;
+ }
+
+ td ul a:hover {
+   text-decoration: none !important;
+   font-weight: bold !important;
+ }
 
  .user-row {
      margin-bottom: 14px;
@@ -274,9 +282,5 @@ hr.jumbo {
   transition: display 2s;
   transition-delay: 2s;
 }
-
-/*.comedian-panel-bottom {
-  align-self: baseline;
-}*/
 
 /* New Comedian Panels End */
