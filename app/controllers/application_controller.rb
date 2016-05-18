@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
   end
 
   def testing_view
-    @comedians = Comedian.all
+    @comedian = Comedian.first
   end
 
   def homepage
