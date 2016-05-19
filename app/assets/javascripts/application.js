@@ -17,12 +17,15 @@
 //= require raty.min.js
 //= require jquery.raty.js
 
-$(document).on("ready", ready);
+$(document).on("click", ready);
 
 function ready() {
-	$('#comedians-list-table-container').on('ajax:success', searchShows);
+	$('#application-list').on('ajax:success', bookingsList);
 
-	function searchShows() {
+	function bookingsList() {
 		window.location.reload();
 	}
+}
+
+$('.search-filter-button').click(ready);
 }
