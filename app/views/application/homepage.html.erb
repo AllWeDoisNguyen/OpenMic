@@ -53,10 +53,18 @@
           </div>
         </div>
       </section>
+      <hr>
+
+    </div>
 
 <!-- Comedian panels -->
 
-<%= render 'comedians/comedians_panel' %>
+<%= render 'bookings/index' %>
+<% if @return_type == "com" %>
+  <%= render 'comedians/comedians_panel' %>
+<% elsif @return_type == "show" %>
+  <%= render 'shows/shows_panel' %>
+<% end %>
 
 <!-- Old Comedian panels -->
     <!-- <div class="group-panel">
@@ -81,15 +89,11 @@
     </div> -->
         <!-- /.row -->
 
-        <hr>
-
-    </div>
     <!-- /.container -->
 
 
 
 
-<%= render 'bookings/index' %>
 <!-- Footer -->
 <footer>
   <div class="row">

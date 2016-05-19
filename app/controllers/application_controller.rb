@@ -38,26 +38,37 @@ class ApplicationController < ActionController::Base
     @booking = Booking.new
     @user = User.new
     @users = User.all
-   
+    @return_type = nil
+
+
+    if params[:username]
+      @comedians = Comedian.where(username: params[:username])
+      @return_type = "com"
+    end
     if params[:name]
-      @find_comedian = Comedian.find_by(name: params[:name])
-      @bookings = Booking.where(comedian_id: @find_comedian.id)
+      @comedians = Comedian.where(name: params[:name])
+      @return_type = "com"
     end
     if params[:venue]
-      @find_venue = Show.find_by(venue: params[:venue])
-      @bookings = Booking.where(show_id: @find_venue.id)
+      @shows = Show.where(venue: params[:venue])
+      @return_type = "show"
     end
     if params[:show_name]
-      @f_venue = Show.find_by(show_name: params[:show_name])
-      @bookings = Booking.where(show_id: @f_venue.id)
+      @shows = Show.where(show_name: params[:show_name])
+      @return_type = "show"
     end
     if params[:date]
-      @f_venue = Show.find_by(date: params[:date])
-      @bookings = Booking.where(show_id: @f_venue.id)
+      @shows = Show.where(date: params[:date])
+      @return_type = "show"
     end
     if params[:time]
-      @f_venue = Show.find_by(time: params[:time])
-      @bookings = Booking.where(show_id: @f_venue.id)
+      @shows = Show.where(time: params[:time])
+      @return_type = "show"
     end
+
+    p "*" * 50
+    p @return_type
+    p "*" * 50
+
   end
 end

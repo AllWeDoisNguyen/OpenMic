@@ -9,6 +9,7 @@ class ComediansController < ApplicationController
   def index
     @comedians = Comedian.all
     @bookings = Booking.all
+    @shows = Show.all
   end
 
   # GET /comedians/1
