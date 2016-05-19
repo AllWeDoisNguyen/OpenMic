@@ -20,9 +20,5 @@
 $(document).on("ready", ready);
 
 function ready() {
-	$('#comedians-list-table-container').on('ajax:success', searchShows);
-
-	function searchShows() {
-		window.location.reload();
-	}
+	$("#mydiv").load(location.href + " #mydiv");
 }

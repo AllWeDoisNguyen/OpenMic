@@ -13,9 +13,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 no-pad">
-                    <div class="user-image">
-                        <%= image_tag @comedian.avatar.url(:medium) %>
-                    </div>
+                  <%= image_tag @comedian.avatar.url(:medium), height: "220", width: "220" %>
                 </div>
             </div>
             <div class="row overview">
