@@ -60,10 +60,10 @@
 <!-- Comedian panels -->
 
 <%= render 'bookings/index' %>
-<% if @return_type == "com" %>
-  <%= render 'comedians/comedians_panel' %>
-<% elsif @return_type == "show" %>
+<% if @return_type == "show" %>
   <%= render 'shows/shows_panel' %>
+<% else %>
+  <%= render 'comedians/comedians_panel' %>
 <% end %>
 
 <!-- Old Comedian panels -->

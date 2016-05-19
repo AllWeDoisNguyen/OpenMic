@@ -8,28 +8,27 @@
         <br>
         <!-- first form -->
         <%= form_tag '', :method => :get do %>
-          <div class="horiz-flex-box">
-            <div class="input-group col-md-9">
-              <span class="input-group-addon", id="basic-addon1">
-                <%= label_tag :username, "Comedian Username" %>
-              </span>
-            <%= text_field_tag :username, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
-            </div>
+        <div class="horiz-flex-box">
+          <div class="input-group col-md-9">
+            <span class="input-group-addon", id="basic-addon1">
+              <%= label_tag :name, "Comedian name" %>
+            </span>
+            <%= text_field_tag :name, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+          </div>
           <%= submit_tag 'Filter' %>
           <% end %>
         </div>
         <!-- end first form-->
         <br>
         <!-- second form -->
-
         <%= form_tag '', :method => :get do %>
-          <div class="horiz-flex-box">
-            <div class="input-group col-md-9">
-              <span class="input-group-addon", id="basic-addon1">
-                <%= label_tag :name, "Comedian name" %>
-              </span>
-            <%= text_field_tag :name, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
-            </div>
+        <div class="horiz-flex-box">
+          <div class="input-group col-md-9">
+            <span class="input-group-addon", id="basic-addon1">
+              <%= label_tag :username, "Comedian Username" %>
+            </span>
+            <%= text_field_tag :username, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+          </div>
           <%= submit_tag 'Filter' %>
           <% end %>
         </div>
