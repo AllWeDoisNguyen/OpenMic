@@ -7,8 +7,46 @@
                 </div>
             </div>
         </div>
+        <!-- libraries for image gallery -->
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+      <script type="text/javascript" src="jquery.jswipe-0.1.2.js"></script>
+        <!-- libraries for image gallery end-->
     </header>
 
+<!--image gallery start -->
+<body>
+ 
+  <button id="leftButton" onclick='moveLeft()'>&lt;</button>
+  <button id="rightButton" onclick='moveRight()'>&gt;</button>
+  <div id="galleryContainer" class="row container">
+    <div id="gallery" class="row">
+      <div id="gallery-image" class="container">
+      <img src="images/isaacnewtonjoke.jpg" alt="Stand-up joke about Isaac Newton" />
+      </div>
+      <div id="gallery-image" class="container">
+      <img src="images/luckycharm.jpg" alt="Luck Charms Joke" />
+      </div>
+      <div id="gallery-image" class="container">
+      <img src="images/mo.jpg" alt="Stand-up Comedy Joke" />
+      </div>
+      <div id="gallery-image" class="container">
+      <img src="images/musicfestivals.jpg" alt="Joke about Music Festivals" />
+      </div>
+      <div id="gallery-image" class="container">
+      <img src="images/nb5XNY3.jpg" alt="Stand-up Shot" />
+      </div>
+      <div id="gallery-image" class="container">
+      <img src="images/rayjoke.jpg" alt="Joke about movies" />
+      </div>
+ <!--     <img src="slides/StickSea.jpg" alt="Stick and Sea" />
+      <img src="slides/SeaweedGasmask.jpg" alt="Seaweed Gasmask" />
+      <img src="slides/Surfers.jpg" alt="Surfers" /> -->
+    </div>
+    <div id="caption">Photo Caption</div>
+    <div id="loading">Please wait...</div>
+  </div>
+ 
+<!--image gallery end -->
     <!-- Page Content -->
     <section id="services">
       <div class="jumbotron text-center">
@@ -56,6 +94,7 @@
       <hr>
 
     </div>
+  </body>
 
 <!-- Comedian panels -->
 
