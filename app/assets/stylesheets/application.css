@@ -58,16 +58,13 @@
 
 /* End of css for panels*/
 
-.fa-microphone {
-  font-size: 25pt;
-}
-
-body {
-  padding-top: 5px;
-}
-
 .navbar-brand {
-  padding: 1px !important;
+  padding: 2px 5px!important;
+  background-color: #9d9d9d  
+}
+.navbar-inverse .navbar-header .navbar-brand:hover {
+  padding: 2px 5px!important;
+  background-color: #9d9d9d  
 }
 
 html, body {
@@ -88,7 +85,7 @@ html, body {
 }
 
 ul.navbar-nav li a {
-  font-size: 14pt;
+  font-size: 15pt;
   font-family: Verdana, Geneva, sans-serif;
 }
 
