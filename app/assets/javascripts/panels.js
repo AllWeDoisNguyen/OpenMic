@@ -1,5 +1,4 @@
-var comPanels;
-comPanels = function() {
+var comPanels = function() {
   var timed_actions
   $('.comedian-hover-box').hover(function() {
     var comedianHoverBox = $(this)

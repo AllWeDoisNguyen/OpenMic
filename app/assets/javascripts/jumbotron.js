@@ -1,9 +1,12 @@
-var jumbotronIcons;
-
-jumbotronIcons = function() {
-  var timed_actions;
-  $('bounce-on-hover').hover(function{
-    $(this).addClass('animation-target')
+var jumbotronIcons = function() {
+  $('.bounce-on-hover').hover(function() {
+    var containerDiv = $(this);
+    containerDiv.addClass('animation-target');
+  }, function() {
+    var containerDiv = $(this);
+    containerDiv.removeClass('animation-target');
   });
-
 };
+
+$(document).ready(jumbotronIcons);
+$(document).on('page:load', jumbotronIcons);
