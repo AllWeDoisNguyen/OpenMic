@@ -57,6 +57,31 @@
  }
 
 /* End of css for panels*/
+/* style for jumbotron icons*/
+
+.animated {
+-webkit-animation-fill-mode: both;
+-moz-animation-fill-mode: both;
+-ms-animation-fill-mode: both;
+-o-animation-fill-mode: both;
+animation-fill-mode: both;
+-webkit-animation-duration: 1s;
+-moz-animation-duration: 1s;
+-ms-animation-duration: 1s;
+-o-animation-duration: 1s;
+animation-duration: 1s;
+}
+
+.animation-name {
+  bounceIn;
+}
+.bounceIn {
+-webkit-animation-name: bounceIn;
+-moz-animation-name: bounceIn;
+-o-animation-name: bounceIn;
+animation-name: bounceIn;
+}
+/*end of Jumbotron icon style*/
 
 .navbar-brand {
   padding: 2px 5px!important;
@@ -70,15 +95,20 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  background-color: #f4ecd6
+}
+
+.landing-background {
+  background-color: #f4ecd6
 }
 
 .comedian-table-link {
-  color: #8a6d3b;
+  color: #414d4b!important;
   font-family: Verdana, Geneva, sans-serif;
 }
 
 .comedian-table-link:hover {
-  color: #8a6d3b;
+  color: #fff!important;
   font-family: Verdana, Geneva, sans-serif;
   font-weight: bold;
   text-decoration: none;
@@ -94,11 +124,11 @@ h3 {
 }
 
 .panel-body a {
-  color: #8a6d3b;
+  color: #f4ecd6;
 }
 
 .panel-body a {
-  color: #8a6d3b;
+  color: #f4ecd6;
   font-family: Verdana, Geneva, sans-serif;
   font-weight: bold;
   text-decoration: none;
@@ -113,15 +143,21 @@ h3 {
   margin: 0 auto !important;
 }
 
+
+
+.background-comedian-signup-master {
+  background-color: #f6d258
+}
 .comedian-signup-container {
   display: flex;
   flex-direction: column;
+  box-shadow: :10px 10px 5px #000000!important;
 }
 
 .comedian-signup-master-container {
-  background-color: #fcf8e3;
-  border-color: #faebcc;
+  background-color: #414d4b;
   padding: 50px 20px !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10pt;
 }
 
@@ -134,7 +170,7 @@ h3 {
 
 h1 {
   font-family: Verdana, Geneva, sans-serif !important;
-  color: #8a6d3b !important;
+  color: #f4ecd6!important;
 }
 
 .banner-filler {
@@ -181,6 +217,7 @@ hr.jumbo {
 
 /* New Comedian Panels Beginning */
 .comedian-panel-container-outer {
+  background-color: #f4ecd6;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
   padding: 0 !important;
@@ -189,6 +226,7 @@ hr.jumbo {
 }
 
 .comedian-panel-container-outer-hover {
+  background-color: #f4ecd6;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
   padding: 0 !important;
@@ -196,6 +234,9 @@ hr.jumbo {
   position: relative !important;
   transition: width 2s, max-height 2s, min-height 2s;
 
+}
+.group-panel {
+  background-color: #c34946;
 }
 
 .comedian-panel-container-inner {

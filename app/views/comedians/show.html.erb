@@ -175,7 +175,10 @@
 <div class="container">
   <div class="col-md-12 vert-flex-box comment-container">
     <div class="horiz-flex-box add-review-button comment-individual">
-      <%= button_to "Add Review", new_comedian_review_path(@comedian) %>
+      <% if current_user %>
+         <%= render "reviews/form"%> 
+      <% end %>   
+      <!--"Add Review", new_comedian_review_path(@comedian) %> -->
     </div>
     <p id="notice"><%= flash[:notice_signin] %></p>
     <%= render @comedian.reviews %>

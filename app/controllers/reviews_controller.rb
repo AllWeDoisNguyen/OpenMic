@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
 	before_action :find_comedian
   before_action :check_current_user, only: [:create, :edit, :destroy]
-  before_action :find_review, only: [:edit, :update, :destroy]
+  before_action :find_review, only: [:show, :edit, :update, :destroy]
 
 	def new
 		@review = Review.new
@@ -19,6 +19,9 @@ class ReviewsController < ApplicationController
 			render 'new'
 		end
 	end
+
+  def show
+  end
 
   def edit
   end

@@ -1,104 +1,108 @@
-<div class="comedian-signup-master-container col-md-8 col-centered">
-  <br><br>
-  <div class="comedian-signup-container">
-    <div>
-      <!-- first form col -->
-      <div class="col-md-6">
-        <h1>Search Comedians</h1>
-        <br>
-        <!-- first form -->
-        <%= form_tag '', :method => :get do %>
-        <div class="horiz-flex-box">
-          <div class="input-group col-md-9">
-            <span class="input-group-addon", id="basic-addon1">
-              <%= label_tag :name, "Comedian name" %>
-            </span>
-            <%= text_field_tag :name, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
-          </div>
-          <%= submit_tag 'Filter' %>
-          <% end %>
-        </div>
-        <!-- end first form-->
-        <br>
-        <!-- second form -->
-        <%= form_tag '', :method => :get do %>
-        <div class="horiz-flex-box">
-          <div class="input-group col-md-9">
-            <span class="input-group-addon", id="basic-addon1">
-              <%= label_tag :username, "Comedian Username" %>
-            </span>
-            <%= text_field_tag :username, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
-          </div>
-          <%= submit_tag 'Filter' %>
-          <% end %>
-        </div>
-        <!-- end second form -->
-        <br>
-      </div>
-      <!-- end first form col -->
-      <!-- begin second form col -->
-      <div class="col-md-6">
-        <h1>Search Shows</h1>
-        <br>
-        <!-- third form -->
-        <%= form_tag '', :method => :get do %>
-        <div class="horiz-flex-box">
-          <div class="input-group col-md-9">
-            <span class="input-group-addon", id="basic-addon1">
-              <%= label_tag :venue, "Venue" %>
-            </span>
-            <%= text_field_tag :venue, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
-          </div>
-          <%= submit_tag 'Filter' %>
-          <% end %>
-        </div>
-        <!-- end third form -->
-        <br>
-        <!-- fourth form -->
-        <%= form_tag '', :method => :get do %>
-          <div class="horiz-flex-box">
-            <div class="input-group col-md-9">
-              <span class="input-group-addon", id="basic-addon1">
-                <%= label_tag :show_name, "Show Name" %>
-              </span>
-            <%= text_field_tag :show_name, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+<div class="background-comedian-signup-master">
+  <br>
+    <div class="comedian-signup-master-container col-md-8 col-centered">
+      <br><br>
+      <div class="comedian-signup-container">
+        <div>
+          <!-- first form col -->
+          <div class="col-md-6">
+            <h1>Search Comedians</h1>
+            <br>
+            <!-- first form -->
+            <%= form_tag '', :method => :get do %>
+            <div class="horiz-flex-box">
+              <div class="input-group col-md-9">
+                <span class="input-group-addon", id="basic-addon1">
+                  <%= label_tag :name, "Comedian name" %>
+                </span>
+                <%= text_field_tag :name, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+              </div>
+              <%= submit_tag 'Filter' %>
+              <% end %>
             </div>
-          <%= submit_tag 'Filter' %>
-          <% end %>
-        </div>
-        <!-- end fourth form -->
-        <br>
-        <!-- begin fifth form -->
-        <%= form_tag '', :method => :get do %>
-          <div class="horiz-flex-box">
-            <div class="input-group col-md-9">
-              <span class="input-group-addon", id="basic-addon1">
-                <%= label_tag :date, "Search by date" %>
-              </span>
-            <%= date_field_tag :date, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
-          </div>
-          <%= submit_tag 'Filter' %>
-          <% end %>
-        </div>
-        <!-- end fifth form -->
-        <br>
-        <!-- begin sixth form -->
-        <%= form_tag '', :method => :get do %>
-          <div class="horiz-flex-box">
-            <div class="input-group col-md-9">
-              <span class="input-group-addon", id="basic-addon1">
-                <%= label_tag :time, "Search by time" %>
-              </span>
-              <%= time_field_tag :time, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+            <!-- end first form-->
+            <br>
+            <!-- second form -->
+            <%= form_tag '', :method => :get do %>
+            <div class="horiz-flex-box">
+              <div class="input-group col-md-9">
+                <span class="input-group-addon", id="basic-addon1">
+                  <%= label_tag :username, "Comedian Username" %>
+                </span>
+                <%= text_field_tag :username, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+              </div>
+              <%= submit_tag 'Filter' %>
+              <% end %>
             </div>
-          <%= submit_tag 'Filter' %>
-          <% end %>
+            <!-- end second form -->
+            <br>
+          </div>
+          <!-- end first form col -->
+          <!-- begin second form col -->
+          <div class="col-md-6">
+            <h1>Search Shows</h1>
+            <br>
+            <!-- third form -->
+            <%= form_tag '', :method => :get do %>
+            <div class="horiz-flex-box">
+              <div class="input-group col-md-9">
+                <span class="input-group-addon", id="basic-addon1">
+                  <%= label_tag :venue, "Venue" %>
+                </span>
+                <%= text_field_tag :venue, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+              </div>
+              <%= submit_tag 'Filter' %>
+              <% end %>
+            </div>
+            <!-- end third form -->
+            <br>
+            <!-- fourth form -->
+            <%= form_tag '', :method => :get do %>
+              <div class="horiz-flex-box">
+                <div class="input-group col-md-9">
+                  <span class="input-group-addon", id="basic-addon1">
+                    <%= label_tag :show_name, "Show Name" %>
+                  </span>
+                <%= text_field_tag :show_name, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+                </div>
+              <%= submit_tag 'Filter' %>
+              <% end %>
+            </div>
+            <!-- end fourth form -->
+            <br>
+            <!-- begin fifth form -->
+            <%= form_tag '', :method => :get do %>
+              <div class="horiz-flex-box">
+                <div class="input-group col-md-9">
+                  <span class="input-group-addon", id="basic-addon1">
+                    <%= label_tag :date, "Search by date" %>
+                  </span>
+                <%= date_field_tag :date, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+              </div>
+              <%= submit_tag 'Filter' %>
+              <% end %>
+            </div>
+            <!-- end fifth form -->
+            <br>
+            <!-- begin sixth form -->
+            <%= form_tag '', :method => :get do %>
+              <div class="horiz-flex-box">
+                <div class="input-group col-md-9">
+                  <span class="input-group-addon", id="basic-addon1">
+                    <%= label_tag :time, "Search by time" %>
+                  </span>
+                  <%= time_field_tag :time, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+                </div>
+              <%= submit_tag 'Filter' %>
+              <% end %>
+            </div>
+            <!-- end sixth form -->
+            <br>
+          </div>
+          <!-- end second form col -->
         </div>
-        <!-- end sixth form -->
-        <br>
       </div>
-      <!-- end second form col -->
+      <%= button_to "Start Over", root_path %>
     </div>
-  </div>
-  <%= button_to "Start Over", root_path %>
+   <br> 
 </div>
