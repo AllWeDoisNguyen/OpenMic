@@ -14,6 +14,12 @@
  *= require_self
  */
 
+/* style the text area field for reviews on Comedian Show page */
+.textarea {
+  width:50em;
+  height: 150px;
+  overflow: auto;
+}
  /* Beginning of css for panels*/
 
  td ul a {

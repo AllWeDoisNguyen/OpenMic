@@ -1,3 +1,4 @@
+
 <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
 <div class="container">
     <div class="row user-menu-container square">
@@ -172,18 +173,23 @@
 
 <%# #link_to 'Edit', edit_comedian_path(@comedian) %> |
 <%# #link_to 'Back', root_path %> -->
-<div class="container">
-  <div class="col-md-12 vert-flex-box comment-container">
-    <div class="horiz-flex-box add-review-button comment-individual">
+      <div class="reviews container">
       <% if current_user %>
          <%= render "reviews/form"%> 
       <% end %>   
+      </div>
+<div class="container">
+  <div class="col-md-12 vert-flex-box comment-container">
+    <div class="horiz-flex-box add-review-button comment-individual">
       <!--"Add Review", new_comedian_review_path(@comedian) %> -->
     </div>
     <p id="notice"><%= flash[:notice_signin] %></p>
     <%= render @comedian.reviews %>
   </div>
 </div>
+
+
+
 <script src="jquery.raty.js"></script>
 <script>
   $('.review-rating').raty({
