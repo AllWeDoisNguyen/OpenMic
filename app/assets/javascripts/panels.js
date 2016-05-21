@@ -15,14 +15,14 @@ comPanels = function() {
     comedianHoverBox.find('.comedian-panel-body-line')
       .addClass('comedian-panel-body-line-hover')
       .removeClass('comedian-panel-body-line')
-    comedianHoverBox.find('vert-flex-box')
-      .addClass('col-lg-6')
-      .removeClass('col-lg-12');
+    comedianHoverBox.find('panel-image')
+      .addClass('panel-image-hover')
+      .removeClass('panel-image')
     timed_actions = window.setTimeout(function() {
       comedianHoverBox.find('.hidden')
         .removeClass('hidden')
         .addClass('was-hidden');
-    }, 2000);
+    }, 1200);
   }, function() {
     var comedianHoverBox = $(this)
 
@@ -41,9 +41,10 @@ comPanels = function() {
     comedianHoverBox.find('.comedian-panel-body-line-hover')
       .addClass('comedian-panel-body-line')
       .removeClass('comedian-panel-body-line-hover')
-    comedianHoverBox.find('vert-flex-box')
-      .addClass('col-lg-12')
-      .removeClass('col-lg-6');
+    comedianHoverBox.find('panel-image-hover')
+      .addClass('panel-image')
+      .removeClass('panel-image-hover')
+
     window.clearTimeout(timed_actions);
   });
 };
