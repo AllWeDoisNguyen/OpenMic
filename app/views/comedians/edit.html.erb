@@ -1,6 +1,15 @@
-<h1>Editing Comedian</h1>
+<div class="jumbotron text-center">
+	<h1>Edit Account Profile</h1>
+</div>
 
+<div class="container-fluid">
+	<h3>Account Info</h3>
 <%= render 'form' %>
+</div>
+<div class="container-fluid">
+	<h3>Profile Info</h3>
+<%= render 'profile' %>
+</div>
 
 <%= link_to 'Show', @comedian %> |
 <%= link_to 'Back', comedians_path %>

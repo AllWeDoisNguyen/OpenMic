@@ -32,11 +32,12 @@ class UsersController < ApplicationController
         flash[:notice] = 'Username is already taken.'
         format.json { render json: @user.errors, status: :unprocessable_entity }
       elsif @user.save
-         format.html { redirect_to @user, notice: 'User was successfully created.' }
-         format.json { render :show, status: :created, location: @user }
+        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.json { render :show, status: :created, location: @user }
+        session[:user_id] = @user.id
        else
-         format.html { render :new }
-         format.json { render json: @user.errors, status: :unprocessable_entity }
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end

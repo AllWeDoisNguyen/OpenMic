@@ -20,10 +20,6 @@ class SessionsController < ApplicationController
   	session[:comedian_id] = nil
   	session[:user_id] = @user.id
 
-  	p "***************"
-  	p "user:" + session[:user_id].to_s
-    p "comedian:" + session[:comedian_id].to_s
-  	p "***************"
   	flash[:notice_login] = 'Signed in!'
   	redirect_to root_path
   end
@@ -37,10 +33,6 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
   	session[:comedian_id] = @comedian.id
 
-  	p "***************"
-    p "user:" + session[:user_id].to_s
-  	p "comedian:" + session[:comedian_id].to_s
-  	p "***************"
   	flash[:notice_login] = 'Signed in!'
   	redirect_to root_path
   end

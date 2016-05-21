@@ -1,3 +1,4 @@
+<p id="notice"><%= flash[:notice_login] %></p>
 
 <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
 <div class="container">
@@ -6,11 +7,13 @@
             <div class="row coralbg white">
                 <div class="col-md-6 no-pad">
                     <div class="user-pad">
-                        <h3>Welcome back, <%= @comedian.name %></h3>
-                        <h4 class="white"><i class="fa fa-check-circle-o"></i> San Antonio, TX</h4>
-                        <h4 class="white"><i class="fa fa-twitter"></i> CoolesOCool</h4>
+                        <h3><%= @comedian.name %></h3>
+                        <h4 class="white"><i class="fa fa-check-circle-o"></i><%= @comedian.city %></h4>
+                        <h4 class="white"><i class="fa fa-twitter"></i> <%= @comedian.twitter_handle %></h4>
+                        <% if current_comedian %>
                        	<a href="<%= edit_comedian_path(@comedian) %>"><button type="button" class="btn btn-labeled btn-danger">
-                            <span class="btn-label"><i class="fa fa-pencil"></i></span>Update</button></a>
+                            <span class="btn-label"><i class="fa fa-pencil"></i></span>Edit Profile</button></a>
+                            <% end %> 
                     </div>
                 </div>
                 <div class="col-md-6 no-pad">
@@ -27,7 +30,7 @@
                     <h4>456</h4>
                 </div>
                 <div class="col-md-4 user-pad text-center">
-                    <h3>APPRECIATIONS</h3>
+                    <h3>REVIEWS</h3>
                     <h4>4,901</h4>
                 </div>
             </div>
@@ -134,15 +137,15 @@
             </div>
             <div class="user-menu-content">
                 <h2 class="text-center">
-                    START SHARING
+                    OUTSIDE MEDIA
                 </h2>
                 <center><i class="fa fa-cloud-upload fa-4x"></i></center>
                 <div class="share-links">
                     <center><button type="button" class="btn btn-lg btn-labeled btn-success" href="#" style="margin-bottom: 15px;">
-                            <span class="btn-label"><i class="fa fa-bell-o"></i></span>A FINISHED PROJECT
+                            <span class="btn-label"><i class="fa fa-bell-o"></i></span>Youtube Channel
                     </button></center>
                     <center><button type="button" class="btn btn-lg btn-labeled btn-warning" href="#">
-                            <span class="btn-label"><i class="fa fa-bell-o"></i></span>A WORK IN PROGRESS
+                            <span class="btn-label"><i class="fa fa-bell-o"></i></span>Facebook
                     </button></center>
                 </div>
             </div>

@@ -1,0 +1,60 @@
+<%= form_for @comedian, html: { multipart: true } do |f| %>
+  <% if @comedian.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comedian.errors.count, "error") %> prohibited this comedian from being saved:</h2>
+
+      <ul>
+      <% @comedian.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="comedian-signup-container">
+    <div>
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-addon", id="basic-addon1"><%= f.label :bio %></span>
+          <%= f.text_area :bio, class: "form-control", 'aria-describedby':"basic-addon1" %>
+        </div>
+      </div>
+        <br>
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-addon", id="basic-addon1"><%= f.label :city %></span>
+          <%= f.text_field :city, class: "form-control", 'aria-describedby':"basic-addon1" %>
+        </div>
+      </div>
+        <br>
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-addon", id="basic-addon1"><%= f.label :twitter_handle %></span>
+          <%= f.text_field :twitter_handle, class: "form-control", 'aria-describedby':"basic-addon1" %>
+        </div>
+      </div>
+        <br>
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-addon", id="basic-addon1"><%= f.label :facebook %></span>
+          <%= f.text_field :facebook, class: "form-control", 'aria-describedby':"basic-addon1" %>
+        </div>
+      </div>
+        <br>
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-addon", id="basic-addon1"><%= f.label :youtube %></span>
+          <%= f.text_field :youtube, class: "form-control", 'aria-describedby':"basic-addon1" %>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="actions submit-and-back-buttons-container">
+      <div>
+        <%= f.submit :Update_Profile %>
+      </div>
+      <div>
+        <%= button_to 'Back', comedian_path(@comedian) %>
+      </div>
+    </div>
+  </div>
+<% end %>
