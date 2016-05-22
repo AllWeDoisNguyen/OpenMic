@@ -8,7 +8,8 @@
                 <div class="col-md-6 no-pad">
                     <div class="user-pad">
                         <h3><%= @comedian.name %></h3>
-                        <h4 class="white"><i class="fa fa-check-circle-o"></i><%= @comedian.city %></h4>
+                        <h4 class="white"><i class="fa fa-check-circle-o"></i>
+                          <%= @comedian.city %></h4>
                         <h4 class="white"><i class="fa fa-twitter"></i> <%= @comedian.twitter_handle %></h4>
                         <% if current_comedian == @comedian %>
                        	<a href="<%= edit_comedian_path(@comedian) %>"><button type="button" class="btn btn-labeled btn-danger">
@@ -30,24 +31,26 @@
                     <h4>456</h4>
                 </div>
                 <div class="col-md-4 user-pad text-center">
-                    <h3>AVERAGE RATING</h3>
+                    <h3>RATING</h3>
                     <div class="average-review-rating" data-score=<%= @average_review %>></div>
-                    <span>Based on <%= @comedian.reviews.count %> reviews</span>
+                      <span>
+                        <p class="profile-rating"><%= @comedian.reviews.count %>reviews</p>
+                      </span>
                 </div>
             </div>
         </div>
         <div class="col-md-1 user-menu-btns vert-button-container">
             <div class="btn-group-vertical square vert-button-container" id="responsive">
-                <a href="#" class="btn btn-block btn-default com-prof-button active">
+                <a href="#" class="btn btn-block btn-inverse com-prof-button active">
                   <i class="fa fa-bell-o fa-3x"></i>
                 </a>
-                <a href="#" class="btn btn-default com-prof-button">
+                <a href="#" class="btn btn-inverse com-prof-button">
                   <i class="fa fa-envelope-o fa-3x"></i>
                 </a>
-                <a href="#" class="btn btn-default com-prof-button">
+                <a href="#" class="btn btn-inverse com-prof-button">
                   <i class="fa fa-laptop fa-3x"></i>
                 </a>
-                <a href="#" class="btn btn-default com-prof-button">
+                <a href="#" class="btn btn-inverse com-prof-button">
                   <i class="fa fa-cloud-upload fa-3x"></i>
                 </a>
             </div>
@@ -178,11 +181,11 @@
 <%# #link_to 'Edit', edit_comedian_path(@comedian) %> |
 <%# #link_to 'Back', root_path %> -->
 
-      <div class="reviews container">
-      <% if current_user %>
-         <%= render "reviews/form"%> 
-      <% end %>   
-      </div>
+<div class="reviews container">
+<% if current_user %>
+   <%= render "reviews/form"%> 
+<% end %>   
+</div>
 <div class="container">
   <div class="col-md-12 vert-flex-box comment-container">
     <div class="horiz-flex-box add-review-button comment-individual">
@@ -194,7 +197,7 @@
 </div>
 
 
-
+<!--- To display star icons for each rating -->
 <script src="jquery.raty.js"></script>
 <script>
   $('.review-rating').raty({
@@ -206,7 +209,7 @@
   });
 </script>
 
-
+<!-- this displays the star images for the average rating -->
 <script>
   $('.average-review-rating').raty({
     readOnly: true,
@@ -216,3 +219,5 @@
     }
   });
 </script>
+<!-- javascript for profile buttons -->
+<script src="javascripts/jquery.js"></script>

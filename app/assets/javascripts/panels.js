@@ -76,8 +76,8 @@ function sendSearch() {
 }
 
 // $(document).ready(comPanels());
-$(document).on('page:load ready', comPanels());
+$(document).on('page:load ready page:partial-load', comPanels());
 // $(document).ready(renderSearch());
 // $(document).on('page:load', renderSearch());
 // $(document).ready(sendSearch());
-$(document).on('page:load ready', sendSearch());
+$(document).on('page:load ready page:partial-load', sendSearch());
