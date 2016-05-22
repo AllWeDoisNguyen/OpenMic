@@ -10,14 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery2
 //= require jquery_ujs
-//= require_tree .
-//= require raty.min.js
 //= require jquery.raty
-
-$(document).on("ready", ready);
-
-function ready() {
-	$("#mydiv").load(location.href + " #mydiv");
-}
+//= require bootstrap.min
+//= require raty.min
+//= require comedians.js
+//= require_tree .
