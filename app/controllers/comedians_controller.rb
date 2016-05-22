@@ -36,8 +36,9 @@ class ComediansController < ApplicationController
     @comedian = Comedian.new(comedian_params)
     respond_to do |format|
       if @comedian.save
-        format.html { redirect_to @comedian, notice: 'Comedian was successfully created.' }
+        format.html { redirect_to @comedian, notice: 'Comedian account was successfully created.' }
         format.json { render :show, status: :created, location: @comedian }
+        session[:comedian_id] = @comedian.id
       else
         format.html { render :new }
         format.json { render json: @comedian.errors, status: :unprocessable_entity }
@@ -78,6 +79,6 @@ class ComediansController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def comedian_params
       params.require(:comedian).permit(:avatar, :name, :username, :password,
-                                       :password_confirmation, :bookings)
+                                       :password_confirmation, :bookings, :bio, :city, :twitter_handle, :facebook, :youtube)
     end
 end
