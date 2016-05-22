@@ -4,10 +4,11 @@
 
 .show-right-box {
   width: 70vw;
+  height: 82vh;
 }
 
 .show-container {
-  height: 76.7%;
+  height: 94.7%;
 }
 
 .show-top-left-box {
@@ -15,7 +16,7 @@
 }
 
 .show-header-container {
-  height: 18%;
+  height: 18vh;
 }
 
 .show-header-name {
@@ -27,6 +28,17 @@
   padding-left: 30px;
   text-align: left;
 }
+
+.show-header-venue a {
+  color: #f6d258;
+}
+
+.show-header-venue a:hover {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
 
 .show-body-outer-box {
   padding: 50px;
@@ -44,4 +56,49 @@
 }
 
 #show-header-venue {
+}
+
+ul li.show-bookings {
+  list-style-type: none;
+  padding: 5px;
+}
+
+ul {
+  padding-left: 10px;
+}
+
+.show-bookings-name {
+}
+
+.show-bookings-name * {
+  text-align: center;
+}
+
+.show-bookings-name>div:first-child>a {
+  color: white;
+  font-size: 16pt;
+}
+
+.show-bookings-name>div:nth-child(2)>a {
+  color: #414d4b;
+  font-size: 10pt;
+}
+
+.show-bookings-name>div:first-child>a:hover {
+  color: white;
+  font-size: 16pt;
+}
+
+.show-bookings-name>div:nth-child(2)>a:hover {
+  color: #414d4b;
+  font-size: 10pt;
+}
+
+.comedian-show-panel-outer {
+  background-color: pink;
+  margin: 15px 0;
+  padding: 0 15px;
+  border-radius: 5px;
+  max-width: 125px;
+  min-width: 125px;
 }

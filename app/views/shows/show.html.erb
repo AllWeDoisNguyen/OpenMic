@@ -1,53 +1,22 @@
-<div class="horiz-flex-box show-header-container space-around"
-     style="background-color:teal;">
-  <div class="vert-flex-box space-around">
-    <div class="horiz-flex-box space-around">
-      <div><%= image_tag @show.avatar.url(:medium), height: '150px', width: '150px' %></div>
-      <div class="vert-flex-box flex-start show-name-box">
-        <div id="show-header-name">
-          <h1 class="show-header-name"><%= @show.show_name %></h1>
-        </div>
-        <div id="show-header-venue">
-          <h4 class="show-header-venue"><%= @show.venue %></h4>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="vert-flex-box space-around">Some Deets</div>
-</div>
 <div class="horiz-flex-box space-around show-container">
   <div class="vert-flex-box space-around show-left-box" style="background-color:orange;">
     <div class= "horiz-flex-box space-around">
-      <div class="vert-flex-box space-around show-top-left-box" style="background-color:red;">
-        <p id="notice">
-          <%= notice %>
-        </p>
-        <p>
-          <strong>Name:</strong>
-          <%= @show.show_name %>
-        </p>
-
-        <p>
-          <strong>Venue:</strong>
-          <%= link_to @show.venue, @show.venue_website %>
-        </p>
-
-        <p>
-          <strong>Date:</strong>
-          <%= @show.date %>
-        </p>
-
-        <p>
-          <strong>Time:</strong>
-          <%= @show.time %>
-        </p>
-
-        <p>
-          <strong>Booked comedians:</strong>
-          <% @show.bookings.each do |x| %>
-          <%= link_to x.comedian.name, x.comedian %>
-          <% end %>
-        </p>
+      <div class="vert-flex-box space-around">
+        <div class="horiz-flex-box space-around">
+          <div>
+            <%= image_tag @show.avatar.url(:medium), height: '150px', width: '150px' %>
+          </div>
+          <div class="vert-flex-box flex-start show-name-box">
+            <div id="show-header-name">
+              <h1 class="show-header-name"><%= @show.show_name %></h1>
+            </div>
+            <div id="show-header-venue">
+              <h4 class="show-header-venue">
+                <%= link_to @show.venue, @show.venue_website %>
+              </h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="horiz-flex-box space-around">
@@ -63,15 +32,38 @@
       </div>
     </div>
   </div>
-  <div class="show-right-box vert-flex-box space-around" style="background-color:blue;">
-    <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
-      Some Text
+  <!-- Here -->
+  <div class="vert-flex-box flex-start">
+    <div class="horiz-flex-box show-header-container space-around"
+    style="background-color:teal;">
+      <p id="notice">
+        <%= notice %>
+      </p>
+      <div class="vert-flex-box center">
+        <strong>Booked comedians:</strong>
+      </div>
+      <% @show.comedians.each do |x| %>
+        <div class="vert-flex-box center comedian-show-panel-outer">
+          <div class="horiz-flex-box center">
+            <%= image_tag x.avatar.url(:medium), height: '50px', width: '50px' %>
+          </div>
+          <div class="show-bookings-name vert-flex-box">
+            <div><%= link_to x.name, x %></div>
+            <div><%= link_to x.username, x %></div>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
-      Some Text
-    </div>
-    <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
-      Some Text
+    <div class="show-right-box vert-flex-box space-around" style="background-color:blue;">
+      <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
+        Some Text
+      </div>
+      <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
+        Some Text
+      </div>
+      <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
+        Some Text
+      </div>
     </div>
   </div>
 </div>
