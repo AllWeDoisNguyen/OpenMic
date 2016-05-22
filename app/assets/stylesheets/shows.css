@@ -1,9 +1,9 @@
 .show-left-box {
-  width: 30vw;
+  width: 35vw;
 }
 
 .show-right-box {
-  width: 70vw;
+  width: 65vw;
   height: 82vh;
 }
 
@@ -101,4 +101,32 @@ ul {
   border-radius: 5px;
   max-width: 125px;
   min-width: 125px;
+}
+
+.comedian-show-panel-outer-filler {
+  margin: 15px 0;
+  padding: 0 15px;
+  max-width: 125px;
+  min-width: 125px;
+}
+
+.booked-comedians-title {
+  font-size: 20pt;
+  text-align: left;
+}
+
+.show-bookings-title {
+  border: 1px solid black;
+  margin: 25px 0;
+  padding: 0 20px;
+}
+
+.show-title-box {
+  padding: 20px 25px;
+  background-color: purple;
+  margin: 0 20px;
+}
+
+div.average-review-rating {
+  margin: 0 auto;
 }

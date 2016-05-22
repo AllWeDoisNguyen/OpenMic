@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'jquery-turbolinks'
+
 gem 'font-awesome-rails'
 
 gem 'pg'
