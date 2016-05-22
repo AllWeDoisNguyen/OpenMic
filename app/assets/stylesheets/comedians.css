@@ -1,13 +1,17 @@
 // Place all the styles related to the Comedians controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
 
+body {
+  background-color: #86888c!important;
 }
 div {
   text-align: center;
 }
 
+h3 {
+  color: #eee!important;
+}
 .square, .btn {
     border-radius: 0px!important;
 }
@@ -38,14 +42,18 @@ div {
 }
 
 /* -- The "User's Menu Container" specific elements. Custom container for the snippet -- */
+p.profile-rating {
+  color: #86888c!important;
+}
 div.average-review-rating {
   margin: 0 auto;
 }
 
 div.user-menu-container {
   z-index: 10;
-  background-color: #f4ecd6; /*used to be white*/
-  margin-top: 20px;
+  background-color: #303030; /*used to be white*/
+  margin-top: 1em;
+  margin-left: 0em;
   background-clip: padding-box;
   opacity: 0.97;
   filter: alpha(opacity=97);
@@ -54,7 +62,7 @@ div.user-menu-container {
 }
 
 div.user-menu-container .btn-lg {
-    padding: 12px 12px;
+    padding: 1em 1em;
 }
 
 div.user-menu-container h4 {
@@ -68,7 +76,7 @@ div.user-menu-container a, div.user-menu-container .btn  {
 
 div.user-menu-container .thumbnail {
    width:100%;
-   min-height:200px;
+   min-height:20em;
    border: 0px!important;
    padding: 0px;
    border-radius: 0;
@@ -82,8 +90,8 @@ div.user-menu-container .btn-group-vertical {
 }
 
 div.user-menu-container .btn-group-vertical>a {
-    padding: 2.8em 1.70em;
-    background-color: #f6d258;
+    padding: 2em 1.70em;
+    background-color: #303030;
     color: white;
     border-color: #f4ecd6;
 }
@@ -152,7 +160,7 @@ div.user-menu div.user-menu-content:not(.active){
 /* -- Custom classes for the snippet, won't effect any existing bootstrap classes of your site, but can be reused. -- */
 
 .user-pad {
-    padding: 20px 25px;
+    padding: 2em 1em;
 }
 
 .no-pad {
@@ -162,7 +170,7 @@ div.user-menu div.user-menu-content:not(.active){
 }
 
 .user-details {
-    background: #eee;
+    background: #303030;
     min-height: 333px;
 }
 
