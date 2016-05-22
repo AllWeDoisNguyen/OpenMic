@@ -1,61 +1,69 @@
 <div class="group-panel">
   <div class="container-fluid">
     <div class="group-panel-heading">
-    <br>
-    <h1 class="gallery">Shows</h1><br>
+      <br>
+      <h1 class="gallery">Shows</h1>
+      <br>
     </div>
     <div class="row">
       <% counter = 1 %>
+      <% div_start = 0 %>
+      <% div_end = 0 %>
       <% @shows.each do |x| %>
         <% if (counter + 3) % 4 == 0 %>
-          <div class="horiz-flex-box space-around">
+          <% div_start += 1 %>
+      <div class="horiz-flex-box space-around">
         <% end %>
       <!-- Real box beginning -->
-            <div class="col-xs-4 col-lg-5 comedian-panel-container-outer-hover
-                      comedian-hover-box">
-              <div class="panel-body comedian-panel-container-body-hover">
-                <div class="vert-flex-box">
-                  <div class="horiz-flex-box">
-                    <div class="vert-flex-box col-lg-12">
-                    <%= link_to image_tag(x.avatar.url(:medium),
-                      class: "img-rounded img-responsive img-left panel-image"), x %>
-                      <div class="comedian-panel-body-line-hover"><h4><%= link_to x.show_name, x, class: "comedian-table-link" %></h4>
-                      </div>
-                      <div class="comedian-panel-body-line"><h4>Rating Goes Here</h4>
-                      </div>
-                      <div class="comedian-panel-body-line "><h4>Description goes here</h4>
-                      </div>
-                    </div>
-                    <div class="vert-flex-box col-lg-12 ">
-                      <h4>Line-Up</h4>
-                      <div>Comedian1</div>
-                      <div>Comedian2</div>
-                      <div>Comedian3</div>
-                      <div>Comedian4</div>
-                    </div>
+        <div class="col-xs-4 col-lg-5 comedian-panel-container-outer-hover
+                    comedian-hover-box">
+          <div class="panel-body comedian-panel-container-body-hover">
+            <div class="vert-flex-box">
+              <div class="horiz-flex-box">
+                <div class="vert-flex-box col-lg-12">
+                  <%= link_to image_tag(x.avatar.url(:medium),
+                    class: "img-rounded img-responsive img-left panel-image"), x %>
+                  <div class="comedian-panel-body-line-hover">
+                    <h4><%= link_to x.show_name, x, class: "comedian-table-link" %></h4>
                   </div>
-                <div class="horiz-flex-box space-around comedian-panel-bottom">
-              <div>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                @exampleHandle
+                  <div class="comedian-panel-body-line">
+                    <h4>Rating Goes Here</h4>
+                  </div>
+                  <div class="comedian-panel-body-line ">
+                    <h4>Description goes here</h4>
+                  </div>
+                </div>
+                <div class="vert-flex-box col-lg-12 ">
+                  <h4>Line-Up</h4>
+                  <div>Comedian1</div>
+                  <div>Comedian2</div>
+                  <div>Comedian3</div>
+                  <div>Comedian4</div>
+                </div>
               </div>
-              <div>
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                example@email.com
+              <div class="horiz-flex-box space-around comedian-panel-bottom">
+                <div>
+                  <i class="fa fa-twitter" aria-hidden="true"></i>@exampleHandle
+                </div>
+                <div>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>example@email.com
+                </div>
+                <div>
+                  <i class="fa fa-phone" aria-hidden="true"></i>(305) 555-5555
+                </div>
               </div>
-              <div>
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                (305) 555-5555
-              </div>
-          </div>
-        </div>
             </div>
           </div>
+        </div>
         <% if counter % 4 == 0 %>
-          </div>
+          <% div_end += 1 %>
+      </div>
         <% end %>
         <% counter += 1 %>
-          <!-- Real box end -->
+        <!-- Real box end -->
+      <% end %>
+      <% if div_start < div_end %>
+      </div>
       <% end %>
     </div>
   </div>
