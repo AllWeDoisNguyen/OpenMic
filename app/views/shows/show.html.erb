@@ -1,6 +1,6 @@
 <div class="horiz-flex-box space-around show-container">
   <div class="vert-flex-box space-around show-left-box" style="background-color:orange;">
-    <div class= "horiz-flex-box space-around">
+    <div class= "horiz-flex-box flex-start show-title-box">
       <div class="vert-flex-box space-around">
         <div class="horiz-flex-box space-around">
           <div>
@@ -14,6 +14,8 @@
               <h4 class="show-header-venue">
                 <%= link_to @show.venue, @show.venue_website %>
               </h4>
+              <div class="average-review-rating" data-score=<%= @average_review %>></div>
+              <div> Based on <%= @show.reviews.count %> reviews </div>
             </div>
           </div>
         </div>
@@ -39,19 +41,28 @@
       <p id="notice">
         <%= notice %>
       </p>
-      <div class="vert-flex-box center">
-        <strong>Booked comedians:</strong>
+      <div class="horiz-flex-box flex-start">
+        <div class="vert-flex-box center show-bookings-title">
+          <span class="booked-comedians-title">The</span>
+          <span class="booked-comedians-title">LineUp:</span>
+        </div>
       </div>
-      <% @show.comedians.each do |x| %>
+      <% counter = 0 %>
+      <% @show.comedians.sample(5).each do |x| %>
         <div class="vert-flex-box center comedian-show-panel-outer">
           <div class="horiz-flex-box center">
             <%= image_tag x.avatar.url(:medium), height: '50px', width: '50px' %>
           </div>
           <div class="show-bookings-name vert-flex-box">
-            <div><%= link_to x.name, x %></div>
-            <div><%= link_to x.username, x %></div>
+            <div class="horiz-flex-box space-around"><%= link_to x.name, x %></div>
+            <div class="horiz-flex-box space-around"><%= link_to x.username, x %></div>
           </div>
         </div>
+        <% counter += 1 %>
+      <% end %>
+      <% while counter < 5 %>
+        <div class="vert-flex-box center comedian-show-panel-outer-filler"></div>
+        <% counter += 1 %>
       <% end %>
     </div>
     <div class="show-right-box vert-flex-box space-around" style="background-color:blue;">
@@ -67,3 +78,25 @@
     </div>
   </div>
 </div>
+
+<script src="jquery.raty.js"></script>
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
+
+
+<script>
+  $('.average-review-rating').raty({
+    readOnly: true,
+    path: '/assets/',
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>

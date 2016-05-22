@@ -17,6 +17,12 @@ class ShowsController < ApplicationController
     @booking = Booking.new
     @user = User.new
     @users = User.all
+
+    if @show.reviews.blank?
+      @average_review = 0
+    else
+      @average_review = @show.reviews.average(:rating).round(2)
+    end
   end
 
   def show_json
