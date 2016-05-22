@@ -5,14 +5,14 @@
  */
 
 body {
-    padding-top: -2em; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: -1em; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 
 .business-header {
-    height: 600px;
-    background: image-url('OpenMiic/OMbanner.png') center center no-repeat scroll;
+    height: 300px;
+    background: image-url('OpenMiic/obn.png') center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
