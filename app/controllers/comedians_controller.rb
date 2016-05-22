@@ -15,6 +15,11 @@ class ComediansController < ApplicationController
   # GET /comedians/1
   # GET /comedians/1.json
   def show
+    if @comedian.reviews.blank?
+      @average_review = 0
+    else
+      @average_review = @comedian.reviews.average(:rating).round(2)
+    end
   end
 
   # GET /comedians/new

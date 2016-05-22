@@ -15,30 +15,33 @@
       <div class="horiz-flex-box space-around">
         <% end %>
       <!-- Real box beginning -->
-        <div class="col-xs-4 col-lg-5 comedian-panel-container-outer-hover
+        <div class="col-xs-4 col-lg-8 comedian-panel-container-outer-hover
                     comedian-hover-box">
           <div class="panel-body comedian-panel-container-body-hover">
             <div class="vert-flex-box">
               <div class="horiz-flex-box">
                 <div class="vert-flex-box col-lg-12">
+                  <div class="comedian-panel-body-line-hover">
+                    <h3><%= link_to x.show_name, x, class: "show-panel" %></h3>
+                  </div>
                   <%= link_to image_tag(x.avatar.url(:medium),
                     class: "img-rounded img-responsive img-left panel-image"), x %>
-                  <div class="comedian-panel-body-line-hover">
-                    <h4><%= link_to x.show_name, x, class: "comedian-table-link" %></h4>
-                  </div>
                   <div class="comedian-panel-body-line">
-                    <h4>Rating Goes Here</h4>
+                    <h4><%= x.address %></h4>
+                    <h4><%= x.city %><%= x.state %></h4>
                   </div>
                   <div class="comedian-panel-body-line ">
-                    <h4>Description goes here</h4>
+                    <h4>Description</h4>
                   </div>
                 </div>
                 <div class="vert-flex-box col-lg-12 ">
                   <h4>Line-Up</h4>
-                  <div>Comedian1</div>
-                  <div>Comedian2</div>
-                  <div>Comedian3</div>
-                  <div>Comedian4</div>
+                    <% x.comedians.each do |comedian| %>
+                  <div>
+                      <%= image_tag comedian.avatar.url(:thumb) %>
+                      <%= link_to comedian.name, x, class: "show-panel" %>
+                  </div>
+                  <% end %>
                 </div>
               </div>
               <div class="horiz-flex-box space-around comedian-panel-bottom">
