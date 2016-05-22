@@ -168,6 +168,18 @@ html, body {
   text-decoration: none;
 }
 
+.show-panel {
+  color: #414d4b!important;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.show-panel:hover {
+  color: #AC1C35!important;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 ul.navbar-nav li a {
   font-size: 15pt;
   font-family: Verdana, Geneva, sans-serif;

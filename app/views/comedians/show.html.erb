@@ -10,7 +10,7 @@
                         <h3><%= @comedian.name %></h3>
                         <h4 class="white"><i class="fa fa-check-circle-o"></i><%= @comedian.city %></h4>
                         <h4 class="white"><i class="fa fa-twitter"></i> <%= @comedian.twitter_handle %></h4>
-                        <% if current_comedian %>
+                        <% if current_comedian == @comedian %>
                        	<a href="<%= edit_comedian_path(@comedian) %>"><button type="button" class="btn btn-labeled btn-danger">
                             <span class="btn-label"><i class="fa fa-pencil"></i></span>Edit Profile</button></a>
                             <% end %> 
@@ -30,8 +30,9 @@
                     <h4>456</h4>
                 </div>
                 <div class="col-md-4 user-pad text-center">
-                    <h3>REVIEWS</h3>
-                    <h4>4,901</h4>
+                    <h3>AVERAGE RATING</h3>
+                    <div class="average-review-rating" data-score=<%= @average_review %>></div>
+                    <span>Based on <%= @comedian.reviews.count %> reviews</span>
                 </div>
             </div>
         </div>
@@ -176,6 +177,7 @@
 
 <%# #link_to 'Edit', edit_comedian_path(@comedian) %> |
 <%# #link_to 'Back', root_path %> -->
+
       <div class="reviews container">
       <% if current_user %>
          <%= render "reviews/form"%> 

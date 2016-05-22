@@ -38,6 +38,10 @@ div {
 }
 
 /* -- The "User's Menu Container" specific elements. Custom container for the snippet -- */
+div.average-review-rating {
+  margin: 0 auto;
+}
+
 div.user-menu-container {
   z-index: 10;
   background-color: #f4ecd6; /*used to be white*/
