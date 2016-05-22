@@ -12,11 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.turbolinks
-//= require turbolinks
 //= require_tree .
 //= require raty.min.js
-//= require jquery.raty.js
+//= require jquery.raty
 
 $(document).on("ready", ready);
 

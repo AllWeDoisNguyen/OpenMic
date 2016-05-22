@@ -29,7 +29,5 @@ tooltip = function() {
     );
 };
 
-$(document).ready(buttons);
-$(document).on('page:load', buttons);
-$(document).ready(tooltip);
-$(document).on('page:load', tooltip);
+$(document).on('page:load ready page:change', buttons);
+$(document).on('page:load ready page:change', tooltip);
