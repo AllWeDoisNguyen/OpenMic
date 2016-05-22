@@ -1,7 +1,8 @@
 <div class="group-panel">
   <div class="container-fluid">
     <div class="group-panel-heading">
-    <br><h1 class="gallery">Shows</h1><br>
+    <br>
+    <h1 class="gallery">Shows</h1><br>
     </div>
     <div class="row">
       <% counter = 1 %>
@@ -10,28 +11,30 @@
           <div class="horiz-flex-box space-around">
         <% end %>
       <!-- Real box beginning -->
-          <div class="col-xs-4 col-lg-2 comedian-panel-container-outer
+            <div class="col-xs-4 col-lg-5 comedian-panel-container-outer-hover
                       comedian-hover-box">
-            <!-- <div class="panel-body comedian-filler-box" style="display:none;"></div> -->
-            <div class="panel-body comedian-panel-container-body">
-              <div class="vert-flex-box">
-              <div class="horiz-flex-box">
-                <div class="vert-flex-box col-lg-12">
-                  <%= link_to image_tag(x.avatar.url(:medium),
+              <div class="panel-body comedian-panel-container-body-hover">
+                <div class="vert-flex-box">
+                  <div class="horiz-flex-box">
+                    <div class="vert-flex-box col-lg-12">
+                    <%= link_to image_tag(x.avatar.url(:medium),
                       class: "img-rounded img-responsive img-left panel-image"), x %>
-              <div class="comedian-panel-body-line"><h4><%= link_to x.show_name, x, class: "comedian-table-link" %></h4></div>
-              <div class="comedian-panel-body-line"><h4>Rating Goes Here</h4></div>
-              <div class="comedian-panel-body-line hidden"><h4>Description goes here</h4><div>
-            </div>
-              <div class="vert-flex-box col-lg-12 hidden">
-                <h4>Line-Up</h4>
-                <div>Comedian1</div>
-                <div>Comedian2</div>
-                <div>Comedian3</div>
-                <div>Comedian4</div>
-            </div>
-          </div>
-          <div class="horiz-flex-box space-around hidden comedian-panel-bottom">
+                      <div class="comedian-panel-body-line-hover"><h4><%= link_to x.show_name, x, class: "comedian-table-link" %></h4>
+                      </div>
+                      <div class="comedian-panel-body-line"><h4>Rating Goes Here</h4>
+                      </div>
+                      <div class="comedian-panel-body-line "><h4>Description goes here</h4>
+                      </div>
+                    </div>
+                    <div class="vert-flex-box col-lg-12 ">
+                      <h4>Line-Up</h4>
+                      <div>Comedian1</div>
+                      <div>Comedian2</div>
+                      <div>Comedian3</div>
+                      <div>Comedian4</div>
+                    </div>
+                  </div>
+                <div class="horiz-flex-box space-around comedian-panel-bottom">
               <div>
                 <i class="fa fa-twitter" aria-hidden="true"></i>
                 @exampleHandle
