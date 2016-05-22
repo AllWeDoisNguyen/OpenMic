@@ -209,15 +209,13 @@ h3 {
   margin: 0 auto !important;
 }
 
-
-
 .background-comedian-signup-master {
   background-color: #f6d258
 }
 .comedian-signup-container {
   display: flex;
   flex-direction: column;
-  box-shadow: 10px 10px 5px #000000!important;
+  /*box-shadow: 10px 10px 5px #000000!important;*/
 }
 
 .comedian-signup-master-container {
