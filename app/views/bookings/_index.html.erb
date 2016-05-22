@@ -8,29 +8,29 @@
             <h1>Find Comedians</h1>
             <br>
             <!-- first form -->
-            <%= form_tag '', :method => :get do %>
+            <%= form_tag '', :method => :get, remote: true do %>
             <div class="horiz-flex-box">
               <div class="input-group col-md-9">
                 <span class="input-group-addon", id="basic-addon1">
                   <%= label_tag :name, "Comedian name" %>
                 </span>
-                <%= text_field_tag :name, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+                <%= text_field_tag :name, nil, class: "form-control com_name", 'aria-describedby':"basic-addon1" %>
               </div>
-              <%= submit_tag 'Filter' %>
+              <%= submit_tag 'Filter', class: "search-button" %>
               <% end %>
             </div>
             <!-- end first form-->
             <br>
             <!-- second form -->
-            <%= form_tag '', :method => :get do %>
+            <%= form_tag '', :method => :get, :remote => true do %>
             <div class="horiz-flex-box">
               <div class="input-group col-md-9">
                 <span class="input-group-addon", id="basic-addon1">
                   <%= label_tag :username, "Comedian Username" %>
                 </span>
-                <%= text_field_tag :username, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+                <%= text_field_tag :username, nil, class: "form-control com_username", 'aria-describedby':"basic-addon1" %>
               </div>
-              <%= submit_tag 'Filter' %>
+              <%= submit_tag 'Filter', class: "search-button" %>
               <% end %>
             </div>
             <!-- end second form -->
@@ -42,57 +42,57 @@
             <h1>Find Shows</h1>
             <br>
             <!-- third form -->
-            <%= form_tag '', :method => :get do %>
+            <%= form_tag '', :method => :get, :remote => true do %>
             <div class="horiz-flex-box">
               <div class="input-group col-md-9">
                 <span class="input-group-addon", id="basic-addon1">
                   <%= label_tag :venue, "Venue" %>
                 </span>
-                <%= text_field_tag :venue, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+                <%= text_field_tag :venue, nil, class: "form-control show_venue", 'aria-describedby':"basic-addon1" %>
               </div>
-              <%= submit_tag 'Filter' %>
+              <%= submit_tag 'Filter', class: "search-button" %>
               <% end %>
             </div>
             <!-- end third form -->
             <br>
             <!-- fourth form -->
-            <%= form_tag '', :method => :get do %>
+            <%= form_tag '', :method => :get, :remote => true do %>
               <div class="horiz-flex-box">
                 <div class="input-group col-md-9">
                   <span class="input-group-addon", id="basic-addon1">
                     <%= label_tag :show_name, "Show Name" %>
                   </span>
-                <%= text_field_tag :show_name, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+                <%= text_field_tag :show_name, nil, class: "form-control show_name", 'aria-describedby':"basic-addon1" %>
                 </div>
-              <%= submit_tag 'Filter' %>
+              <%= submit_tag 'Filter', class: "search-button" %>
               <% end %>
             </div>
             <!-- end fourth form -->
             <br>
             <!-- begin fifth form -->
-            <%= form_tag '', :method => :get do %>
+            <%= form_tag '', :method => :get, :remote => true do %>
               <div class="horiz-flex-box">
                 <div class="input-group col-md-9">
                   <span class="input-group-addon", id="basic-addon1">
                     <%= label_tag :date, "Search by date" %>
                   </span>
-                <%= date_field_tag :date, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+                <%= date_field_tag :date, nil, class: "form-control show_date", 'aria-describedby':"basic-addon1" %>
               </div>
-              <%= submit_tag 'Filter' %>
+              <%= submit_tag 'Filter', class: "search-button" %>
               <% end %>
             </div>
             <!-- end fifth form -->
             <br>
             <!-- begin sixth form -->
-            <%= form_tag '', :method => :get do %>
+            <%= form_tag '', :method => :get, :remote => true do %>
               <div class="horiz-flex-box">
                 <div class="input-group col-md-9">
                   <span class="input-group-addon", id="basic-addon1">
                     <%= label_tag :time, "Search by time" %>
                   </span>
-                  <%= time_field_tag :time, nil, class: "form-control", 'aria-describedby':"basic-addon1" %>
+                  <%= time_field_tag :time, nil, class: "form-control show_time", 'aria-describedby':"basic-addon1" %>
                 </div>
-              <%= submit_tag 'Filter' %>
+              <%= submit_tag 'Filter', class: "search-button" %>
               <% end %>
             </div>
             <!-- end sixth form -->
@@ -102,5 +102,5 @@
         </div>
       </div>
     </div>
-   <br> 
+   <br>
 </div>

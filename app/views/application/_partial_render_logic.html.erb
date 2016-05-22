@@ -1,0 +1,7 @@
+<% p "&" * 50 %>
+<% p @return_type %>
+<% if @return_type == 'show' %>
+  <%= render 'shows/shows_panel' %>
+<% else %>
+  <%= render 'comedians/comedians_panel' %>
+<% end %>

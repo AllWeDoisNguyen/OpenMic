@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   root 'application#homepage'
 
   get '/sessions/new_user/' => 'sessions#new_user', as: :new_user_session
@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   post '/sessions/create_user/' => 'sessions#create_user', as: :create_user_session
   get '/sessions/logout' => 'sessions#destroy', as: :log_out
   get '/bookings/add_comedian' => 'bookings#create', as: :create_booking
+  get '/search_results' => 'application#search_results'
+  post '/search_results_input' => 'application#search_results_input'
 
 
-  resources :users 
+  resources :users
   resources :sessions
   resources :bookings
   resources :shows
