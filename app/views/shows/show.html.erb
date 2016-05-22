@@ -1,40 +1,77 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <strong>Name:</strong>
-  <%= @show.show_name %>
-</p>
+<div class="horiz-flex-box show-header-container space-around"
+     style="background-color:teal;">
+  <div class="vert-flex-box space-around">
+    <div class="horiz-flex-box space-around">
+      <div><%= image_tag @show.avatar.url(:medium), height: '150px', width: '150px' %></div>
+      <div class="vert-flex-box flex-start show-name-box">
+        <div id="show-header-name">
+          <h1 class="show-header-name"><%= @show.show_name %></h1>
+        </div>
+        <div id="show-header-venue">
+          <h4 class="show-header-venue"><%= @show.venue %></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vert-flex-box space-around">Some Deets</div>
+</div>
+<div class="horiz-flex-box space-around show-container">
+  <div class="vert-flex-box space-around show-left-box" style="background-color:orange;">
+    <div class= "horiz-flex-box space-around">
+      <div class="vert-flex-box space-around show-top-left-box" style="background-color:red;">
+        <p id="notice">
+          <%= notice %>
+        </p>
+        <p>
+          <strong>Name:</strong>
+          <%= @show.show_name %>
+        </p>
 
-<p>
-  <strong>Venue:</strong>
-  <%= link_to @show.venue, @show.venue_website %>
-</p>
+        <p>
+          <strong>Venue:</strong>
+          <%= link_to @show.venue, @show.venue_website %>
+        </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @show.date %>
-</p>
+        <p>
+          <strong>Date:</strong>
+          <%= @show.date %>
+        </p>
 
-<p>
-  <strong>Time:</strong>
-  <%= @show.time %>
-</p>
+        <p>
+          <strong>Time:</strong>
+          <%= @show.time %>
+        </p>
 
-<p>
-  <strong>Booked comedians:</strong>
-  <% @show.bookings.each do |x| %>
-    <%= link_to x.comedian.name, x.comedian %>
-  <% end %>
-</p>
-
-<div class = "gmaps_iframe"><iframe
-  width="350"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBvc3cf9rMc8McjqK3mVH2OCzrZndlyahg&q=<%= @show.address %>,<%= @show.city %>,<%= @show.state %>" allowfullscreen>
-</iframe></div>
-
-
-<%= render 'bookings/form' %>
-
-<%= link_to 'Edit', edit_show_path(@show) %> |
-<%= link_to 'Back', root_path %>
+        <p>
+          <strong>Booked comedians:</strong>
+          <% @show.bookings.each do |x| %>
+          <%= link_to x.comedian.name, x.comedian %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+    <div class="horiz-flex-box space-around">
+      <div class="vert-flex-box space-around" style="background-color:green;">
+        <div class = "gmaps_iframe">
+          <iframe
+            width="350"
+            height="350"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBvc3cf9rMc8McjqK3mVH2OCzrZndlyahg&q=<%= @show.address %>,<%= @show.city %>,<%= @show.state %>" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="show-right-box vert-flex-box space-around" style="background-color:blue;">
+    <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
+      Some Text
+    </div>
+    <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
+      Some Text
+    </div>
+    <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
+      Some Text
+    </div>
+  </div>
+</div>

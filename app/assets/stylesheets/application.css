@@ -249,6 +249,18 @@ h1 {
   justify-content: space-around;
 }
 
+.center {
+  justify-content: center;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
 .list-unstyled {
   text-align: left;
 }
