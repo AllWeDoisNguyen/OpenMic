@@ -67,12 +67,9 @@
 <!-- Comedian panels -->
 
 <%= render 'bookings/index' %>
-<% if @return_type == "show" %>
-  <%= render 'shows/shows_panel' %>
-<% else %>
-  <%= render 'comedians/comedians_panel' %>
-<% end %>
-
+<div class='render-search-results' >
+  <%= render 'application/partial_render_logic' %>
+</div>
 <!-- Old Comedian panels -->
     <!-- <div class="group-panel">
       <div class="container-fluid">

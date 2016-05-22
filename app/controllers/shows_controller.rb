@@ -19,6 +19,11 @@ class ShowsController < ApplicationController
     @users = User.all
   end
 
+  def show_json
+    @shows = Show.all
+    render json: @shows
+  end
+
   # GET /shows/new
   def new
     @show = Show.new

@@ -48,5 +48,36 @@ var comPanels = function() {
   });
 };
 
-$(document).ready(comPanels);
-$(document).on('page:load', comPanels);
+function sendSearch() {
+  $('.search-button').click(function(event) {
+    event.preventDefault();
+    var comName = $('.comedian-signup-container').find('.com_name').val();
+    var comUsername = $('.comedian-signup-container').find('.com_username').val();
+    var showVenue = $('.comedian-signup-container').find('.show_venue').val();
+    var showName = $('.comedian-signup-container').find('.show_name').val();
+    var showDate = $('.comedian-signup-container').find('.show_date').val();
+    var showTime = $('.comedian-signup-container').find('.show_time').val();
+    var searchInput = {
+      "username" : comUsername,
+      "name" : comName,
+      "venue" : showVenue,
+      "show_name" : showName,
+      "date" : showDate,
+      "time" : showTime
+    };
+    console.log(searchInput);
+    $.ajax({
+      type: "POST",
+      url: '/search_results_input',
+      data: searchInput
+    });
+    $('.form-control').val('');
+  });
+}
+
+// $(document).ready(comPanels());
+$(document).on('page:load ready', comPanels());
+// $(document).ready(renderSearch());
+// $(document).on('page:load', renderSearch());
+// $(document).ready(sendSearch());
+$(document).on('page:load ready', sendSearch());

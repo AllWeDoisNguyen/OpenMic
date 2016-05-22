@@ -29,11 +29,11 @@ class ApplicationController < ActionController::Base
     @comedian = Comedian.first
   end
 
-  def homepage
-    @comedians = Comedian.all.sample(6)
+  def search_logic(search_array = params)
+    @comedians = nil
     @comedian = Comedian.new
     @show = Show.new
-    @shows = Show.all
+    @shows = nil
     @bookings = Booking.all
     @booking = Booking.new
     @user = User.new
@@ -65,10 +65,37 @@ class ApplicationController < ActionController::Base
       @shows = Show.where(time: params[:time])
       @return_type = "show"
     end
+  end
 
+  def search_results_input
+    search_inputs = params
+    p "^" * 50
+    p search_inputs
+    p "^" * 50
+    search_inputs.each do |k, v|
+      search_inputs[k] = nil if v == ""
+    end
+    search_logic(search_inputs)
+    @return = [@return_type, @shows, @comedians]
     p "*" * 50
-    p @return_type
+    p "post request input"
+    p @return
     p "*" * 50
+    p search_inputs
+    p "*" * 50
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def search_results
+  end
+
+  def homepage
+    search_logic
+    @comedians = Comedian.all
+    @shows = Show.all
 
   end
 end
