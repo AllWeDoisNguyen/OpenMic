@@ -342,8 +342,8 @@ hr.jumbo {
 }
 
 .comedian-panel-container-body {
-  min-height: 375px;
-  max-height: 375px;
+  min-height: 400px;
+  max-height: 400px;
   height: 375px;
   transition: width 2s, max-height 1s, min-height 1s;
   text-align: center;
