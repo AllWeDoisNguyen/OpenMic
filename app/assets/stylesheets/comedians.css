@@ -311,8 +311,6 @@ col.comedian-2 {
 }
 
 .reviews.container {
-  /*margin-right: 55px;*/*/
-  /*padding-left: 0;*/
 }
 
 div.row.coralbg.white {
@@ -324,6 +322,11 @@ div.average-review-rating.show-show {
   margin: 0 0 0 0;
   align-items: center;
 }
+
+div.row.user-menu-container.square {
+  margin-right: 0;
+}
+
 
 /* -- media query for user profile image -- */
 @media (max-width: 767px) {
