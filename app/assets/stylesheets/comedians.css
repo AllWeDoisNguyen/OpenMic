@@ -255,9 +255,8 @@ col.comedian-2 {
   width: 70%;
 }
 
-.com-prof-button {
-  max-height: 25%;
-  min-height: 25%;
+a.btn.btn-inverse.com-prof-button {
+  padding: 31px 23.8px;
 }
 
 .vert-button-container {
