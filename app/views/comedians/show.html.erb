@@ -14,7 +14,7 @@
                         <% if current_comedian == @comedian %>
                        	<a href="<%= edit_comedian_path(@comedian) %>"><button type="button" class="btn btn-labeled btn-danger">
                             <span class="btn-label"><i class="fa fa-pencil"></i></span>Edit Profile</button></a>
-                            <% end %> 
+                            <% end %>
                     </div>
                 </div>
                 <div class="col-md-6 no-pad">
@@ -183,8 +183,8 @@
 
 <div class="reviews container">
 <% if current_user %>
-   <%= render "reviews/form"%> 
-<% end %>   
+   <%= render "reviews/form"%>
+<% end %>
 </div>
 <div class="container">
   <div class="col-md-12 vert-flex-box comment-container">
@@ -195,29 +195,3 @@
     <%= render @comedian.reviews %>
   </div>
 </div>
-
-
-<!--- To display star icons for each rating -->
-<script src="jquery.raty.js"></script>
-<script>
-  $('.review-rating').raty({
-    readOnly: true,
-    score: function() {
-      return $(this).attr('data-score');
-    },
-    path: '/assets/'
-  });
-</script>
-
-<!-- this displays the star images for the average rating -->
-<script>
-  $('.average-review-rating').raty({
-    readOnly: true,
-    path: '/assets/',
-    score: function() {
-      return $(this).attr('data-score')
-    }
-  });
-</script>
-<!-- javascript for profile buttons -->
-<script src="javascripts/jquery.js"></script>

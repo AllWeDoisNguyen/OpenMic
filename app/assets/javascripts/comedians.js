@@ -29,7 +29,31 @@ tooltip = function() {
     );
 };
 
-$(document).ready(buttons);
-$(document).on('page:load', buttons);
-$(document).ready(tooltip);
-$(document).on('page:load', tooltip);
+// Raty stuff here
+function reviewRating() {
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+};
+// <!-- this displays the star images for the average rating -->
+function averageReviewRating() {
+  $('.average-review-rating').raty({
+    readOnly: true,
+    path: '/assets/',
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+};
+
+// Raty stuff end
+
+// Make JS available
+$(document).on('page:load ready page:change', buttons);
+$(document).on('page:load ready page:change', tooltip);
+$(document).on('page:load ready page:change', reviewRating);
+$(document).on('page:load ready page:change', averageReviewRating);

@@ -24,9 +24,15 @@
   text-align: left;
 }
 
+h5.show-header-venue {
+  margin: 0;
+  color: #f6d258;
+}
+
 .show-header-venue {
   padding-left: 30px;
   text-align: left;
+  align-items: flex-start;
 }
 
 .show-header-venue a {
@@ -128,5 +134,6 @@ ul {
 }
 
 div.average-review-rating {
-  margin: 0 auto;
+  margin: 0;
+  margin-left: 30px;
 }

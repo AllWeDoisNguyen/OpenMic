@@ -14,8 +14,16 @@
               <h4 class="show-header-venue">
                 <%= link_to @show.venue, @show.venue_website %>
               </h4>
-              <div class="average-review-rating" data-score=<%= @average_review %>></div>
-              <div> Based on <%= @show.reviews.count %> reviews </div>
+              <div class="horiz-flex-box flex-start">
+                <div class="average-review-rating" data-score=<%= @average_review %>></div>
+              </div>
+              <div class="horiz-flex-box flex-start">
+                <div>
+                  <h5 class="show-header-venue">
+                    Based on <%= @show.reviews.count %> reviews
+                  </h5>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -79,7 +87,7 @@
   </div>
 </div>
 
-<script src="jquery.raty.js"></script>
+<!-- <script src="jquery.raty.js"></script> -->
 <script>
   $('.review-rating').raty({
     readOnly: true,
