@@ -29,4 +29,13 @@ class Comedian < ActiveRecord::Base
 			""
 		end
 	end
+
+	def average_review
+		if self.reviews.blank?
+			@average_review = 0
+		else
+			@average_review = self.reviews.average(:rating).round(2)
+		end
+	end
+
 end

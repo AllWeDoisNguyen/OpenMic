@@ -27,9 +27,9 @@
                               class: "img-rounded img-responsive img-left panel-image"), x %>
                         <div class="comedian-panel-body-line">
                           <h4>Rating Goes Here</h4>
-                          <div class="average-review-rating" data-score=<%= @average_review %>></div>
+                          <div class="average-review-rating" data-score=<%= x.average_review %>></div>
                       <span>
-                        <p class="profile-rating"><%= @comedian.reviews.count %> reviews</p>
+                        <p class="profile-rating"><%= x.reviews.count %> reviews</p>
                       </span>
                         </div>
                         <% unless x.show.nil? || x.next_show_name.nil? || x.next_show.date.nil? %>
@@ -76,28 +76,3 @@
     </div>
   </div>
 </section>
-
-<!--- To display star icons for each rating -->
-<script src="jquery.raty.js"></script>
-<script>
-  $('.review-rating').raty({
-    readOnly: true,
-    score: function() {
-      return $(this).attr('data-score');
-    },
-    path: '/assets/'
-  });
-</script>
-
-<!-- this displays the star images for the average rating -->
-<script>
-  $('.average-review-rating').raty({
-    readOnly: true,
-    path: '/assets/',
-    score: function() {
-      return $(this).attr('data-score')
-    }
-  });
-</script>
-<!-- javascript for profile buttons -->
-<script src="javascripts/jquery.js"></script>

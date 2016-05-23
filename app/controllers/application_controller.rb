@@ -68,6 +68,7 @@ class ApplicationController < ActionController::Base
   end
 
   def search_results_input
+    p params
     search_inputs = params
     p "^" * 50
     p search_inputs
