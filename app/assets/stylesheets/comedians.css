@@ -325,6 +325,11 @@ div.average-review-rating.show-show {
   align-items: center;
 }
 
+div.row.user-menu-container.square {
+  margin-right: 0;
+}
+
+
 /* -- media query for user profile image -- */
 @media (max-width: 767px) {
     .user-image {
