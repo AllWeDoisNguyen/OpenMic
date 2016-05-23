@@ -2,8 +2,12 @@
 	<div>
 		<div class="review-rating" data-score="<%= r.rating %>">
 		</div>
-		<p><%= r.comment %></p>
-		<%= button_to "Edit", edit_comedian_review_path(r.comedian, r) %>
-		<%= button_to "Delete", comedian_review_path(r.comedian, r), method: :delete, date: {confirm: "Are you sure?" } %>
+		<p class="review-comment"><%= r.comment %></p>
+		<% if current_user %>
+			<% if r.user_id == current_user.id %>
+				<%= link_to "Edit", edit_comedian_review_path(r.comedian, r), class: "btn btn-warning" %>
+				<%= link_to "Delete", comedian_review_path(r.comedian, r), method: :delete, date: {confirm: "Are you sure?" }, class: "btn btn-warning" %>
 	</div>
-<% end %>
+			<% end %>
+		<% end %>
+	<% end %> 	

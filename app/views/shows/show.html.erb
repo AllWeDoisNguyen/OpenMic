@@ -1,5 +1,5 @@
 <div class="horiz-flex-box space-around show-container">
-  <div class="vert-flex-box space-around show-left-box" style="background-color:orange;">
+  <div class="vert-flex-box space-around show-left-box" style="background-color: #303030;">
     <div class= "horiz-flex-box flex-start show-title-box">
       <div class="vert-flex-box space-around">
         <div class="horiz-flex-box space-around">
@@ -30,7 +30,8 @@
       </div>
     </div>
     <div class="horiz-flex-box space-around">
-      <div class="vert-flex-box space-around" style="background-color:green;">
+      <div class="vert-flex-box space-around text center" style="background-color:#9d9d9d;">
+        <h2>Where in Miami?</h2>
         <div class = "gmaps_iframe">
           <iframe
             width="350"
@@ -45,7 +46,7 @@
   <!-- Here -->
   <div class="vert-flex-box flex-start">
     <div class="horiz-flex-box show-header-container space-around"
-    style="background-color:teal;">
+    style="background-color:#9d9d9d;">
       <p id="notice">
         <%= notice %>
       </p>
@@ -73,12 +74,8 @@
         <% counter += 1 %>
       <% end %>
     </div>
-    <div class="show-right-box vert-flex-box space-around" style="background-color:blue;">
-      <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
-        <% p "#" * 50 %>
-        <% p params %>
-        <% p @show %>
-        <% p "#" * 50 %>
+    <div class="show-right-box vert-flex-box space-around" style="background-color:#9d9d9d;">
+      <div class="vert-flex-box show-body-outer-box" style="background-color:#ac1c35;">
         <%= render 'show_form' %>
       </div>
       <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
