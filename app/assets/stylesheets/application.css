@@ -218,7 +218,7 @@ h3 {
 }
 
 .background-comedian-signup-master {
-  background-color: #f6d258
+  background-color: #f6d258;
 }
 .comedian-signup-container {
   display: flex;
@@ -228,7 +228,7 @@ h3 {
 
 .comedian-signup-master-container {
   background-color: #303030;
-  padding: 50px 20px !important;
+  padding: 50px 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10pt;
 }

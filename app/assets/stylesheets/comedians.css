@@ -1,7 +1,3 @@
-// Place all the styles related to the Comedians controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 body {
   background-color: #86888c!important;
 }
@@ -267,6 +263,66 @@ col.comedian-2 {
 .vert-button-container {
   position: absolute;
   height: 100%;
+}
+
+.rating-form-box {
+  background-color: white;
+  margin: 15px;
+  padding: 10px 0;
+}
+
+.rating-form-box span.input-group-addon {
+  min-width: 100%;
+}
+
+.rating-form {
+  margin-left: 10px;
+}
+
+.comedian-review-master-container {
+  background-color: #303030;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10pt;
+}
+
+.background-comedian-review-master {
+  background-color: #f6d258;
+  padding-bottom: 20px;
+}
+
+.comedian-review-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-form-box label {
+  margin-bottom: 0;
+}
+
+.review-box-title {
+  margin-left: 15px;
+  padding-right: 15px;
+}
+
+.comedian-review-master-container h2 {
+  color: white;
+  margin: 0;
+}
+
+.reviews.container {
+  /*margin-right: 55px;*/*/
+  /*padding-left: 0;*/
+}
+
+div.row.coralbg.white {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+div.average-review-rating.show-show {
+  margin: 0 0 0 0;
+  align-items: center;
 }
 
 /* -- media query for user profile image -- */
