@@ -1,20 +1,21 @@
 <div class="background-comedian-signup-master">
-  <br><br>
-    <div class="comedian-signup-master-container col-md-8 col-centered">
-      <div class="comedian-signup-container">
-        <div>
-          <!-- first form col -->
-          <div class="col-md-6">
-            <h1>Find Comedians</h1>
-            <br>
-            <!-- first form -->
-            <%= form_tag '', :method => :get, remote: true do %>
-            <div class="horiz-flex-box">
-              <div class="input-group col-md-9">
-                <span class="input-group-addon", id="basic-addon1">
-                  <%= label_tag :name, "Comedian name" %>
-                </span>
-                <%= text_field_tag :name, nil, class: "form-control com_name", 'aria-describedby':"basic-addon1" %>
+  <br>
+  <br>
+  <div class="comedian-signup-master-container col-md-8 col-centered">
+    <div class="comedian-signup-container">
+      <div>
+      <!-- first form col -->
+        <div class="col-md-6">
+          <h1>Find Comedians</h1>
+          <br>
+          <!-- first form -->
+          <%= form_tag '', :method => :get, remote: true do %>
+          <div class="horiz-flex-box">
+            <div class="input-group col-md-9">
+              <span class="input-group-addon", id="basic-addon1">
+                <%= label_tag :name, "Comedian name" %>
+              </span>
+              <%= text_field_tag :name, nil, class: "form-control com_name", 'aria-describedby':"basic-addon1" %>
               </div>
               <%= submit_tag 'Filter', class: "search-button" %>
               <% end %>

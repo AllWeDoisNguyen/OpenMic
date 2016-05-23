@@ -3,18 +3,18 @@
 	<div class="comedian-signup-master-container col-md-8 col-centered">
 	<br>
 		<div class="comedian-signup-container">
-			<div class="col-md-12 row">	
+			<div class="col-md-12 row">
 			<%= form_for([@comedian, @comedian.reviews.build]) do |f| %>
 				<div class="horiz-flex-box field col-lg-1">
 					<span class="input-group-addon", id="basic-addon1">
 						<div id="rating-form">
 				<%= f.label :rating %><br>
-						</div>	
+						</div>
 					</span>
-				</div>	
+				</div>
 			</div>
 			<br><br><br>
-			<div class="col-md-12 row">		
+			<div class="col-md-12 row">
 				<div class="horiz-flex-box field col-lg-2">
 					<span class="input-group-addon", id="basic-addon1">
 				<%= f.label :comment %><br>
@@ -31,12 +31,4 @@
 			<% end %>
 		</div>
 	</div>
-</div>			
-
-
-<script>
-	$('#rating-form').raty({
-		path: '/assets/',
-		scoreName: 'review[rating]'
-	});
-</script>
+</div>

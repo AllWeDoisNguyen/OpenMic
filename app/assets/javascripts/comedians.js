@@ -50,6 +50,13 @@ function averageReviewRating() {
   });
 };
 
+function ratingForm() {
+  $('#rating-form').raty({
+    path: '/assets/',
+    scoreName: 'review[rating]'
+  });
+};
+
 // Raty stuff end
 
 // Make JS available
@@ -57,3 +64,4 @@ $(document).on('page:load ready page:change', buttons);
 $(document).on('page:load ready page:change', tooltip);
 $(document).on('page:load ready page:change', reviewRating);
 $(document).on('page:load ready page:change', averageReviewRating);
+$(document).on('page:load ready page:change', ratingForm);
