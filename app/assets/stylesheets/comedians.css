@@ -265,8 +265,8 @@ a.btn.btn-inverse.com-prof-button {
 }
 
 .rating-form-box {
-  background-color: white;
-  margin: 15px;
+  /*background-color: white;*/
+  margin: 0 15px 0 15px;
   padding: 10px 0;
 }
 
@@ -346,6 +346,43 @@ div.comedian-comment-left {
 h3.com-prof-name {
   font-weight: bold;
   font-size: 30pt;
+}
+
+.comedian.textarea {
+  max-height: 4em;
+  min-width: 80%;
+  resize: none;
+}
+
+span.sm-icon {
+  margin: 0 10px;
+  color: white;
+}
+
+.user-menu-content h2.text-center {
+  margin-top: 0;
+  color: white;
+}
+
+span.sm-text {
+  color: white;
+  font-weight: normal;
+}
+
+span.sm-text a {
+  color: white;
+  font-weight: normal;
+}
+
+span.sm-text a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+div.comedian-upcoming-shows {
+  min-height: 250px;
+  border: 1px solid white;
+  margin: 0 40px;
 }
 
 /* -- media query for user profile image -- */
