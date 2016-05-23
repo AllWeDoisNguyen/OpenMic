@@ -338,9 +338,16 @@ p.comment-body {
   padding: 0;
   color: white;
 }
+
 div.comedian-comment-left {
   border-right: black solid 1px;
 }
+
+h3.com-prof-name {
+  font-weight: bold;
+  font-size: 30pt;
+}
+
 /* -- media query for user profile image -- */
 @media (max-width: 767px) {
     .user-image {

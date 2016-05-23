@@ -21,6 +21,9 @@ class ComediansController < ApplicationController
     else
       @average_review = @comedian.reviews.average(:rating).round(2)
     end
+    @twitter_handle = @comedian.twitter_handle
+    @youtube = @comedian.youtube
+    @shows = @comedian.shows.sample(3)
   end
 
   # GET /comedians/new
