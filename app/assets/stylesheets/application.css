@@ -428,26 +428,3 @@ hr.jumbo {
 }
 
 /* New Comedian Panels End */
-
-/* Comments formatting beginning */
-.comment-container {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  box-shadow: 5px 5px 5px 5px grey;
-  background: #f4ecd6;
-}
-
-.comment-individual {
-  border-bottom: 1px solid grey;
-  padding-bottom: 15px;
-}
-
-.add-review-button {
-  padding-top: 10px;
-}
-
-.comment-body {
-  padding: 5px 10vw;
-  text-align: left;
-}
-/* Comments formatting end */

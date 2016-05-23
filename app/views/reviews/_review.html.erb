@@ -1,16 +1,9 @@
-<div class="vert-flex-box comment-individual">
-	<div class="review-rating" data-score="<%= review.rating %>"></div>
-		<div class="comment-body">
-			<p><%= review.comment %></p>
+<% @comedian.reviews.each do |r| %>
+	<div>
+		<div class="review-rating" data-score="<%= r.rating %>">
 		</div>
-	<% if current_user %>
-
-		<% if review.user_id == current_user.id %>
-
-			<div class="vert-flex list-unstyled">
-				<%= button_to "Edit", edit_comedian_review_path(review.comedian, review) %>
-				<%= button_to "Delete", comedian_review_path(review.comedian, review), method: :delete, date: {confirm: "Are you sure?" } %>
-			</div>
-		<% end %>
-	<% end %>
-</div>
+		<p><%= r.comment %></p>
+		<%= button_to "Edit", edit_comedian_review_path(r.comedian, r) %>
+		<%= button_to "Delete", comedian_review_path(r.comedian, r), method: :delete, date: {confirm: "Are you sure?" } %>
+	</div>
+<% end %>

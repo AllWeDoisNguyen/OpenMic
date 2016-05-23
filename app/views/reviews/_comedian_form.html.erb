@@ -1,23 +1,21 @@
-<div class="background-comedian-review-master">
+<br>
+<div class="comedian-review-master-container col-md-8 col-centered">
+	<h2>Write a Review!</h2>
 	<br>
-	<div class="comedian-review-master-container col-md-8 col-centered">
-		<h2>Write a Review!</h2>
-		<br>
-		<div class="comedian-review-container comedian-form center">
-			<div class="rating-form-box horiz-flex-box">
-				<%= form_for([@comedian, @comedian.reviews.build]) do |f| %>
-				<div id="rating-form" class="rating-form">
-				</div>
+	<div class="comedian-review-container comedian-form center">
+		<div class="rating-form-box horiz-flex-box">
+			<%= form_for([@comedian, @comedian.reviews.build]) do |f| %>
+			<div id="rating-form" class="rating-form">
 			</div>
-			<div class="">
-				<div class="">
-					<%= f.text_area :comment, class:'textarea' %>
-				</div>
-			</div>
-			<div class="">
-				<%= f.submit %>
-			</div>
-			<% end %>
 		</div>
+		<div class="">
+			<div class="">
+				<%= f.text_area :comment, class:'textarea' %>
+			</div>
+		</div>
+		<div class="">
+			<%= f.submit %>
+		</div>
+		<% end %>
 	</div>
 </div>
