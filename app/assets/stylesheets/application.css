@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+ /* footer background */
+ footer {
+  color: #eee;
+  background-color: #303030;
+ }
 
 /* style the text area field for reviews on Comedian Show page */
 .textarea {
@@ -189,12 +194,15 @@ h3 {
   font-family: Verdana, Geneva, sans-serif;
 }
 
-.panel-body a {
-  color: #f4ecd6;
+.panel-body h4 {
+  color: #9d9d9d;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .panel-body a {
-  color: #f4ecd6;
+  color: #9d9d9d;
   font-family: Verdana, Geneva, sans-serif;
   font-weight: bold;
   text-decoration: none;
@@ -342,8 +350,8 @@ hr.jumbo {
 }
 
 .comedian-panel-container-body {
-  min-height: 375px;
-  max-height: 375px;
+  min-height: 400px;
+  max-height: 400px;
   height: 375px;
   transition: width 2s, max-height 1s, min-height 1s;
   text-align: center;
@@ -368,6 +376,10 @@ hr.jumbo {
   flex-direction: row;
   justify-content: flex-start;
   transition: display 2s, flex-direction 2s, justify-content 2s;
+}
+
+.comedian-panel-bottom {
+  color:#9d9d9d;
 }
 
 .comedian-filler-box-body {
