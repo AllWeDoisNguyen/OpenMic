@@ -11,11 +11,12 @@ Rails.application.routes.draw do
   get '/search_results' => 'application#search_results'
   post '/search_results_input' => 'application#search_results_input'
 
-
   resources :users
   resources :sessions
   resources :bookings
-  resources :shows
+  resources :shows do
+    resources :reviews
+  end
   resources :comedians do
     resources :reviews
   end

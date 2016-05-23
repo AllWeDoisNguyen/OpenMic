@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  background-color: #303030;
+ }
  /* footer background */
  footer {
   color: #eee;
@@ -139,7 +142,11 @@
 /*end of Jumbotron icon style*/
 
 .jumbotron {
+  background-color: transparent!important;
   margin-bottom: 0 !important;
+}
+.text-muted {
+  color: #000;
 }
 
 .navbar-brand {
@@ -158,7 +165,7 @@ html, body {
 }
 
 .landing-background {
-  background-color: #f4ecd6
+  background-color: #9d9d9d;
 }
 
 .comedian-table-link {
