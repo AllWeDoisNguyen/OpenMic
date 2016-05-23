@@ -13,14 +13,6 @@
  *= require_tree .
  *= require_self
  */
- body {
-  background-color: #303030;
- }
- /* footer background */
- footer {
-  color: #eee;
-  background-color: #303030;
- }
 
 /* style the text area field for reviews on Comedian Show page */
 .textarea {
@@ -140,14 +132,6 @@
 }
 
 /*end of Jumbotron icon style*/
-
-.jumbotron {
-  background-color: transparent!important;
-  margin-bottom: 0 !important;
-}
-.text-muted {
-  color: #000;
-}
 
 .navbar-brand {
   padding: 2px 5px!important;
@@ -298,6 +282,11 @@ li.centered-list-item {
   font-family: Verdana, Geneva, sans-serif !important;
   color: #656565 !important;
 }
+
+h2.jumbotron {
+  color: #656565!important;
+}
+
 hr.jumbo {
     width: 6%;
     height: 10px;
@@ -435,3 +424,17 @@ hr.jumbo {
 }
 
 /* New Comedian Panels End */
+ body {
+  background-color: #9d9d9d;
+ }
+ /* footer background */
+ footer {
+  color: #eee;
+  background-color: #9d9d9d!important;
+  margin-bottom: 1em;
+  margin-top: 0em;
+ }
+
+.jumbo h3 {
+  color: #9d9d9d!important;
+}
