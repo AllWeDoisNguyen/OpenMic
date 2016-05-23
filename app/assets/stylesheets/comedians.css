@@ -47,6 +47,7 @@ p.profile-rating {
 }
 div.average-review-rating {
   margin: 0 auto;
+  width:200px!important;
 }
 
 div.user-menu-container {
