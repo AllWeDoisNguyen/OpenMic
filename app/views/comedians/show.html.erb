@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-md-4 user-pad text-center">
                     <h3>RATING</h3>
-                    <div class="average-review-rating" data-score=<%= @average_review %>></div>
+                    <div class="average-review-rating show-show" data-score=<%= @average_review %>></div>
                       <span>
                         <p class="profile-rating"><%= @comedian.reviews.count %>reviews</p>
                       </span>
@@ -156,34 +156,10 @@
         </div>
     </div>
 </div>
-<!-- <p id="notice">
-<%#notice %>
-
-</p>
-<%#image_tag @comedian.avatar.url(:thumb)%>
-<p>
-  <strong>Name:</strong>
-  <%#@comedian.name %>
-</p>
-
-<p>
-  <strong>Username:</strong>
-  <%#@comedian.username %>
-</p>
-
-<p>
-  <strong>Upcoming Shows:</strong>
-  <%#@comedian.shows.each do |x| %>
-    <%#link_to x.show_name, x %>
-  <%# #end %>
-</p>
-
-<%# #link_to 'Edit', edit_comedian_path(@comedian) %> |
-<%# #link_to 'Back', root_path %> -->
-
+<!-- Reviews Code -->
 <div class="reviews container">
 <% if current_user %>
-   <%= render "reviews/form"%>
+   <%= render "reviews/comedian_form"%>
 <% end %>
 </div>
 <div class="container">
