@@ -162,9 +162,9 @@
     <% if current_user %>
       <%= render "reviews/comedian_form"%>
     <% end %>
-    <div class="col-md-12 vert-flex-box comment-container">
+    <div class="col-md-10 col-centered vert-flex-box comment-container">
       <p id="notice"><%= flash[:notice_signin] %></p>
-        <%= render 'reviews/review' %>
+        <%= render 'comedians_reviews' %>
     </div>
   </div>
 </div>

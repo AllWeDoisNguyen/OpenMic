@@ -15,6 +15,7 @@ class ComediansController < ApplicationController
   # GET /comedians/1
   # GET /comedians/1.json
   def show
+    set_comedian
     if @comedian.reviews.blank?
       @average_review = 0
     else
@@ -84,6 +85,7 @@ class ComediansController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def comedian_params
       params.require(:comedian).permit(:avatar, :name, :username, :password,
-                                       :password_confirmation, :bookings, :bio, :city, :twitter_handle, :facebook, :youtube)
+                                       :password_confirmation, :bookings, :bio,
+                                       :city, :twitter_handle, :facebook, :youtube)
     end
 end
