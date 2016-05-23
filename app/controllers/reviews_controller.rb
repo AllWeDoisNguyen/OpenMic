@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
 	def create
     @review = Review.new(review_params)
     #associate book with current user
-    @review.comedian_id = @comedian.id 
+    @review.comedian_id = @comedian.id
     @review.user_id = current_user.id
 
 		if @review.save
@@ -26,7 +26,7 @@ class ReviewsController < ApplicationController
   def edit
   end
 
-  def update 
+  def update
     if @review.update(review_params)
       redirect_to comedian_path(@comedian)
     else
@@ -42,7 +42,7 @@ class ReviewsController < ApplicationController
 	private
 
 	def review_params
-		params.require(:review).permit(:rating, :comment)
+		params.require(:review).permit(:rating, :comment, :id)
 	end
 
 	def find_comedian

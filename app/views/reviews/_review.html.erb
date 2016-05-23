@@ -1,9 +1,13 @@
-<% @comedian.reviews.each do |r| %>
-	<div>
-		<div class="review-rating" data-score="<%= r.rating %>">
-		</div>
-		<p><%= r.comment %></p>
-		<%= button_to "Edit", edit_comedian_review_path(r.comedian, r) %>
-		<%= button_to "Delete", comedian_review_path(r.comedian, r), method: :delete, date: {confirm: "Are you sure?" } %>
-	</div>
+<% unless @comedian.nil? %>
+	<% unless @comedian.reviews.nil? %>
+		<% @comedian.reviews.each do |r| %>
+			<div>
+				<div class="review-rating" data-score="<%= r.rating %>">
+				</div>
+				<p><%= r.comment %></p>
+				<%= button_to "Edit", edit_comedian_review_path(r.comedian, r) %>
+				<%= button_to "Delete", comedian_review_path(r.comedian, r), method: :delete, date: {confirm: "Are you sure?" } %>
+			</div>
+		<% end %>
+	<% end %>
 <% end %>

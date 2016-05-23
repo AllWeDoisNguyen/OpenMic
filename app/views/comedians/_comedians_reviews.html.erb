@@ -1,0 +1,15 @@
+<% unless @comedian.nil? %>
+	<% unless @comedian.reviews.nil? %>
+		<% @comedian.reviews.each do |r| %>
+			<div class="individual-comedian-comment">
+				<div class="col-lg-3 comedian-comment-left vert-flex-box">
+					<div class="review-rating" data-score="<%= r.rating %>">
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<p class="comment-body"><%= r.comment %></p>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+<% end %>
