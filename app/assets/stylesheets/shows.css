@@ -4,7 +4,7 @@
 
 .show-right-box {
   width: 65vw;
-  height: 82vh;
+  height: 300px;
 }
 
 .show-container {
@@ -49,9 +49,9 @@ h5.show-header-venue {
 
 
 .show-body-outer-box {
-  padding: 50px;
-  margin: 0 20px;
-  height: 200px;
+  padding: 20px;
+  margin: 10px 20px;
+  height: 400px;
 }
 
 .show-name-box {
@@ -118,6 +118,21 @@ ul {
   min-width: 125px;
 }
 
+.comedian-review-master-container {
+  background-color: #303030;
+  padding: 1em 6em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10pt;
+}
+.comedian-review-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.comedian-form {
+  max-height: 500px!important;
+}
+
 .booked-comedians-title {
   font-size: 20pt;
   text-align: left;
@@ -125,7 +140,6 @@ ul {
 
 .show-bookings-title {
   border: 1px solid;
-  border-color: #f6d258
   margin: 25px 0;
   padding: 20px 20px;
 }
@@ -142,4 +156,19 @@ div.average-review-rating {
 }
 body {
   background-color: #303030!important;
+}
+.rating-form-box {
+  background-color: #303030;
+  margin: 10px 10px;
+  padding: 0em 0em;
+  max-width: 25%;
+}
+.rating-form {
+  margin-left: 10px;
+  max-width: 100%;
+}
+.textarea {
+  max-height: 4em;
+  min-width: 61em;
+  resize: none;
 }

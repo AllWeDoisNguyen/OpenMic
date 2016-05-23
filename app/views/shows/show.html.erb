@@ -78,12 +78,27 @@
       <div class="vert-flex-box show-body-outer-box" style="background-color:#ac1c35;">
         <%= render 'show_form' %>
       </div>
-      <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
-        Some Text
-      </div>
-      <div class="vert-flex-box show-body-outer-box" style="background-color:yellow;">
-        Some Text
-      </div>
+      <br>
     </div>
+      <div class="show-body-outer-box" style="background-color: #ac1c35;">
+        <% unless @show.nil? %>
+          <% unless @show.reviews.nil? %>
+            <% @show.reviews.each do |r| %>
+              <div class="individual-comedian-comment">
+                <div class="col-lg-3 comedian-comment-left vert-flex-box">
+                  <div class="review-rating" data-score="<%= r.rating %>">
+                  </div>
+                </div>
+              <div class="col-lg-9">
+                <p class="comment-body"><%= r.comment %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+      </div>
+      <div class="show-body-outer-box" style="background-color: #ac1c35;">
+        Some Text
+      </div>
   </div>
 </div>

@@ -9,12 +9,23 @@ class ReviewsController < ApplicationController
 
 	def create
     @review = Review.new(review_params)
-    #associate book with current user
-    @review.comedian_id = @comedian.id
+    if @comedian.nil?
+      @review.show_id = @show.id
+    elsif @show.nil?
+      #associate book with current user
+      @review.comedian_id = @comedian.id
+    end
+          
     @review.user_id = current_user.id
 
 		if @review.save
-			redirect_to comedian_path(@comedian)
+      if @review.comedian_id
+        @review_direction = "com"
+			 redirect_to comedian_path(@comedian)
+      elsif @review.show_id
+        @review_direction = "show"
+        redirect_to show_path(@show)
+      end    
 		else
 			render 'new'
 		end
@@ -46,7 +57,11 @@ class ReviewsController < ApplicationController
 	end
 
 	def find_comedian
-		@comedian = Comedian.find(params[:comedian_id])
+      if (params[:comedian_id]).nil?
+        @show = Show.find(params[:show_id])
+      elsif 
+        @comedian = Comedian.find(params[:comedian_id])
+      end
 	end
 
   def check_current_user

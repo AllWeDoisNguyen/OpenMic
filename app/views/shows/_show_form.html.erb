@@ -1,8 +1,5 @@
-<br>
-<div class="comedian-review-master-container col-md-8 col-centered">
+<div class="comedian-review-master-container comedian-form center">
 	<h2>Write a Review!</h2>
-	<br>
-	<div class="comedian-review-container comedian-form center">
 		<div class="rating-form-box horiz-flex-box">
 			<%= form_for([@show, @show.reviews.build]) do |f| %>
 			<div id="rating-form" class="rating-form">
@@ -12,10 +9,11 @@
 			<div class="">
 				<%= f.text_area :comment, class:'textarea' %>
 			</div>
+			<br>
 		</div>
 		<div class="">
 			<%= f.submit %>
 		</div>
 		<% end %>
-	</div>
 </div>
+
