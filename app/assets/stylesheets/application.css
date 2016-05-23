@@ -157,7 +157,7 @@ html, body {
 }
 
 .comedian-table-link {
-  color: #414d4b!important;
+  color: #9d9d9d!important;
   font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -219,7 +219,7 @@ h3 {
 }
 
 .comedian-signup-master-container {
-  background-color: #414d4b;
+  background-color: #303030;
   padding: 50px 20px !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10pt;
@@ -311,7 +311,7 @@ hr.jumbo {
 }
 
 .comedian-panel-container-outer {
-  background-color: #f4ecd6;
+  background-color: #363636;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
   padding: 0 !important;
@@ -320,7 +320,7 @@ hr.jumbo {
 }
 
 .comedian-panel-container-outer-hover {
-  background-color: #f4ecd6;
+  background-color: #363636;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
   padding: 0 !important;
