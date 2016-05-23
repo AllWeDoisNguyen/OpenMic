@@ -1,34 +1,21 @@
-<div class="background-comedian-signup-master">
 <br>
-	<div class="comedian-signup-master-container col-md-8 col-centered">
+<div class="comedian-review-master-container col-md-8 col-centered">
+	<h2>Write a Review!</h2>
 	<br>
-		<div class="comedian-signup-container">
-			<div class="col-md-12 row">
+	<div class="comedian-review-container comedian-form center">
+		<div class="rating-form-box horiz-flex-box">
 			<%= form_for([@show, @show.reviews.build]) do |f| %>
-				<div class="horiz-flex-box field col-lg-1">
-					<span class="input-group-addon", id="basic-addon1">
-						<div id="rating-form">
-				<%= f.label :rating %><br>
-						</div>
-					</span>
-				</div>
+			<div id="rating-form" class="rating-form">
 			</div>
-			<br><br><br>
-			<div class="col-md-12 row">
-				<div class="horiz-flex-box field col-lg-2">
-					<span class="input-group-addon", id="basic-addon1">
-				<%= f.label :comment %><br>
-					</span>
-				</div>
-				<br><br>
-				<div class="container-fluid">
-				<%= f.text_area :comment, class:'textarea' %>
-				</div>
-			</div>
-			<div class="actions">
-				<%= f.submit %>
-			</div>
-			<% end %>
 		</div>
+		<div class="">
+			<div class="">
+				<%= f.text_area :comment, class:'textarea' %>
+			</div>
+		</div>
+		<div class="">
+			<%= f.submit %>
+		</div>
+		<% end %>
 	</div>
 </div>
