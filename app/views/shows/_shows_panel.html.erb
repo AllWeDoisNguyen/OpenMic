@@ -7,32 +7,71 @@
         <br>
       </div>
       <div class="row">
-        <% @shows.each do |x| %>
         <div class="horiz-flex-box">
         <!-- Real box beginning -->
           <div class="col-xs-4 col-lg-10 show-panel-container">
-            <div class="horiz-flex-box show-panel-body container">
-              <div class="vert-flex-box">
+            <% @shows.each do |x| %>
+            <div class="vert-flex-box show-panel-body container
+                        col-lg-10">
+              <div class="horiz-flex-box space-around show-panel-top">
+                <!-- New code -->
+                <div class="vert-flex-box">
+                  <%= link_to image_tag(x.avatar.url(:medium),
+                    class: "img-rounded img-responsive img-left panel-image"), x %>
+                </div>
+                <div class="vert-flex-box">
+                  <%= link_to image_tag(x.avatar.url(:medium),
+                    class: "img-rounded img-responsive img-left panel-image"), x %>
+                </div>
+                <div class="vert-flex-box">
+                  <%= link_to image_tag(x.avatar.url(:medium),
+                    class: "img-rounded img-responsive img-left panel-image"), x %>
+                </div>
+              </div>
+              <div class="horiz-flex-box space-around show-panel-bottom">
+                <div>
+                  <i class="fa fa-twitter" aria-hidden="true"></i>@exampleHandle
+                </div>
+                <div>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>example@email.com
+                </div>
+                <div>
+                  <i class="fa fa-phone" aria-hidden="true"></i>(305) 555-5555
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+              <!-- Old code -->
+              <!-- <div class="vert-flex-box">
                 <div class="horiz-flex-box">
                   <div class="vert-flex-box-show container">
                     <div class="comedian-panel-body-line-hover">
-                      <h3><%= link_to x.show_name, x, class: "show-panel" %></h3>
                     </div>
-                    <%= link_to image_tag(x.avatar.url(:medium),
+                    <%# link_to image_tag(x.avatar.url(:medium),
                       class: "img-rounded img-responsive img-left panel-image"), x %>
                     <div class="comedian-panel-body-line">
-                      <h4><%= x.address %></h4>
-                      <h4><%= x.city %><%= x.state %></h4>
+                      <h4><%# x.address %></h4>
+                      <h4><%# x.city %><%# x.state %></h4>
                     </div>
                   </div>
                   <div class="vert-flex-box col-lg-12 ">
                     <h4>Line-Up</h4>
-                      <% x.comedians.each do |comedian| %>
+                      <%# x.comedians.each do |comedian| %>
                     <div>
-                        <%= image_tag comedian.avatar.url(:thumb) %>
-                        <%= link_to comedian.name, x, class: "show-panel" %>
+                        <%# image_tag comedian.avatar.url(:thumb) %>
+                        <%# link_to comedian.name, x, class: "show-panel" %>
                     </div>
-                    <% end %>
+                    <%# end %>
                     <div class="comedian-panel-body-line ">
                       <h4>Description</h4>
                       <h3>Chicago-style improv sketch and stand up comedy in Miami.</h3>
@@ -50,19 +89,4 @@
                     <i class="fa fa-phone" aria-hidden="true"></i>(305) 555-5555
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-
-          <!-- Real box end -->
-        <% end %>
-       
-        </div>
-       
-      </div>
-    </div>
-  </div>
-</section>
+              </div> -->

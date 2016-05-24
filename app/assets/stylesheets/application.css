@@ -183,10 +183,21 @@ html, body {
   max-width: 20em;
 }
 
+.show-panel-top {
+  padding: 30px 0;
+}
+
+.show-panel-bottom {
+  padding: 0 0 30px 0;
+}
+
 .show-panel-body {
   background-color: #9d9d9d;
   border-radius: 10pt;
   padding: 0em;
+  float: none !important;
+  margin: 0 auto 20px auto !important;
+  margin-bottom: 20px;
 }
 
 .show-panel-container {
