@@ -4,6 +4,12 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.show-left-box:after {
+  width: 1px;
+  height: 75%;
+  background: black;
+}
+
 .show-right-box {
   width: 65vw;
   background-color: #f6d258;
@@ -23,6 +29,7 @@
   height: 18vh;
   background-color: #c34946;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0;
+  border-bottom: 1px solid #dadada;
 }
 
 .show-header-name {
@@ -136,6 +143,7 @@ a:hover {
   border-radius: 5px;
   max-width: 160px;
   min-width: 160px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  border-radius: 10pt;
 }
 
 .comedian-show-panel-outer-filler {
@@ -214,8 +222,8 @@ body {
 }
 
 .textarea.show {
-  max-height: 4em;
-  min-width: 85%;
+  max-height: 6em;
+  min-width: 900px;
   resize: none;
 }
 
@@ -246,4 +254,24 @@ div.individual-show-comment {
 
 .gmaps_iframe {
   padding: 10px;
+}
+
+div.title-stars {
+  width: auto;
+  margin-bottom: 5px;
+}
+
+p.show-bio {
+  color: white;
+  font-weight: normal;
+  font-size: 12pt;
+  text-align: left;
+}
+
+.show-bio-box {
+  padding: 20px 25px;
+  background-color: #303030;
+  margin: 0 70px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

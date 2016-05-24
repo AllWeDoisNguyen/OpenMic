@@ -47,7 +47,8 @@
         </div>
         <div class="col-md-4 user-pad text-center">
           <h3>RATING</h3>
-          <div class="average-review-rating show-show" data-score=<%= @average_review %>>
+          <div class="average-review-rating show-show horiz-flex-box center"
+               data-score=<%= @average_review %>>
           </div>
           <span>
             <p class="profile-rating">Based on <%= @comedian.reviews.count %> reviews</p>
@@ -79,9 +80,9 @@
         <div class="vert-flex-box col-lg-8 space-around comedian-upcoming-shows">
           <% @shows.each do |show| %>
             <div class="horiz-flex-box flex-start">
-              <span class="sm-icon">
+              <div class="sm-icon vert-flex-box center">
                 <i class="fa fa-hand-o-right"></i>
-              </span>
+              </div>
               <span class="sm-text">
                 <h3><%= link_to show.show_name, show %></h3>
                 <ul>
