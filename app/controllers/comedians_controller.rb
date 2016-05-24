@@ -42,7 +42,7 @@ class ComediansController < ApplicationController
     @instagram = "@wyncode" if @instagram.nil?
     @instagram_url = "http://www.instagram.com/#{@instagram[1, @twitter_handle.length]}"
 
-    @shows = @comedian.shows.sample(3)
+    @shows = @comedian.shows.sample(2)
     @shows = [] if @shows.nil?
   end
 
