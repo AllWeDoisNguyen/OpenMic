@@ -486,3 +486,7 @@ hr.jumbo {
 .jumbo h3 {
   color: #9d9d9d!important;
 }
+div.average-review-rating {
+  margin: 0 auto;
+  width: 200px!important;
+}
