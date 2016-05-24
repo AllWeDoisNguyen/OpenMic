@@ -21,7 +21,7 @@
                       <span>
                         <p class="profile-rating"><%= x.reviews.count %> reviews</p>
                       </span>
-                    </div>    
+                    </div>
                   </div>
                 <div class="vert-flex-box">
                   <%= link_to image_tag(x.avatar.url(:medium),
@@ -31,14 +31,16 @@
                   <div class="vert-flex-box col-lg-12 panel-body">
                     <h4>Line-Up</h4>
                       <% x.comedians.each do |comedian| %>
-                    <div>
-                        <% image_tag comedian.avatar.url(:thumb) %>
-                        <h4><% link_to comedian.name, x, class: "show-panel" %></h4>
+                    <div class="horiz-flex-box flex-start line-up-row">
+                      <%= image_tag comedian.avatar.url(:thumb), style: "width: 60px; height: 60px;" %>
+                      <div class="vert-flex-box center">
+                        <h4><%= link_to comedian.name, x, class: "show-panel line-up-name" %></h4>
+                      </div>
                     </div>
                     <% end %>
                   </div>
                 </div>
-              </div>    
+              </div>
               <div class="horiz-flex-box space-around show-panel-bottom">
                 <div>
                   <i class="fa fa-twitter" aria-hidden="true"></i>@exampleHandle

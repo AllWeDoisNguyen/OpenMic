@@ -275,3 +275,11 @@ p.show-bio {
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.line-up-name {
+  padding-left: 10px;
+}
+
+.line-up-row {
+  padding-bottom: 10px;
+}
