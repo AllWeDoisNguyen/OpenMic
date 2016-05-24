@@ -283,3 +283,8 @@ p.show-bio {
 .line-up-row {
   padding-bottom: 10px;
 }
+
+.show-panel-bottom {
+  padding-bottom: 10px !important;
+  border-bottom: 1px solid white;
+}
