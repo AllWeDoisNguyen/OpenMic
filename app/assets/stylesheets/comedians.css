@@ -319,6 +319,7 @@ div.row.coralbg.white {
 div.average-review-rating.show-show {
   margin: 0 0 0 0;
   align-items: center;
+  width: auto !important;
 }
 
 div.row.user-menu-container.square {
@@ -354,8 +355,8 @@ h3.com-prof-name {
   resize: none;
 }
 
-span.sm-icon {
-  margin: 0 10px;
+div.sm-icon {
+  margin: -37px 10px 0;
   color: white;
 }
 

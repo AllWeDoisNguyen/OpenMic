@@ -14,6 +14,11 @@
  *= require_self
  */
 
+ ul li {
+   list-style-type: none;
+   text-align: left;
+}
+
 /* style the text area field for reviews on Comedian Show page */
 .textarea {
   width:50em;
