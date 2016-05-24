@@ -25,6 +25,7 @@ class ShowsController < ApplicationController
     end
   end
 
+
   def show_json
     @shows = Show.all
     render json: @shows

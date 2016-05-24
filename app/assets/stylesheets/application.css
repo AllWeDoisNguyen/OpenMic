@@ -208,12 +208,12 @@ html, body {
   margin: 0 auto;
 }
 
-.show-panel {
+.show-panel h2 {
   color: #f6d258!important;
   font-family: Verdana, Geneva, sans-serif;
 }
 
-.show-panel:hover {
+.show-panel:hover h2 {
   color: #AC1C35!important;
   font-family: Verdana, Geneva, sans-serif;
   font-weight: bold;

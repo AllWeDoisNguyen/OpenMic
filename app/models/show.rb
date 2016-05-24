@@ -9,4 +9,12 @@ class Show < ActiveRecord::Base
 	validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 	accepts_nested_attributes_for :bookings
 	validates :date, presence: true
+
+	 def average_review
+	 	if self.reviews.blank?
+	 		0
+		else 
+			self.reviews.average(:rating).round(2)
+		end
+  end
 end

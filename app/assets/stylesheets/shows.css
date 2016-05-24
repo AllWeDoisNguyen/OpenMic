@@ -200,3 +200,6 @@ div.individual-show-comment {
   box-shadow: 5px 5px 5px grey;
   background-color: #303030;
 }
+.show-panel-words {
+  color: #fff;
+}
