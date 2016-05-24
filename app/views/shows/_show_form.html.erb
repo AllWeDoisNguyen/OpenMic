@@ -1,21 +1,18 @@
-<div class="show-body-inner-box">
+<br>
 	<h2>Write a Review!</h2>
-	<div class="rating-form-box horiz-flex-box">
-		<%= form_for([@show, @show.reviews.build]) do |f| %>
-	</div>
-	<div class="">
-		<div class="horiz-flex-box left-align">
-			<div class="vert-flex-box show-comment-review-box">
-				<div id="rating-form" class="rating-form">
-				</div>
-				<br>
-				<%= f.text_area :comment, class:'textarea show' %>
+	<div class="comedian-review-container comedian-form center">
+		<div class="rating-form-box horiz-flex-box">
+			<%= form_for([@show, @show.reviews.build]) do |f| %>
+			<div id="rating-form" class="rating-form">
 			</div>
 		</div>
-		<br>
+		<div class="">
+			<div class="">
+				<%= f.text_area :comment, class:'textarea comedian' %>
+			</div>
+		</div>
+		<div class="">
+			<%= f.submit %>
+		</div>
+		<% end %>
 	</div>
-	<div class="">
-		<%= f.submit %>
-	</div>
-	<% end %>
-</div>

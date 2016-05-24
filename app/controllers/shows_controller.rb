@@ -10,6 +10,7 @@ class ShowsController < ApplicationController
   # GET /shows/1
   # GET /shows/1.json
   def show
+    set_show
     @comedians = Comedian.all
     @comedian = Comedian.new
     @shows = Show.all

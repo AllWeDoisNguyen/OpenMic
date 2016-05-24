@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
       #associate book with current user
       @review.comedian_id = @comedian.id
     end
-          
+
     @review.user_id = current_user.id
 
 		if @review.save
@@ -25,7 +25,7 @@ class ReviewsController < ApplicationController
       elsif @review.show_id
         @review_direction = "show"
         redirect_to show_path(@show)
-      end    
+      end
 		else
 			render 'new'
 		end
@@ -53,13 +53,16 @@ class ReviewsController < ApplicationController
 	private
 
 	def review_params
+		p "*" * 50
+		p params
+		p "*" * 50
 		params.require(:review).permit(:rating, :comment, :id)
 	end
 
 	def find_comedian
       if (params[:comedian_id]).nil?
         @show = Show.find(params[:show_id])
-      elsif 
+      elsif
         @comedian = Comedian.find(params[:comedian_id])
       end
 	end
