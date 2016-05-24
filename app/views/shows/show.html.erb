@@ -15,7 +15,8 @@
                 <%= link_to @show.venue, @show.venue_website %>
               </h4>
               <div class="horiz-flex-box flex-start">
-                <div class="average-review-rating" data-score=<%= @average_review %>></div>
+                <div class="average-review-rating title-stars"
+                     data-score=<%= @average_review %>></div>
               </div>
               <div class="horiz-flex-box flex-start">
                 <div>
@@ -29,6 +30,16 @@
         </div>
       </div>
     </div>
+
+    <!-- Description box -->
+
+    <div class= "horiz-flex-box flex-start show-bio-box">
+      <div class="vert-flex-box space-around">
+        <p class="show-bio"><%= @show.bio %></p>
+      </div>
+    </div>
+    <!-- Google Maps box -->
+
     <div class="horiz-flex-box space-around">
       <div class="vert-flex-box space-around text center map-wrapper">
         <h2>Where in Miami?</h2>
@@ -82,11 +93,11 @@
           <% unless @show.reviews.nil? %>
             <% @show.reviews.each do |r| %>
               <div class="individual-show-comment">
-                <div class="col-lg-3 comedian-comment-left vert-flex-box">
+                <div class="col-lg-2 comedian-comment-left vert-flex-box">
                   <div class="review-rating" data-score="<%= r.rating %>">
                   </div>
                 </div>
-                <div class="col-lg-9">
+                <div class="col-lg-10">
                   <p class="comment-body"><%= r.comment %></p>
                 </div>
               </div>

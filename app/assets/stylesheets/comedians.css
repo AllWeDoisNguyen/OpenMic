@@ -43,7 +43,7 @@ p.profile-rating {
 }
 div.average-review-rating {
   margin: 0 auto;
-  width:200px!important;
+  width:200px;
 }
 
 div.user-menu-container {
@@ -340,7 +340,7 @@ p.comment-body {
 }
 
 div.comedian-comment-left {
-  border-right: black solid 1px;
+  border-right: white solid 2px;
 }
 
 h3.com-prof-name {
@@ -383,6 +383,10 @@ div.comedian-upcoming-shows {
   min-height: 250px;
   border: 1px solid white;
   margin: 0 40px;
+}
+
+h4.show-header-venue {
+  margin-bottom: 0;
 }
 
 /* -- media query for user profile image -- */
