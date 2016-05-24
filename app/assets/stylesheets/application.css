@@ -144,11 +144,11 @@ div.jumbotron {
 
 .navbar-brand {
   padding: 2px 5px!important;
-  background-color: #9d9d9d
+  /*background-color: #303030;*/
 }
 .navbar-inverse .navbar-header .navbar-brand:hover {
   padding: 2px 5px!important;
-  background-color: #9d9d9d
+  background-color: #9d9d9d;
 }
 
 html, body {
