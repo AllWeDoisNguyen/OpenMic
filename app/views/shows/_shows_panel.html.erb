@@ -1,7 +1,7 @@
 <section id="#shows">
   <div class="group-show-panel">
     <div class="container-fluid">
-      <div class="container group-show-panel-heading text-center">
+      <div class="container group-show-panel-heading">
         <br>
         <h1 class="gallery">Miami Shows</h1>
         <br>
@@ -9,35 +9,36 @@
       <div class="row">
         <div class="horiz-flex-box">
         <!-- Real box beginning -->
-          <div class="col-xs-4 col-lg-10 show-panel-container">
+          <div class="col-lg-10 show-panel-container">
             <% @shows.each do |x| %>
-            <div class="vert-flex-box show-panel-body container
-                        col-lg-10">
               <div class="horiz-flex-box space-around show-panel-top">
                 <!-- New code -->
-                <div class="vert-flex-box">
-                  <div class="container show-panel">
-                    <h2><%= link_to x.show_name, x %></h2>
-                    <h2><%= link_to x.venue, x %></h2>
-                    <h2><%= link_to x.address, x %></h2>
-                  </div>    
+                  <div class="show-panel">
+                    <h2 class="show-panel"><%= link_to x.show_name, x, class: "show-panel" %></h2>
+                    <h3 class="show-panel"><%= link_to x.venue, x, class: "show-panel" %></h3>
+                    <h3 class="show-panel"><%= link_to x.address, x, class: "show-panel" %></h3>
                     <div class="average-review-rating" data-score=<%= x.average_review %>>
                       <span>
                         <p class="profile-rating"><%= x.reviews.count %> reviews</p>
                       </span>
+                    </div>    
+                  </div>
+                <div class="vert-flex-box">
+                  <%= link_to image_tag(x.avatar.url(:medium),
+                    class: "img-rounded img-responsive img-left panel-image"), x %>
+                </div>
+                <div class="vert-flex-box">
+                  <div class="vert-flex-box col-lg-12 panel-body">
+                    <h4>Line-Up</h4>
+                      <% x.comedians.each do |comedian| %>
+                    <div>
+                        <% image_tag comedian.avatar.url(:thumb) %>
+                        <h4><% link_to comedian.name, x, class: "show-panel" %></h4>
                     </div>
-                  </h4>
-                  </ul>
+                    <% end %>
+                  </div>
                 </div>
-                <div class="vert-flex-box">
-                  <%= link_to image_tag(x.avatar.url(:medium),
-                    class: "img-rounded img-responsive img-left panel-image"), x %>
-                </div>
-                <div class="vert-flex-box">
-                  <%= link_to image_tag(x.avatar.url(:medium),
-                    class: "img-rounded img-responsive img-left panel-image"), x %>
-                </div>
-              </div>
+              </div>    
               <div class="horiz-flex-box space-around show-panel-bottom">
                 <div>
                   <i class="fa fa-twitter" aria-hidden="true"></i>@exampleHandle
@@ -49,7 +50,6 @@
                   <i class="fa fa-phone" aria-hidden="true"></i>(305) 555-5555
                 </div>
               </div>
-            </div>
             <% end %>
           </div>
         </div>
