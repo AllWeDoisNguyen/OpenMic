@@ -1,5 +1,5 @@
 <div class="horiz-flex-box space-around show-container">
-  <div class="vert-flex-box space-around show-left-box" style="background-color: #303030;">
+  <div class="vert-flex-box space-around show-left-box">
     <div class= "horiz-flex-box flex-start show-title-box">
       <div class="vert-flex-box space-around">
         <div class="horiz-flex-box space-around">
@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="horiz-flex-box space-around">
-      <div class="vert-flex-box space-around text center" style="background-color:#9d9d9d;">
+      <div class="vert-flex-box space-around text center map-wrapper">
         <h2>Where in Miami?</h2>
         <div class = "gmaps_iframe">
           <iframe
@@ -44,9 +44,8 @@
     </div>
   </div>
   <!-- Here -->
-  <div class="vert-flex-box flex-start">
-    <div class="horiz-flex-box show-header-container space-around"
-    style="background-color:#9d9d9d;">
+  <div class="vert-flex-box flex-start show-right-side">
+    <div class="horiz-flex-box show-header-container space-around">
       <div class="horiz-flex-box flex-start">
         <div class="vert-flex-box center show-bookings-title">
           <span class="booked-comedians-title">The</span>
@@ -56,13 +55,15 @@
       <% counter = 0 %>
       <% @show.comedians.sample(5).each do |x| %>
         <div class="vert-flex-box center comedian-show-panel-outer">
+          <%= link_to x do %>
           <div class="horiz-flex-box center">
-            <%= image_tag x.avatar.url(:medium), height: '50px', width: '50px' %>
+            <%= image_tag x.avatar.url(:medium), height: '75px', width: '75px' %>
           </div>
           <div class="show-bookings-name vert-flex-box">
-            <div class="horiz-flex-box space-around"><%= link_to x.name, x %></div>
-            <div class="horiz-flex-box space-around"><%= link_to x.username, x %></div>
+            <div class="horiz-flex-box space-around"><%= x.name %></div>
+            <div class="horiz-flex-box space-around"><%= x.username %></div>
           </div>
+          <% end %>
         </div>
         <% counter += 1 %>
       <% end %>
@@ -71,7 +72,7 @@
         <% counter += 1 %>
       <% end %>
     </div>
-    <div class="show-right-box vert-flex-box flex-start" style="background-color:#9d9d9d;">
+    <div class="show-right-box vert-flex-box flex-start">
       <div class="vert-flex-box show-body-outer-box">
         <%= render 'show_form' %>
       </div>
