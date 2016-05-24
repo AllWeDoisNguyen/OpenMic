@@ -21,29 +21,29 @@ class ComediansController < ApplicationController
     else
       @average_review = @comedian.reviews.average(:rating).round(2)
     end
-    unless @phone.nil?
-      @phone = @comedian.phone.to_i.to_s
-      @phone = "(#{@phone[0,3]}) #{@phone[3,3]}-#{@phone[6,4]}"
-    end
-    unless @twitter_handle.nil?
-      @twitter_handle = @comedian.twitter_handle
-      @twitter_url = "http://twitter.com/#{@twitter_handle[1, @twitter_handle.length]}"
-    end
-    unless @facebook.nil?
-      @facebook = @comedian.facebook
-      @facebook_url = "http://www.facebook.com/#{@facebook}"
-    end
-    unless @youtube.nil?
-      @youtube = @comedian.youtube
-      @youtube_url = "http://www.youtube.com/user/#{@youtube}"
-    end
-    unless @instagram.nil?
-      @instagram = @comedian.instagram
-      @instagram_url = "http://www.instagram.com/#{@instagram[1, @twitter_handle.length]}"
-    end
-    unless @shows.nil?
+
+    @phone = @comedian.phone.to_i.to_s
+    @phone = "3055555555" if @phone.nil?
+    @phone = "(#{@phone[0,3]}) #{@phone[3,3]}-#{@phone[6,4]}"
+
+    @twitter_handle = @comedian.twitter_handle
+    @twitter_handle = "@wyncode" if @twitter_handle.nil?
+    @twitter_url = "http://twitter.com/#{@twitter_handle[1, @twitter_handle.length]}"
+
+    @facebook = @comedian.facebook
+    @facebook = "wyncode" if @facebook.nil?
+    @facebook_url = "http://www.facebook.com/#{@facebook}"
+
+    @youtube = @comedian.youtube
+    @youtube = "wyncode" if @youtube.nil?
+    @youtube_url = "http://www.youtube.com/user/#{@youtube}"
+
+    @instagram = @comedian.instagram
+    @instagram = "@wyncode" if @instagram.nil?
+    @instagram_url = "http://www.instagram.com/#{@instagram[1, @twitter_handle.length]}"
+
     @shows = @comedian.shows.sample(3)
-  end
+    @shows = [] if @shows.nil?
   end
 
   # GET /comedians/new
@@ -109,6 +109,7 @@ class ComediansController < ApplicationController
     def comedian_params
       params.require(:comedian).permit(:avatar, :name, :username, :password,
                                        :password_confirmation, :bookings, :bio,
-                                       :city, :twitter_handle, :facebook, :youtube)
+                                       :city, :twitter_handle, :facebook, :youtube,
+                                       :phone, :email, :instagram)
     end
 end
