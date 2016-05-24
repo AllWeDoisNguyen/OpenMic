@@ -16,8 +16,10 @@
               <div class="horiz-flex-box space-around show-panel-top">
                 <!-- New code -->
                 <div class="vert-flex-box">
-                  <%= link_to image_tag(x.avatar.url(:medium),
-                    class: "img-rounded img-responsive img-left panel-image"), x %>
+                  <ul class="list-unstyled">
+                  <li><h1><%= link_to x.show_name, x %></h1></li>
+                  <li><%= link_to x.venue, x %></li>
+                  <li><%= link_to x.address, x %></li>
                 </div>
                 <div class="vert-flex-box">
                   <%= link_to image_tag(x.avatar.url(:medium),
