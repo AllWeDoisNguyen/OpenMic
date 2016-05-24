@@ -1,9 +1,13 @@
 .show-left-box {
   width: 35vw;
+  background-color: #c34946;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .show-right-box {
   width: 65vw;
+  background-color: #f6d258;
+  min-height: 0;
 }
 
 .show-container {
@@ -16,8 +20,9 @@
 
 .show-header-container {
   margin-top: 0em;
-  padding: 20px 0px;
   height: 18vh;
+  background-color: #c34946;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0;
 }
 
 .show-header-name {
@@ -27,7 +32,7 @@
 
 h5.show-header-venue {
   margin: 0;
-  color: #f6d258;
+  color: white;
 }
 
 .show-header-venue {
@@ -37,7 +42,7 @@ h5.show-header-venue {
 }
 
 .show-header-venue a {
-  color: #f6d258;
+  color: white;
 }
 
 .show-header-venue a:hover {
@@ -49,9 +54,19 @@ h5.show-header-venue {
 
 .show-body-outer-box {
   padding: 20px;
-  margin: 10px 30px;
-  height: 400px;
+  margin: 20px 30px 10px;
+  min-height: 200px;
   background-color: #303030;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.show-body-inner-box {
+  padding: 20px;
+  margin: 10px 30px;
+  min-height: 200px;
+  background-color: #303030;
+  border-radius: 10px;
 }
 
 .show-name-box {
@@ -83,33 +98,44 @@ ul {
   text-align: center;
 }
 
-.show-bookings-name>div:first-child>a {
-  color: white;
-  font-size: 16pt;
+.show-bookings-name *:hover {
+  text-decoration: none;
+  font-weight: normal;
 }
 
-.show-bookings-name>div:nth-child(2)>a {
-  color: #414d4b;
+.show-bookings-name>div:first-child {
+  color: black;
+  font-size: 14pt;
+}
+
+.show-bookings-name>div:nth-child(2) {
+  color: black;
   font-size: 10pt;
 }
 
-.show-bookings-name>div:first-child>a:hover {
-  color: white;
+.show-bookings-name>div:first-child:hover {
+  color: black;
   font-size: 16pt;
+  text-decoration: none;
 }
 
-.show-bookings-name>div:nth-child(2)>a:hover {
-  color: #414d4b;
+a:hover {
+  text-decoration: none !important;
+}
+
+.show-bookings-name>div:nth-child(2):hover {
+  color: black;
   font-size: 10pt;
+  text-decoration: none;
 }
 
 .comedian-show-panel-outer {
   background-color: #f6d258;
   margin: 15px 0;
-  padding: 0 15px;
+  padding: 15px 15px;
   border-radius: 5px;
-  max-width: 125px;
-  min-width: 125px;
+  max-width: 160px;
+  min-width: 160px;
 }
 
 .comedian-show-panel-outer-filler {
@@ -122,8 +148,7 @@ ul {
 .comedian-review-master-container {
   background-color: #303030;
   padding: 1em 6em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 10pt;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  border-radius: 10pt;
 }
 .comedian-review-container {
   display: flex;
@@ -137,18 +162,24 @@ ul {
 .booked-comedians-title {
   font-size: 20pt;
   text-align: left;
+  color: white;
 }
 
 .show-bookings-title {
   border: 1px solid;
   margin: 25px 0;
   padding: 20px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  background-color: #303030;
 }
 
 .show-title-box {
   padding: 20px 25px;
-  background-color: #ac1c35;
+  background-color: #303030;
   margin: 0 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 div.average-review-rating {
@@ -178,8 +209,7 @@ body {
 .show-review-master-container {
   background-color: #303030;
   padding: 20px 0 40px 0;
-  box-shadow: 5px 5px 5px grey;
-  /*border-radius: 10pt;*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  /*border-radius: 10pt;*/
   margin: 20px;
 }
 
@@ -197,6 +227,23 @@ div.individual-show-comment {
   margin: 15px 30px;
   min-height: 100px;
   padding: 10px;
-  box-shadow: 5px 5px 5px grey;
-  background-color: #303030;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  background-color: #303030;
+  border-radius: 10px;
+}
+
+.show-right-side {
+  background-color: #f6d258;
+}
+
+.map-wrapper {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  background-color: #303030;
+  border-radius: 10px;
+}
+
+.map-wrapper h2 {
+  color: white;
+}
+
+.gmaps_iframe {
+  padding: 10px;
 }
