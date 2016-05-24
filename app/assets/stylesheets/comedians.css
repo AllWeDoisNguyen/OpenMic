@@ -390,6 +390,15 @@ h4.show-header-venue {
   margin-bottom: 0;
 }
 
+.comedian-panel-body-line-hover * {
+  color: #9d9d9d !important;
+}
+
+.comedian-panel-bio {
+  margin-top: 9px;
+  margin-left: 3px;
+}
+
 /* -- media query for user profile image -- */
 @media (max-width: 767px) {
     .user-image {
