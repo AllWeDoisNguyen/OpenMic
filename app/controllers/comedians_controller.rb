@@ -21,17 +21,29 @@ class ComediansController < ApplicationController
     else
       @average_review = @comedian.reviews.average(:rating).round(2)
     end
-    @phone = @comedian.phone.to_i.to_s
-    @phone = "(#{@phone[0,3]}) #{@phone[3,3]}-#{@phone[6,4]}"
-    @twitter_handle = @comedian.twitter_handle
-    @twitter_url = "http://twitter.com/#{@twitter_handle[1, @twitter_handle.length]}"
-    @facebook = @comedian.facebook
-    @facebook_url = "http://www.facebook.com/#{@facebook}"
-    @youtube = @comedian.youtube
-    @youtube_url = "http://www.youtube.com/user/#{@youtube}"
-    @instagram = @comedian.instagram
-    @instagram_url = "http://www.instagram.com/#{@instagram[1, @twitter_handle.length]}"
+    unless @phone.nil?
+      @phone = @comedian.phone.to_i.to_s
+      @phone = "(#{@phone[0,3]}) #{@phone[3,3]}-#{@phone[6,4]}"
+    end
+    unless @twitter_handle.nil?
+      @twitter_handle = @comedian.twitter_handle
+      @twitter_url = "http://twitter.com/#{@twitter_handle[1, @twitter_handle.length]}"
+    end
+    unless @facebook.nil?
+      @facebook = @comedian.facebook
+      @facebook_url = "http://www.facebook.com/#{@facebook}"
+    end
+    unless @youtube.nil?
+      @youtube = @comedian.youtube
+      @youtube_url = "http://www.youtube.com/user/#{@youtube}"
+    end
+    unless @instagram.nil?
+      @instagram = @comedian.instagram
+      @instagram_url = "http://www.instagram.com/#{@instagram[1, @twitter_handle.length]}"
+    end
+    unless @shows.nil?
     @shows = @comedian.shows.sample(3)
+  end
   end
 
   # GET /comedians/new
