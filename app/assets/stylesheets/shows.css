@@ -4,7 +4,6 @@
 
 .show-right-box {
   width: 65vw;
-  height: 300px;
 }
 
 .show-container {
@@ -50,8 +49,9 @@ h5.show-header-venue {
 
 .show-body-outer-box {
   padding: 20px;
-  margin: 10px 20px;
+  margin: 10px 30px;
   height: 400px;
+  background-color: #303030;
 }
 
 .show-name-box {
@@ -65,6 +65,7 @@ h5.show-header-venue {
 
 #show-header-venue {
 }
+
 
 ul li.show-bookings {
   list-style-type: none;
@@ -163,12 +164,39 @@ body {
   padding: 0em 0em;
   max-width: 25%;
 }
+
 .rating-form {
   margin-left: 10px;
   max-width: 100%;
 }
-.textarea {
+
+.show-body-outer-box h2 {
+  color: white;
+  margin: 0;
+}
+
+.show-review-master-container {
+  background-color: #303030;
+  padding: 20px 0 40px 0;
+  box-shadow: 5px 5px 5px grey;
+  /*border-radius: 10pt;*/
+  margin: 20px;
+}
+
+.textarea.show {
   max-height: 4em;
-  min-width: 61em;
+  min-width: 85%;
   resize: none;
+}
+
+.show-comment-review-box {
+  margin: 0 auto;
+}
+
+div.individual-show-comment {
+  margin: 15px 30px;
+  min-height: 100px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px grey;
+  background-color: #303030;
 }
