@@ -36,7 +36,7 @@ class ComediansController < ApplicationController
 
     @youtube = @comedian.youtube
     @youtube = "wyncode" if @youtube.nil?
-    @youtube_url = "http://www.youtube.com/user/#{@youtube}"
+    @youtube_url = "http://www.youtube.com/channel/#{@youtube}"
 
     @instagram = @comedian.instagram
     @instagram = "@wyncode" if @instagram.nil?

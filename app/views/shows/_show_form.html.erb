@@ -1,14 +1,13 @@
-<br>
-	<h2>Write a Review!</h2>
-	<div class="comedian-review-container comedian-form center">
+<h2>Write a Review!</h2>
+<div class="comedian-review-container comedian-form center flex-start">
+	<div class="vert-flex-box space-around show-show-comment-box">
 		<div class="rating-form-box horiz-flex-box">
 			<%= form_for([@show, @show.reviews.build]) do |f| %>
 			<div id="rating-form" class="rating-form">
 			</div>
-			<br>
 		</div>
 		<div class="">
-			<div class="">
+			<div class="text-area-container">
 				<%= f.text_area :comment, class:'textarea comedian' %>
 			</div>
 		</div>
@@ -17,3 +16,4 @@
 		</div>
 		<% end %>
 	</div>
+</div>

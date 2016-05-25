@@ -197,11 +197,12 @@ div.average-review-rating {
 body {
   background-color: #303030!important;
 }
-.rating-form-box {
+div.rating-form-box.horiz-flex-box {
   background-color: #303030;
-  margin: 10px 10px;
+  margin: 0 10px;
   padding: 0em 0em;
   max-width: 25%;
+  min-height: 50px;
 }
 
 .rating-form {
@@ -287,4 +288,12 @@ p.show-bio {
 .show-panel-bottom {
   padding-bottom: 10px !important;
   border-bottom: 1px solid white;
+}
+
+.show-show-comment-box {
+  margin: 10px;
+}
+
+.text-area-container {
+  /*padding-top: 20px;*/
 }
